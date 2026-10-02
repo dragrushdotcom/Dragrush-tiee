@@ -1,0 +1,54 @@
+test_all_checks_required (test_database_gate.GateTests.test_all_checks_required) ... ok
+test_empty_suite_is_not_a_pass (test_database_gate.GateTests.test_empty_suite_is_not_a_pass) ... ok
+test_failed_test_fails_gate (test_database_gate.GateTests.test_failed_test_fails_gate) ... ok
+test_skip_is_not_a_pass (test_database_gate.GateTests.test_skip_is_not_a_pass) ... ok
+test_cli_and_overwrite_protection (test_foundation.FoundationTests.test_cli_and_overwrite_protection) ... ok
+test_deterministic_bytes (test_foundation.FoundationTests.test_deterministic_bytes) ... ok
+test_duplicate_oracle_source_rejected (test_foundation.FoundationTests.test_duplicate_oracle_source_rejected) ... ok
+test_equal_counts_not_sufficient (test_foundation.FoundationTests.test_equal_counts_not_sufficient) ... ok
+test_ev_parity (test_foundation.FoundationTests.test_ev_parity) ... ok
+test_exact_mixes_per_block (test_foundation.FoundationTests.test_exact_mixes_per_block) ... ok
+test_functional_cases (test_foundation.FoundationTests.test_functional_cases) ... ok
+test_golden_workload_hash (test_foundation.FoundationTests.test_golden_workload_hash) ... ok
+test_invalid_generation_arguments (test_foundation.FoundationTests.test_invalid_generation_arguments) ... ok
+test_invalid_processing_cost (test_foundation.FoundationTests.test_invalid_processing_cost) ... ok
+test_invalid_sample (test_foundation.FoundationTests.test_invalid_sample) ... ok
+test_known_digest_vector (test_foundation.FoundationTests.test_known_digest_vector) ... ok
+test_malformed_and_oversized (test_foundation.FoundationTests.test_malformed_and_oversized) ... ok
+test_missing_and_unknown_fields (test_foundation.FoundationTests.test_missing_and_unknown_fields) ... ok
+test_no_hidden_label_fields (test_foundation.FoundationTests.test_no_hidden_label_fields) ... ok
+test_oracle_has_no_service_imports (test_foundation.FoundationTests.test_oracle_has_no_service_imports) ... ok
+test_processor_oracle_parity (test_foundation.FoundationTests.test_processor_oracle_parity) ... ok
+test_quality_boundary (test_foundation.FoundationTests.test_quality_boundary) ... ok
+test_quality_invalid (test_foundation.FoundationTests.test_quality_invalid) ... ok
+test_reconcile_detects_all_error_classes (test_foundation.FoundationTests.test_reconcile_detects_all_error_classes) ... ok
+test_schedule (test_foundation.FoundationTests.test_schedule) ... ok
+test_score_boundaries (test_foundation.FoundationTests.test_score_boundaries) ... ok
+test_seed_changes_bytes (test_foundation.FoundationTests.test_seed_changes_bytes) ... ok
+test_unique_opaque_ids (test_foundation.FoundationTests.test_unique_opaque_ids) ... ok
+test_valid_schema (test_foundation.FoundationTests.test_valid_schema) ... ok
+test_accept_and_replay (test_postgres_integration.PostgresIntegrationTests.test_accept_and_replay) ... ok
+test_audit_failure_rolls_back_output (test_postgres_integration.PostgresIntegrationTests.test_audit_failure_rolls_back_output) ... ok
+test_concurrent_retries (test_postgres_integration.PostgresIntegrationTests.test_concurrent_retries) ... ok
+test_conflict_is_audited (test_postgres_integration.PostgresIntegrationTests.test_conflict_is_audited) ... ok
+test_failed_calculation_leaves_recoverable_intent (test_postgres_integration.PostgresIntegrationTests.test_failed_calculation_leaves_recoverable_intent) ... ok
+test_pinned_run_conflict (test_postgres_integration.PostgresIntegrationTests.test_pinned_run_conflict) ... ok
+test_rejection_is_persisted (test_postgres_integration.PostgresIntegrationTests.test_rejection_is_persisted) ... ok
+test_runtime_role_cannot_delete_outputs (test_postgres_integration.PostgresIntegrationTests.test_runtime_role_cannot_delete_outputs) ... ok
+test_runtime_role_cannot_rewrite_audit (test_postgres_integration.PostgresIntegrationTests.test_runtime_role_cannot_rewrite_audit) ... ok
+test_unknown_run_creates_no_intent (test_postgres_integration.PostgresIntegrationTests.test_unknown_run_creates_no_intent) ... ok
+test_accept_output_identical (test_storage_contract.StorageContractTests.test_accept_output_identical) ... ok
+test_canonical_replay_identity (test_storage_contract.StorageContractTests.test_canonical_replay_identity) ... ok
+test_content_change_changes_hash (test_storage_contract.StorageContractTests.test_content_change_changes_hash) ... ok
+test_early_filter_avoids_work (test_storage_contract.StorageContractTests.test_early_filter_avoids_work) ... ok
+test_invalid_arms (test_storage_contract.StorageContractTests.test_invalid_arms) ... ok
+test_invalid_body_never_prepared (test_storage_contract.StorageContractTests.test_invalid_body_never_prepared) ... ok
+test_invalid_run_ids (test_storage_contract.StorageContractTests.test_invalid_run_ids) ... ok
+test_invalid_work_counts (test_storage_contract.StorageContractTests.test_invalid_work_counts) ... ok
+test_late_filter_does_work_first (test_storage_contract.StorageContractTests.test_late_filter_does_work_first) ... ok
+test_reject_has_no_output (test_storage_contract.StorageContractTests.test_reject_has_no_output) ... ok
+
+----------------------------------------------------------------------
+Ran 49 tests in 1.012s
+
+OK

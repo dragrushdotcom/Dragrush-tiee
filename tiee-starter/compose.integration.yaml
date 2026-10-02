@@ -1,0 +1,33 @@
+services:
+  db:
+    image: postgres:16-bookworm
+    environment:
+      POSTGRES_USER: tiee_migrator
+      POSTGRES_PASSWORD: ${TIEE_ADMIN_PASSWORD:?runner supplies a random password}
+      POSTGRES_DB: tiee_test
+    volumes:
+      - test_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -h 127.0.0.1 -U tiee_migrator -d tiee_test"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.integration
+    user: ${TIEE_TEST_UID:-10001}:${TIEE_TEST_GID:-10001}
+    environment:
+      TIEE_ADMIN_PASSWORD: ${TIEE_ADMIN_PASSWORD:?required}
+      TIEE_APP_PASSWORD: ${TIEE_APP_PASSWORD:?required}
+    volumes:
+      - ${TIEE_EVIDENCE_DIR:?required}:/evidence
+    depends_on:
+      db:
+        condition: service_healthy
+    network_mode: "service:db"
+networks:
+  test_net:
+    internal: true
+volumes:
+  test_data:
