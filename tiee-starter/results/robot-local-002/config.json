@@ -1,0 +1,53 @@
+{
+  "experiment": "robotics-s01-baseline-v1",
+  "scenario": "S01",
+  "arm": "R0",
+  "width_m": 12,
+  "height_m": 8,
+  "robot_radius_m": 0.2,
+  "clearance_margin_m": 0.1,
+  "grid_m": 0.1,
+  "max_speed_m_s": 0.5,
+  "physics_step_ms": 20,
+  "controller_period_ms": 100,
+  "planner_period_ms": 500,
+  "mapping_sensor_period_ms": 50,
+  "proximity_sensor_period_ms": 20,
+  "proximity_stale_ms": 100,
+  "proximity_stop_m": 0.5,
+  "mapping_rays": 36,
+  "range_m": 4,
+  "queue_capacity_including_service": 10,
+  "stale_mapping_ms": 250,
+  "timeout_ms": 120000,
+  "drain_ms": 1000,
+  "start": [
+    1.0,
+    1.0
+  ],
+  "pickup": [
+    1.5,
+    1.5
+  ],
+  "destination": [
+    10.5,
+    6.5
+  ],
+  "planner_preferred_clearance_m": 0.75,
+  "planner_clearance_penalty_per_m": 20,
+  "walls": [
+    [
+      3.0,
+      0.5,
+      4.0,
+      5.5
+    ],
+    [
+      7.0,
+      2.5,
+      8.0,
+      7.5
+    ]
+  ],
+  "modeled_mapping_service_ms": 10
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TiEE · Warehouse baseline</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#101827;color:#edf2fa;font:16px system-ui,sans-serif}main{max-width:1050px;margin:30px auto;padding:0 20px}h1{font-size:28px;margin:8px 0}p{color:#b9c7da;line-height:1.5}.tag{color:#69ded1;font-size:12px;letter-spacing:2px}.row{display:flex;gap:16px;flex-wrap:wrap}.card{background:#1b293e;border:1px solid #34465f;border-radius:12px;padding:16px;flex:1;min-width:150px}.value{display:block;font-size:23px;margin-top:4px}canvas{width:100%;background:#152136;border:1px solid #34465f;border-radius:12px;margin:20px 0 12px}button,select{font:inherit;border:1px solid #526681;background:#233750;color:white;padding:8px 14px;border-radius:6px}button{cursor:pointer}input{flex:1;min-width:120px}footer{font-size:13px;color:#b9c7da;margin:20px 0}.controls{align-items:center}#state{min-width:200px}#error{color:#ffb7aa}
+</style><main>
+<div class="tag">DRAGRUSH AI · ROBOTICS LAB</div><h1>Warehouse delivery · Baseline R0</h1>
+<p>A recorded 2D simulation. Blue is the robot, amber is pickup, green is delivery. This static baseline has no TiEE filtering yet.</p>
+<div class="row"><div class="card">Delivery<span class="value" id="delivery">—</span></div><div class="card">Simulated mission<span class="value" id="duration">—</span></div><div class="card">Collisions<span class="value" id="collisions">—</span></div><div class="card">Mapping frames<span class="value" id="frames">—</span></div></div>
+<canvas id="world" width="960" height="640" aria-label="Recorded robot route through a warehouse"></canvas>
+<div class="row controls"><button id="play">Play</button><button id="reset">Reset</button><label>Speed <select id="speed"><option value="1">1×</option><option value="4" selected>4×</option><option value="10">10×</option></select></label><input id="seek" type="range" min="0" value="0" aria-label="Replay position"><span id="state"></span></div>
+<p id="error"></p><footer>Playback speed is a viewing control. Simulated service delay is an assumption. Neither is measured robot performance. Navigation currently uses the supplied static floor plan; dynamic sensor-map navigation is a later milestone.</footer></main>
+<script>
+const data=/*REPLAY_DATA*/null;
+if(!data){document.querySelector('#error').textContent='Run python3 -m robotics.run to generate a replay with data.';}
+else{
+const {config:c,summary:s,trace}=data;const canvas=document.querySelector('#world'),ctx=canvas.getContext('2d');
+const $=id=>document.getElementById(id);$('delivery').textContent=s.delivered?'Delivered':'Incomplete';$('duration').textContent=s.mission_simulated_seconds.toFixed(2)+' s';$('collisions').textContent=s.collisions;$('frames').textContent=s.frames_received;
+let t=0,playing=false,last=null;const end=trace[trace.length-1].time_ms;$('seek').max=end;
+const px=x=>x/c.width_m*canvas.width,py=y=>canvas.height-y/c.height_m*canvas.height;
+function draw(){let k=0;while(k+1<trace.length&&trace[k+1].time_ms<=t)k++;const r=trace[k];
+ctx.clearRect(0,0,canvas.width,canvas.height);ctx.strokeStyle='#26354b';ctx.lineWidth=1;
+for(let x=0;x<=12;x++){ctx.beginPath();ctx.moveTo(px(x),0);ctx.lineTo(px(x),640);ctx.stroke();}for(let y=0;y<=8;y++){ctx.beginPath();ctx.moveTo(0,py(y));ctx.lineTo(960,py(y));ctx.stroke();}
+ctx.fillStyle='#61718a';for(const [x0,y0,x1,y1]of c.walls)ctx.fillRect(px(x0),py(y1),px(x1-x0),py(0)-py(y1-y0));
+for(const [point,color,label]of [[c.pickup,'#ffcd70','PICKUP'],[c.destination,'#69ded1','DELIVERY']]){ctx.fillStyle=color;ctx.beginPath();ctx.arc(px(point[0]),py(point[1]),9,0,Math.PI*2);ctx.fill();ctx.font='12px system-ui';ctx.fillText(label,px(point[0])+14,py(point[1])+4);}
+ctx.strokeStyle='#55aaff';ctx.lineWidth=3;ctx.beginPath();trace.slice(0,k+1).forEach((p,i)=>i?ctx.lineTo(px(p.x),py(p.y)):ctx.moveTo(px(p.x),py(p.y)));ctx.stroke();
+ctx.fillStyle=r.interlock_stopped?'#ff927d':'#55aaff';ctx.beginPath();ctx.arc(px(r.x),py(r.y),px(c.robot_radius_m),0,Math.PI*2);ctx.fill();ctx.strokeStyle='white';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(px(r.x),py(r.y));ctx.lineTo(px(r.x+.3*Math.cos(r.heading)),py(r.y+.3*Math.sin(r.heading)));ctx.stroke();
+$('seek').value=t;$('state').textContent=(t/1000).toFixed(1)+' s · '+r.phase+' · queue '+r.queue_depth;}
+$('play').onclick=()=>{if(t>=end)t=0;playing=!playing;$('play').textContent=playing?'Pause':'Play';};$('reset').onclick=()=>{t=0;playing=false;$('play').textContent='Play';draw();};$('seek').oninput=e=>{t=+e.target.value;draw();};
+function tick(now){if(last!==null&&playing){t=Math.min(end,t+(now-last)*+$('speed').value);if(t>=end){playing=false;$('play').textContent='Play';}draw();}last=now;requestAnimationFrame(tick);}draw();requestAnimationFrame(tick);
+}
+</script></html>

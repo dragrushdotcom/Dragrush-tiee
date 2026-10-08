@@ -1,0 +1,12 @@
+{
+  "python": "3.14.2 (main, Aug 27 2026, 12:34:32) [GCC 13.3.0]",
+  "platform": "Linux-6.8.0-1064-azure-x86_64-with-glibc2.39",
+  "source_sha256": {
+    "__init__.py": "0a4ef543e49ecac94a5f13f7eebe9fcebff3500e96843bcc3ca38622347c4711",
+    "baseline.py": "3981c54b37a27a782f61e41148b55be00250e29a67ef36b4f7b1573d4544c938",
+    "replay.html": "bec277a17a1456284a62970a5168fbc6e5c1b5d28cf4f03b750cc7770ff5fc6f",
+    "run.py": "50af859af856e5184f5c3c96919dde09a2b85f820907a9935c644598dfe43279",
+    "tests/test_baseline.py": "60442f7a6b0e773cbba77d11d61cfb8288885bb34912a58ca6c12799ecc85a36"
+  },
+  "spec_sha256": "f69d349a3dffbc235b1993046a02a29770b8360c64356ca65da5b9dfdf360760"
+}

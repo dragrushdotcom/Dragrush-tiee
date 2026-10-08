@@ -1,0 +1,37 @@
+{
+  "experiment": "robotics-s01-baseline-v1",
+  "scenario": "S01",
+  "arm": "R0",
+  "status": "FAIL",
+  "delivered": false,
+  "picked_up": true,
+  "collisions": 0,
+  "mission_simulated_seconds": 120.0,
+  "drain_end_ms": 120010,
+  "path_length_m": 2.8600000000000154,
+  "minimum_clearance_m": 0.254376418309947,
+  "interlock_interventions": 1,
+  "interlock_stopped_seconds": 114.18,
+  "no_path_controller_ticks": 1,
+  "frames_received": 2401,
+  "dispositions": {
+    "processed": 2401
+  },
+  "accounting_pass": true,
+  "max_queue_depth": 1,
+  "map_observed_cells": 2100,
+  "map_version": 2401,
+  "performance_claim": null,
+  "full_robotics_spec_implemented": false,
+  "limitations": [
+    "Static S01 only; no TiEE or R1 yet",
+    "Planner uses supplied static floor plan; sensor map does not yet drive navigation",
+    "No noise, dynamic obstacles, outages or physical dynamics",
+    "Service delays are modeled, not measured CPU time",
+    "No held-out evaluation or safety certification"
+  ],
+  "measured_simulator_wall_seconds": 5.621562308999728,
+  "measured_simulator_cpu_seconds": 5.620886408,
+  "process_peak_rss_kib": 18280,
+  "measurement_scope": "whole simulation including sensing, planning, mapping and in-memory recording; file export excluded"
+}
