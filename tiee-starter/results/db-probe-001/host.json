@@ -1,0 +1,8 @@
+{
+  "NCPU": 2,
+  "MemTotal": 8328073216,
+  "ServerVersion": "29.7.2-2",
+  "KernelVersion": "6.8.0-1064-azure",
+  "Architecture": "x86_64",
+  "OperatingSystem": "Ubuntu 24.04.4 LTS (containerized)"
+}

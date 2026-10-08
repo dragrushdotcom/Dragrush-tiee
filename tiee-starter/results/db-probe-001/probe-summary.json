@@ -1,0 +1,543 @@
+{
+  "status": "PASS",
+  "stage": "exploratory-synchronous-database-probe-v1",
+  "benchmark_v1_qualified": false,
+  "performance_claim": null,
+  "total_system_cpu_measured": false,
+  "total_system_ram_measured": false,
+  "network_mode": "shared-db-namespace-loopback",
+  "load_model": "one outstanding synchronous submit; no scheduled arrivals",
+  "latency_boundary": "submit call through successful commit and connection close",
+  "cache_policy": "fresh database per launch; retained per-trial rows; 10 warmup events per trial",
+  "limitations": [
+    "No HTTP or broker",
+    "No saturation or arrival-rate claim",
+    "No power-loss or restart test",
+    "Client CPU excludes PostgreSQL",
+    "Small samples; tail percentiles are exploratory",
+    "T uses deterministic eligibility, not learned probabilities"
+  ],
+  "config": {
+    "count": 100,
+    "iterations": [
+      100
+    ],
+    "seeds": [
+      101
+    ],
+    "useful_percentages": [
+      100,
+      50,
+      10
+    ]
+  },
+  "trials": [
+    {
+      "run_id": "s101-m100-k100-B0",
+      "seed": 101,
+      "useful_percent": 100,
+      "iterations": 100,
+      "arm": "B0",
+      "order": [
+        "B0",
+        "B1",
+        "T"
+      ],
+      "workload_sha256": "cdf9e9f741cd286897f694b6e3420fb26a64c70e1641a22d71f00758facb319a",
+      "status": "PASS",
+      "successful_submissions": 100,
+      "error_count": 0,
+      "correctness": {
+        "pass": true,
+        "expected_count": 100,
+        "actual_count": 100,
+        "missing": [],
+        "unexpected": [],
+        "wrong": [],
+        "duplicate_ids": [],
+        "duplicate_rows": 0,
+        "states": {
+          "COMPLETED": 100
+        },
+        "audit_actions": {
+          "COMPLETED": 100,
+          "INTENT": 100
+        }
+      },
+      "wall_seconds": 1.101478593,
+      "client_cpu_seconds": 0.248839164,
+      "client_process_peak_rss_kib_cumulative": 38692,
+      "useful_latency": {
+        "count": 100,
+        "p50_ms": 9.902378,
+        "p95_ms": 15.669966,
+        "p99_ms": 21.255273
+      },
+      "rejection_latency": {
+        "count": 0,
+        "p50_ms": null,
+        "p95_ms": null,
+        "p99_ms": null
+      },
+      "useful_completion_fraction": 1.0,
+      "useful_completions_per_wall_second": 90.78705717524554,
+      "logical_rows": {
+        "events": 100,
+        "outputs": 100,
+        "audit": 200
+      }
+    },
+    {
+      "run_id": "s101-m100-k100-B1",
+      "seed": 101,
+      "useful_percent": 100,
+      "iterations": 100,
+      "arm": "B1",
+      "order": [
+        "B0",
+        "B1",
+        "T"
+      ],
+      "workload_sha256": "cdf9e9f741cd286897f694b6e3420fb26a64c70e1641a22d71f00758facb319a",
+      "status": "PASS",
+      "successful_submissions": 100,
+      "error_count": 0,
+      "correctness": {
+        "pass": true,
+        "expected_count": 100,
+        "actual_count": 100,
+        "missing": [],
+        "unexpected": [],
+        "wrong": [],
+        "duplicate_ids": [],
+        "duplicate_rows": 0,
+        "states": {
+          "COMPLETED": 100
+        },
+        "audit_actions": {
+          "COMPLETED": 100,
+          "INTENT": 100
+        }
+      },
+      "wall_seconds": 1.005752898,
+      "client_cpu_seconds": 0.24351687,
+      "client_process_peak_rss_kib_cumulative": 38692,
+      "useful_latency": {
+        "count": 100,
+        "p50_ms": 9.802995,
+        "p95_ms": 10.775206,
+        "p99_ms": 13.37265
+      },
+      "rejection_latency": {
+        "count": 0,
+        "p50_ms": null,
+        "p95_ms": null,
+        "p99_ms": null
+      },
+      "useful_completion_fraction": 1.0,
+      "useful_completions_per_wall_second": 99.42800085275023,
+      "logical_rows": {
+        "events": 100,
+        "outputs": 100,
+        "audit": 200
+      }
+    },
+    {
+      "run_id": "s101-m100-k100-T",
+      "seed": 101,
+      "useful_percent": 100,
+      "iterations": 100,
+      "arm": "T",
+      "order": [
+        "B0",
+        "B1",
+        "T"
+      ],
+      "workload_sha256": "cdf9e9f741cd286897f694b6e3420fb26a64c70e1641a22d71f00758facb319a",
+      "status": "PASS",
+      "successful_submissions": 100,
+      "error_count": 0,
+      "correctness": {
+        "pass": true,
+        "expected_count": 100,
+        "actual_count": 100,
+        "missing": [],
+        "unexpected": [],
+        "wrong": [],
+        "duplicate_ids": [],
+        "duplicate_rows": 0,
+        "states": {
+          "COMPLETED": 100
+        },
+        "audit_actions": {
+          "COMPLETED": 100,
+          "INTENT": 100
+        }
+      },
+      "wall_seconds": 1.092123619,
+      "client_cpu_seconds": 0.247937422,
+      "client_process_peak_rss_kib_cumulative": 38692,
+      "useful_latency": {
+        "count": 100,
+        "p50_ms": 10.06847,
+        "p95_ms": 16.038249,
+        "p99_ms": 19.324006
+      },
+      "rejection_latency": {
+        "count": 0,
+        "p50_ms": null,
+        "p95_ms": null,
+        "p99_ms": null
+      },
+      "useful_completion_fraction": 1.0,
+      "useful_completions_per_wall_second": 91.56472606238908,
+      "logical_rows": {
+        "events": 100,
+        "outputs": 100,
+        "audit": 200
+      }
+    },
+    {
+      "run_id": "s101-m50-k100-B0",
+      "seed": 101,
+      "useful_percent": 50,
+      "iterations": 100,
+      "arm": "B0",
+      "order": [
+        "B0",
+        "B1",
+        "T"
+      ],
+      "workload_sha256": "550b8fb153c7e2aa52854fd17ae2b3e0eeca9c7bc273ad67d641fa1a957721e7",
+      "status": "PASS",
+      "successful_submissions": 100,
+      "error_count": 0,
+      "correctness": {
+        "pass": true,
+        "expected_count": 50,
+        "actual_count": 50,
+        "missing": [],
+        "unexpected": [],
+        "wrong": [],
+        "duplicate_ids": [],
+        "duplicate_rows": 0,
+        "states": {
+          "COMPLETED": 50,
+          "REJECTED": 50
+        },
+        "audit_actions": {
+          "COMPLETED": 50,
+          "INTENT": 100,
+          "REJECTED": 50
+        }
+      },
+      "wall_seconds": 1.151197616,
+      "client_cpu_seconds": 0.243159805,
+      "client_process_peak_rss_kib_cumulative": 38948,
+      "useful_latency": {
+        "count": 50,
+        "p50_ms": 10.212709,
+        "p95_ms": 17.631328,
+        "p99_ms": 41.257893
+      },
+      "rejection_latency": {
+        "count": 50,
+        "p50_ms": 9.858443,
+        "p95_ms": 21.168189,
+        "p99_ms": 31.277825
+      },
+      "useful_completion_fraction": 1.0,
+      "useful_completions_per_wall_second": 43.43302948605134,
+      "logical_rows": {
+        "events": 100,
+        "outputs": 50,
+        "audit": 200
+      }
+    },
+    {
+      "run_id": "s101-m50-k100-B1",
+      "seed": 101,
+      "useful_percent": 50,
+      "iterations": 100,
+      "arm": "B1",
+      "order": [
+        "B0",
+        "B1",
+        "T"
+      ],
+      "workload_sha256": "550b8fb153c7e2aa52854fd17ae2b3e0eeca9c7bc273ad67d641fa1a957721e7",
+      "status": "PASS",
+      "successful_submissions": 100,
+      "error_count": 0,
+      "correctness": {
+        "pass": true,
+        "expected_count": 50,
+        "actual_count": 50,
+        "missing": [],
+        "unexpected": [],
+        "wrong": [],
+        "duplicate_ids": [],
+        "duplicate_rows": 0,
+        "states": {
+          "COMPLETED": 50,
+          "REJECTED": 50
+        },
+        "audit_actions": {
+          "COMPLETED": 50,
+          "INTENT": 100,
+          "REJECTED": 50
+        }
+      },
+      "wall_seconds": 1.124590507,
+      "client_cpu_seconds": 0.239593952,
+      "client_process_peak_rss_kib_cumulative": 38948,
+      "useful_latency": {
+        "count": 50,
+        "p50_ms": 10.214292,
+        "p95_ms": 19.88177,
+        "p99_ms": 40.107773
+      },
+      "rejection_latency": {
+        "count": 50,
+        "p50_ms": 9.735149,
+        "p95_ms": 17.980462,
+        "p99_ms": 26.418012
+      },
+      "useful_completion_fraction": 1.0,
+      "useful_completions_per_wall_second": 44.46062783633297,
+      "logical_rows": {
+        "events": 100,
+        "outputs": 50,
+        "audit": 200
+      }
+    },
+    {
+      "run_id": "s101-m50-k100-T",
+      "seed": 101,
+      "useful_percent": 50,
+      "iterations": 100,
+      "arm": "T",
+      "order": [
+        "B0",
+        "B1",
+        "T"
+      ],
+      "workload_sha256": "550b8fb153c7e2aa52854fd17ae2b3e0eeca9c7bc273ad67d641fa1a957721e7",
+      "status": "PASS",
+      "successful_submissions": 100,
+      "error_count": 0,
+      "correctness": {
+        "pass": true,
+        "expected_count": 50,
+        "actual_count": 50,
+        "missing": [],
+        "unexpected": [],
+        "wrong": [],
+        "duplicate_ids": [],
+        "duplicate_rows": 0,
+        "states": {
+          "COMPLETED": 50,
+          "REJECTED": 50
+        },
+        "audit_actions": {
+          "COMPLETED": 50,
+          "INTENT": 100,
+          "REJECTED": 50
+        }
+      },
+      "wall_seconds": 1.071072989,
+      "client_cpu_seconds": 0.240704875,
+      "client_process_peak_rss_kib_cumulative": 38948,
+      "useful_latency": {
+        "count": 50,
+        "p50_ms": 10.296524,
+        "p95_ms": 14.833261,
+        "p99_ms": 19.95529
+      },
+      "rejection_latency": {
+        "count": 50,
+        "p50_ms": 9.62115,
+        "p95_ms": 15.250001,
+        "p99_ms": 16.379291
+      },
+      "useful_completion_fraction": 1.0,
+      "useful_completions_per_wall_second": 46.68215939856925,
+      "logical_rows": {
+        "events": 100,
+        "outputs": 50,
+        "audit": 200
+      }
+    },
+    {
+      "run_id": "s101-m10-k100-B0",
+      "seed": 101,
+      "useful_percent": 10,
+      "iterations": 100,
+      "arm": "B0",
+      "order": [
+        "B0",
+        "B1",
+        "T"
+      ],
+      "workload_sha256": "5911ccd9efef6f8237754b0064073557c97fdc88c6cf56ea1574142ea1a4c515",
+      "status": "PASS",
+      "successful_submissions": 100,
+      "error_count": 0,
+      "correctness": {
+        "pass": true,
+        "expected_count": 10,
+        "actual_count": 10,
+        "missing": [],
+        "unexpected": [],
+        "wrong": [],
+        "duplicate_ids": [],
+        "duplicate_rows": 0,
+        "states": {
+          "COMPLETED": 10,
+          "REJECTED": 90
+        },
+        "audit_actions": {
+          "COMPLETED": 10,
+          "INTENT": 100,
+          "REJECTED": 90
+        }
+      },
+      "wall_seconds": 0.987816801,
+      "client_cpu_seconds": 0.234963117,
+      "client_process_peak_rss_kib_cumulative": 38948,
+      "useful_latency": {
+        "count": 10,
+        "p50_ms": 9.793611,
+        "p95_ms": 13.097009,
+        "p99_ms": 13.097009
+      },
+      "rejection_latency": {
+        "count": 90,
+        "p50_ms": 9.528032,
+        "p95_ms": 10.642093,
+        "p99_ms": 17.617262
+      },
+      "useful_completion_fraction": 1.0,
+      "useful_completions_per_wall_second": 10.123334599975081,
+      "logical_rows": {
+        "events": 100,
+        "outputs": 10,
+        "audit": 200
+      }
+    },
+    {
+      "run_id": "s101-m10-k100-B1",
+      "seed": 101,
+      "useful_percent": 10,
+      "iterations": 100,
+      "arm": "B1",
+      "order": [
+        "B0",
+        "B1",
+        "T"
+      ],
+      "workload_sha256": "5911ccd9efef6f8237754b0064073557c97fdc88c6cf56ea1574142ea1a4c515",
+      "status": "PASS",
+      "successful_submissions": 100,
+      "error_count": 0,
+      "correctness": {
+        "pass": true,
+        "expected_count": 10,
+        "actual_count": 10,
+        "missing": [],
+        "unexpected": [],
+        "wrong": [],
+        "duplicate_ids": [],
+        "duplicate_rows": 0,
+        "states": {
+          "COMPLETED": 10,
+          "REJECTED": 90
+        },
+        "audit_actions": {
+          "COMPLETED": 10,
+          "INTENT": 100,
+          "REJECTED": 90
+        }
+      },
+      "wall_seconds": 1.236265684,
+      "client_cpu_seconds": 0.239841326,
+      "client_process_peak_rss_kib_cumulative": 38948,
+      "useful_latency": {
+        "count": 10,
+        "p50_ms": 10.435746,
+        "p95_ms": 36.122351,
+        "p99_ms": 36.122351
+      },
+      "rejection_latency": {
+        "count": 90,
+        "p50_ms": 9.630573,
+        "p95_ms": 23.393484,
+        "p99_ms": 62.233276
+      },
+      "useful_completion_fraction": 1.0,
+      "useful_completions_per_wall_second": 8.088876144846548,
+      "logical_rows": {
+        "events": 100,
+        "outputs": 10,
+        "audit": 200
+      }
+    },
+    {
+      "run_id": "s101-m10-k100-T",
+      "seed": 101,
+      "useful_percent": 10,
+      "iterations": 100,
+      "arm": "T",
+      "order": [
+        "B0",
+        "B1",
+        "T"
+      ],
+      "workload_sha256": "5911ccd9efef6f8237754b0064073557c97fdc88c6cf56ea1574142ea1a4c515",
+      "status": "PASS",
+      "successful_submissions": 100,
+      "error_count": 0,
+      "correctness": {
+        "pass": true,
+        "expected_count": 10,
+        "actual_count": 10,
+        "missing": [],
+        "unexpected": [],
+        "wrong": [],
+        "duplicate_ids": [],
+        "duplicate_rows": 0,
+        "states": {
+          "COMPLETED": 10,
+          "REJECTED": 90
+        },
+        "audit_actions": {
+          "COMPLETED": 10,
+          "INTENT": 100,
+          "REJECTED": 90
+        }
+      },
+      "wall_seconds": 1.123484011,
+      "client_cpu_seconds": 0.233820836,
+      "client_process_peak_rss_kib_cumulative": 38948,
+      "useful_latency": {
+        "count": 10,
+        "p50_ms": 10.549561,
+        "p95_ms": 33.558232,
+        "p99_ms": 33.558232
+      },
+      "rejection_latency": {
+        "count": 90,
+        "p50_ms": 9.576408,
+        "p95_ms": 18.117196,
+        "p99_ms": 37.956012
+      },
+      "useful_completion_fraction": 1.0,
+      "useful_completions_per_wall_second": 8.900883236512746,
+      "logical_rows": {
+        "events": 100,
+        "outputs": 10,
+        "audit": 200
+      }
+    }
+  ]
+}

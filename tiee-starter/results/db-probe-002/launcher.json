@@ -1,0 +1,30 @@
+{
+  "project": "tieeprobe_29f6778c64e9",
+  "steps": [
+    {
+      "step": "build",
+      "exit_code": 0
+    },
+    {
+      "step": "up",
+      "exit_code": 0
+    },
+    {
+      "step": "run",
+      "exit_code": 0
+    },
+    {
+      "step": "images",
+      "exit_code": 0
+    },
+    {
+      "step": "stop",
+      "exit_code": 0
+    }
+  ],
+  "exit_code": 0,
+  "stop_exit_code": 0,
+  "volume_retained": true,
+  "git_head": "256700a9c72ae62ce34f489d5837435206695ab1",
+  "source_hashes_authoritative": true
+}

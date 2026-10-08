@@ -1,0 +1,72 @@
+{
+  "services": {
+    "db": {
+      "image": "postgres:16-bookworm",
+      "environment": {
+        "POSTGRES_USER": "tiee_migrator",
+        "POSTGRES_PASSWORD": "${TIEE_ADMIN_PASSWORD}",
+        "POSTGRES_DB": "tiee_test"
+      },
+      "volumes": [
+        "probe_data:/var/lib/postgresql/data"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD-SHELL",
+          "pg_isready -h 127.0.0.1 -U tiee_migrator -d tiee_test"
+        ],
+        "interval": "2s",
+        "timeout": "3s",
+        "retries": 30
+      },
+      "networks": [
+        "probe_net"
+      ]
+    },
+    "probe": {
+      "build": {
+        "context": "/workspaces/Dragrush-tiee/tiee-starter",
+        "dockerfile": "Dockerfile.integration"
+      },
+      "user": "1000:1000",
+      "environment": {
+        "TIEE_ADMIN_PASSWORD": "${TIEE_ADMIN_PASSWORD}",
+        "TIEE_APP_PASSWORD": "${TIEE_APP_PASSWORD}"
+      },
+      "volumes": [
+        "/workspaces/Dragrush-tiee/tiee-starter/results/db-probe-002:/evidence"
+      ],
+      "network_mode": "service:db",
+      "depends_on": {
+        "db": {
+          "condition": "service_healthy"
+        }
+      },
+      "command": [
+        "python",
+        "-m",
+        "tools.run_database_probe",
+        "--inside",
+        "--count",
+        "100",
+        "--iterations",
+        "0",
+        "1000",
+        "--seeds",
+        "101",
+        "202",
+        "303",
+        "404",
+        "505"
+      ]
+    }
+  },
+  "networks": {
+    "probe_net": {
+      "internal": true
+    }
+  },
+  "volumes": {
+    "probe_data": {}
+  }
+}

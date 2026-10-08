@@ -1,0 +1,15 @@
+{"trial": "s101-m100-k100-B0", "status": "PASS", "useful_per_second": 90.78705717524554}
+{"trial": "s101-m100-k100-B1", "status": "PASS", "useful_per_second": 99.42800085275023}
+{"trial": "s101-m100-k100-T", "status": "PASS", "useful_per_second": 91.56472606238908}
+{"trial": "s101-m50-k100-B0", "status": "PASS", "useful_per_second": 43.43302948605134}
+{"trial": "s101-m50-k100-B1", "status": "PASS", "useful_per_second": 44.46062783633297}
+{"trial": "s101-m50-k100-T", "status": "PASS", "useful_per_second": 46.68215939856925}
+{"trial": "s101-m10-k100-B0", "status": "PASS", "useful_per_second": 10.123334599975081}
+{"trial": "s101-m10-k100-B1", "status": "PASS", "useful_per_second": 8.088876144846548}
+{"trial": "s101-m10-k100-T", "status": "PASS", "useful_per_second": 8.900883236512746}
+{"status": "PASS", "trials": 9}
+ Container tieeprobe_f6afc239ad6e-db-1 Running 
+ Container tieeprobe_f6afc239ad6e-db-1 Waiting 
+ Container tieeprobe_f6afc239ad6e-db-1 Healthy 
+ Container tieeprobe_f6afc239ad6e-probe-run-f0e79b2cc49a Creating 
+ Container tieeprobe_f6afc239ad6e-probe-run-f0e79b2cc49a Created 

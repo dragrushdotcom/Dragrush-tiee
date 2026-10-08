@@ -1,0 +1,8 @@
+{
+  "python": "3.12.15 (main, Oct  6 2026, 02:02:22) [GCC 14.2.0]",
+  "platform": "Linux-6.8.0-1064-azure-x86_64-with-glibc2.41",
+  "postgres": "PostgreSQL 16.15 (Debian 16.15-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+  "synchronous_commit": "on",
+  "psycopg": "3.3.5",
+  "runtime_role": "tiee_app"
+}
