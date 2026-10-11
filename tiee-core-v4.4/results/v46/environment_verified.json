@@ -77,5 +77,13 @@
   ],
   "host_nproc": "2",
   "kernel": "6.8.0-1064-azure",
-  "redis_durability": "appendfilename\nappendonly.aof\nappenddirname\nappendonlydir\nappendfsync\nalways\nappendonly\nyes\n"
+  "redis_durability": "appendfilename\nappendonly.aof\nappenddirname\nappendonlydir\nappendfsync\nalways\nappendonly\nyes\n",
+  "postgres_durability_final_verification": {
+    "settings": {
+      "fsync": "on",
+      "full_page_writes": "on",
+      "synchronous_commit": "on"
+    },
+    "utc": "2026-10-11T20:06:31.972975+00:00"
+  }
 }

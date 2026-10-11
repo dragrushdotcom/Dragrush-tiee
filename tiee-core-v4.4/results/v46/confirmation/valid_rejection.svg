@@ -1571,14 +1571,14 @@ z
    </g>
    <g id="legend_1">
     <g id="line2d_19">
-     <path d="M 394.134375 254.767313 
-L 404.134375 254.767313 
-L 414.134375 254.767313 
+     <path d="M 394.134375 39.258438 
+L 404.134375 39.258438 
+L 414.134375 39.258438 
 " style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #b32929; stroke-width: 1.5"/>
     </g>
     <g id="text_17">
      <!-- Required upper bound: 1% -->
-     <g transform="translate(422.134375 258.267313) scale(0.1 -0.1)">
+     <g transform="translate(422.134375 42.758438) scale(0.1 -0.1)">
       <defs>
        <path id="DejaVuSans-35" d="M 2841 2188 
 Q 3044 2119 3236 1894 
