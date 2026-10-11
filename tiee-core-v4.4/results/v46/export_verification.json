@@ -1,0 +1,23 @@
+{
+  "status": "PASSED",
+  "completed_measurements": 360,
+  "confirmation_blocks": 60,
+  "events_accounted": 72000,
+  "paired_traces_and_ids": true,
+  "cpu_endpoints_verified": true,
+  "archives": {
+    "training": {
+      "runs": 45,
+      "raw_sha256": "e08c2d5727d792f6d2be17a8db4320b755d6a8236b07a44bc9d2030e54a01c99"
+    },
+    "fixed_admission": {
+      "runs": 15,
+      "raw_sha256": "2ac33700cf3cf8244c1db456547749e04c7c9a6f8d6a78898f745cd257e7ef20"
+    },
+    "confirmation": {
+      "runs": 300,
+      "raw_sha256": "2d5d7af773b27a1499830b21db85e7b26eae3f3bb4908d6c0467b1e9794a3cab"
+    }
+  },
+  "failed_recorder_attempts_separately_retained": 1
+}

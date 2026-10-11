@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspaces/Dragrush-tiee-v46/tiee-core-v4.4/validation/v46_report.py", line 67, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/workspaces/Dragrush-tiee-v46/tiee-core-v4.4/validation/v46_report.py", line 61, in main
+    for service,seconds in row.get('detail',{}).get('recovery_seconds',{}).items():lines.append(f'| {row["pool"]} | {service} | {seconds:.3f} |')
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'items'

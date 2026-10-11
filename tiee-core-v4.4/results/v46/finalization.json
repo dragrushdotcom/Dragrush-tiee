@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE_PLANNED_RUNS",
+  "confirmation_runs": 300,
+  "frozen_engine_and_workload_verified": true,
+  "recorder_amendment_verified": true,
+  "model_verified": true,
+  "preservation_verified": true,
+  "confirmation_elapsed_including_stop_seconds": 10201.79553,
+  "cumulative_live_budget_compliance": "UNVERIFIED",
+  "performance_claim": "NOT ESTABLISHED"
+}

@@ -1,0 +1,19 @@
+{
+  "confirmation_complete": "PASSED",
+  "power": "FAILED",
+  "valid_rejection": {
+    "normal": "FAILED",
+    "shift": "FAILED",
+    "burst": "FAILED"
+  },
+  "calibration": {
+    "normal": "PASSED",
+    "shift": "PASSED",
+    "burst": "PASSED"
+  },
+  "A3_drain": "FAILED",
+  "all_arm_http": "FAILED",
+  "performance_acceptance": "NOT ESTABLISHED",
+  "recording_protocol": "FAILED original frozen-observation/no-exclusion requirement; recorder amended after one missing measurement",
+  "complete_terminal_latency": "FAILED"
+}

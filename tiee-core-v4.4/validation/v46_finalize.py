@@ -23,6 +23,8 @@ def main():
  state(status='ANALYZING',runs=count())
  for script in ('v46_analyze.py','v46_report.py'):
   p=cli(sys.executable,'validation/'+script);(R/('final-'+script+'.log')).write_text(p.stdout+p.stderr)
+ cli('/workspaces/tiee-v46-report-venv/bin/python','validation/v46_plot.py')
+ cli(sys.executable,'validation/v46_verify_exports.py')
  preservation=json.loads((R/'preservation_final.json').read_text());assert not preservation['changed_paths'] and preservation['original_status_unchanged']
  original='/workspaces/Dragrush-tiee';previous=json.loads((R/'preservation.json').read_text());assert cli('git','-C',original,'status','--porcelain').stdout==previous['original_status']
  assert cli('git','-C',original,'rev-parse','HEAD').stdout.strip()=='6e12b5098699ba636cdb1112dd192da74d8f9bb3'

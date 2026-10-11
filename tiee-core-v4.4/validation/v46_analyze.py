@@ -28,9 +28,9 @@ def main():
     with (OUT/'confirmation/runs.csv').open('w') as f:
         w=csv.DictWriter(f,keys);w.writeheader();w.writerows({k:r[k] for k in keys} for r in runs)
     with (OUT/'confirmation/utility_ledger.csv').open('w') as f:
-        keys=['condition','block','arm','id','valid','state','utility','execution_cpu','queue_seconds','db_latency_seconds','offered_terminal_ms','dispatch_terminal_ms'];w=csv.DictWriter(f,keys);w.writeheader()
+        keys=['condition','block','arm','id','valid','state','utility','execution_cpu','queue_seconds','db_latency_seconds','raw_offered_terminal_ms','raw_dispatch_terminal_ms'];w=csv.DictWriter(f,keys);w.writeheader()
         for r in runs:
-            for x in r['ledger']:w.writerow({k:r[k] if k in r else x.get(k) for k in keys})
+            for x in r['ledger']:w.writerow({k:r[k] if k in r else x.get(k[4:]) if k.startswith('raw_') else x.get(k) for k in keys})
     svg=['<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560"><rect width="1000" height="560" fill="white"/><g font-family="sans-serif" fill="#172334"><text x="50" y="35" font-size="22">v4.6 paired efficiency differences: A3 minus controls</text><text x="50" y="60" font-size="14">Raw block points and multiplicity-adjusted intervals. Utility / engine CPU second.</text>']
     values=[x for c in contrasts.values() for x in c['raw_points']]+[x for c in contrasts.values() for x in c['ci_adjusted']]+[0];low=min(values);high=max(values);span=max(high-low,1);scale=lambda v:100+(v-low)*800/span
     svg.append(f'<line x1="{scale(0)}" y1="90" x2="{scale(0)}" y2="450" stroke="#777" stroke-dasharray="5,5"/>')

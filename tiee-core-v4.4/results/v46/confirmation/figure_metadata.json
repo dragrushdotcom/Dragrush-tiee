@@ -1,0 +1,14 @@
+{
+  "matplotlib_version": "3.11.2",
+  "analysis_sha256": "07bb4ffccdf4ca7f344a27ec758c3d827dd62e0a3ecc75c569f02f1a8708e3ce",
+  "figures": [
+    "efficiency",
+    "valid_rejection"
+  ],
+  "formats": [
+    "png",
+    "pdf",
+    "svg"
+  ],
+  "performance_claim": "NOT ESTABLISHED"
+}

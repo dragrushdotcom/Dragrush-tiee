@@ -1,0 +1,5 @@
+# Preserve generated CSV CRLF and plotting/log formatting exactly.
+results/v46/**/*.csv whitespace=cr-at-eol
+results/v46/**/*.svg whitespace=-blank-at-eol
+results/v46/**/*.log whitespace=-blank-at-eof,-blank-at-eol
+results/v46/*.log whitespace=-blank-at-eof,-blank-at-eol
