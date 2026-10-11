@@ -1,0 +1,414 @@
+{
+  "default": {
+    "admission_contracts": {
+      "test": "admission_contracts",
+      "pass_": true,
+      "seconds": 4.758211188999667,
+      "detail": {
+        "valid_duplicate_conflict_malformed_auth_rejection": "PASS"
+      }
+    },
+    "relay_SIGKILL": {
+      "test": "relay_SIGKILL",
+      "pass_": true,
+      "seconds": 2.793170248000024,
+      "detail": {
+        "recovery_seconds": 1.7864855019997776
+      }
+    },
+    "worker_SIGKILL": {
+      "test": "worker_SIGKILL",
+      "pass_": true,
+      "seconds": 14.895612151000023,
+      "detail": {
+        "recovery_seconds": 2.1340982150004493,
+        "note": "kill timing nondeterministic; additional deterministic pending test below"
+      }
+    },
+    "pending_reclaim": {
+      "test": "pending_reclaim",
+      "pass_": true,
+      "seconds": 26.31518970900015,
+      "detail": {
+        "recovery_seconds": 4.701612142999693,
+        "target_confirmed_in_dead_consumer_delivery": true
+      }
+    },
+    "redis_SIGKILL_AOF": {
+      "test": "redis_SIGKILL_AOF",
+      "pass_": true,
+      "seconds": 16.181495561999327,
+      "detail": {
+        "recovery_seconds": 4.525109105999945
+      }
+    },
+    "postgres_SIGKILL": {
+      "test": "postgres_SIGKILL",
+      "pass_": true,
+      "seconds": 15.7896891219998,
+      "detail": {
+        "recovery_seconds": 4.491551577999417
+      }
+    },
+    "gateway_SIGKILL": {
+      "test": "gateway_SIGKILL",
+      "pass_": true,
+      "seconds": 3.579414136000196,
+      "detail": {
+        "admitted_event_survived": true
+      }
+    },
+    "redis_stream_and_group_loss": {
+      "test": "redis_stream_and_group_loss",
+      "pass_": true,
+      "seconds": 17.301605122999717,
+      "detail": {
+        "recovery_seconds": 1.7283850189996883,
+        "deleted": 1
+      }
+    },
+    "durable_202_pg_crash": {
+      "test": "durable_202_pg_crash",
+      "pass_": true,
+      "seconds": 6.766507185000592,
+      "detail": {
+        "recovery_seconds": 4.855052930999591,
+        "acknowledged_row_survived_db_crash": true
+      }
+    },
+    "backpressure_safe_retry": {
+      "test": "backpressure_safe_retry",
+      "pass_": true,
+      "seconds": 41.347263951999594,
+      "detail": {
+        "capacity": 32,
+        "503_not_admitted": true,
+        "same_id_retry_completed": true
+      }
+    },
+    "redis_publish_failure": {
+      "test": "redis_publish_failure",
+      "pass_": true,
+      "seconds": 4.177404289000151,
+      "detail": {
+        "recovery_seconds": 1.1771931479997875,
+        "failed_publish_remained_pending": true
+      }
+    },
+    "relay_transaction_rollback_after_xadd": {
+      "test": "relay_transaction_rollback_after_xadd",
+      "pass_": true,
+      "seconds": 6.404091057000187,
+      "detail": {
+        "xadd_observed_before_sql_rollback": true,
+        "idempotent_recovery": true
+      }
+    },
+    "result_transaction_rollback": {
+      "test": "result_transaction_rollback",
+      "pass_": true,
+      "seconds": 5.701802777000012,
+      "detail": {
+        "recovery_seconds": 0.875353487999746,
+        "uncommitted_result_not_acknowledged": true
+      }
+    },
+    "postgres_unavailable_no_false_ack": {
+      "test": "postgres_unavailable_no_false_ack",
+      "pass_": true,
+      "seconds": 3.0330434580000656,
+      "detail": {
+        "no_false_202": true,
+        "safe_retry": true
+      }
+    },
+    "final_accounting_idempotent_audit": {
+      "test": "final_accounting_idempotent_audit",
+      "pass_": true,
+      "seconds": 1.9369687819998944,
+      "detail": {
+        "events": [
+          [
+            "REJECT",
+            "REJECTED",
+            2
+          ],
+          [
+            "ACCEPT",
+            "DONE",
+            56
+          ]
+        ],
+        "results": [
+          [
+            56
+          ]
+        ],
+        "terminal_accounting": true
+      }
+    },
+    "deterministic_AOF_without_reconciliation": {
+      "test": "deterministic_AOF_without_reconciliation",
+      "pass_": true,
+      "seconds": 7.381854786999611,
+      "detail": {
+        "recovery_seconds": 5.235624377000022,
+        "entry_and_group_persisted_without_relay": true,
+        "redis_config": [
+          "appendfsync",
+          "always",
+          "appendonly",
+          "yes"
+        ]
+      }
+    },
+    "rejected_duplicate_conflict": {
+      "test": "rejected_duplicate_conflict",
+      "pass_": true,
+      "seconds": 3.661219978999725,
+      "detail": {
+        "rejected_identity_is_protected": true,
+        "broker_replay_cannot_execute_rejected_event": true
+      }
+    },
+    "concurrent_idempotent_commits": {
+      "test": "concurrent_idempotent_commits",
+      "pass_": true,
+      "seconds": 20.004122966000068,
+      "detail": {
+        "worker_processes": 2,
+        "duplicate_publications": 40,
+        "result_rows": 1,
+        "done_audits": 1
+      }
+    },
+    "cold_schema_concurrency": {
+      "test": "cold_schema_concurrency",
+      "pass_": true,
+      "seconds": 1.5418496409993168,
+      "detail": {
+        "concurrent_schema_calls": 32
+      }
+    },
+    "deterministic_stream_group_loss": {
+      "test": "deterministic_stream_group_loss",
+      "pass_": true,
+      "seconds": 3.004975277000085,
+      "detail": {
+        "recovery_seconds": 1.6561903040001198,
+        "worker_not_restarted": true,
+        "initialized_group_deleted": true
+      }
+    }
+  },
+  "pool_size_8": {
+    "admission_contracts": {
+      "test": "admission_contracts",
+      "pass_": true,
+      "seconds": 4.525419427999623,
+      "detail": {
+        "valid_duplicate_conflict_malformed_auth_rejection": "PASS"
+      }
+    },
+    "relay_SIGKILL": {
+      "test": "relay_SIGKILL",
+      "pass_": true,
+      "seconds": 2.8501824329996452,
+      "detail": {
+        "recovery_seconds": 1.7267046380002284
+      }
+    },
+    "worker_SIGKILL": {
+      "test": "worker_SIGKILL",
+      "pass_": true,
+      "seconds": 13.707081401000323,
+      "detail": {
+        "recovery_seconds": 1.6044692389996271,
+        "note": "kill timing nondeterministic; additional deterministic pending test below"
+      }
+    },
+    "pending_reclaim": {
+      "test": "pending_reclaim",
+      "pass_": true,
+      "seconds": 26.273190520000753,
+      "detail": {
+        "recovery_seconds": 4.862014719999934,
+        "target_confirmed_in_dead_consumer_delivery": true
+      }
+    },
+    "redis_SIGKILL_AOF": {
+      "test": "redis_SIGKILL_AOF",
+      "pass_": true,
+      "seconds": 15.774381322999943,
+      "detail": {
+        "recovery_seconds": 4.5570718409999245
+      }
+    },
+    "postgres_SIGKILL": {
+      "test": "postgres_SIGKILL",
+      "pass_": true,
+      "seconds": 15.652927964999435,
+      "detail": {
+        "recovery_seconds": 4.336954807999973
+      }
+    },
+    "gateway_SIGKILL": {
+      "test": "gateway_SIGKILL",
+      "pass_": true,
+      "seconds": 4.468339371999718,
+      "detail": {
+        "admitted_event_survived": true
+      }
+    },
+    "redis_stream_and_group_loss": {
+      "test": "redis_stream_and_group_loss",
+      "pass_": true,
+      "seconds": 14.791282084999693,
+      "detail": {
+        "recovery_seconds": 1.424786196000241,
+        "deleted": 1
+      }
+    },
+    "durable_202_pg_crash": {
+      "test": "durable_202_pg_crash",
+      "pass_": true,
+      "seconds": 6.79059330400014,
+      "detail": {
+        "recovery_seconds": 5.631792660999963,
+        "acknowledged_row_survived_db_crash": true
+      }
+    },
+    "backpressure_safe_retry": {
+      "test": "backpressure_safe_retry",
+      "pass_": true,
+      "seconds": 40.032568571999946,
+      "detail": {
+        "capacity": 32,
+        "503_not_admitted": true,
+        "same_id_retry_completed": true
+      }
+    },
+    "redis_publish_failure": {
+      "test": "redis_publish_failure",
+      "pass_": true,
+      "seconds": 5.264585098999305,
+      "detail": {
+        "recovery_seconds": 2.3033890669994435,
+        "failed_publish_remained_pending": true
+      }
+    },
+    "relay_transaction_rollback_after_xadd": {
+      "test": "relay_transaction_rollback_after_xadd",
+      "pass_": true,
+      "seconds": 5.91402730900063,
+      "detail": {
+        "xadd_observed_before_sql_rollback": true,
+        "idempotent_recovery": true
+      }
+    },
+    "result_transaction_rollback": {
+      "test": "result_transaction_rollback",
+      "pass_": true,
+      "seconds": 5.450414441999783,
+      "detail": {
+        "recovery_seconds": 0.9264207180003723,
+        "uncommitted_result_not_acknowledged": true
+      }
+    },
+    "postgres_unavailable_no_false_ack": {
+      "test": "postgres_unavailable_no_false_ack",
+      "pass_": true,
+      "seconds": 5.603321352999956,
+      "detail": {
+        "no_false_202": true,
+        "safe_retry": true
+      }
+    },
+    "final_accounting_idempotent_audit": {
+      "test": "final_accounting_idempotent_audit",
+      "pass_": true,
+      "seconds": 1.8548138610003662,
+      "detail": {
+        "events": [
+          [
+            "REJECT",
+            "REJECTED",
+            5
+          ],
+          [
+            "ACCEPT",
+            "DONE",
+            113
+          ]
+        ],
+        "results": [
+          [
+            113
+          ]
+        ],
+        "terminal_accounting": true
+      }
+    },
+    "deterministic_AOF_without_reconciliation": {
+      "test": "deterministic_AOF_without_reconciliation",
+      "pass_": true,
+      "seconds": 6.804327073999957,
+      "detail": {
+        "recovery_seconds": 5.242678718999741,
+        "entry_and_group_persisted_without_relay": true,
+        "redis_config": [
+          "appendfsync",
+          "always",
+          "appendonly",
+          "yes"
+        ]
+      }
+    },
+    "rejected_duplicate_conflict": {
+      "test": "rejected_duplicate_conflict",
+      "pass_": true,
+      "seconds": 3.4111704710003323,
+      "detail": {
+        "rejected_identity_is_protected": true,
+        "broker_replay_cannot_execute_rejected_event": true
+      }
+    },
+    "concurrent_idempotent_commits": {
+      "test": "concurrent_idempotent_commits",
+      "pass_": true,
+      "seconds": 19.422381931999553,
+      "detail": {
+        "worker_processes": 2,
+        "duplicate_publications": 40,
+        "result_rows": 1,
+        "done_audits": 1
+      }
+    },
+    "cold_schema_concurrency": {
+      "test": "cold_schema_concurrency",
+      "pass_": true,
+      "seconds": 2.4043626609991406,
+      "detail": {
+        "concurrent_schema_calls": 32
+      }
+    },
+    "deterministic_stream_group_loss": {
+      "test": "deterministic_stream_group_loss",
+      "pass_": true,
+      "seconds": 3.0453194479996455,
+      "detail": {
+        "recovery_seconds": 1.6744427169996925,
+        "worker_not_restarted": true,
+        "initialized_group_deleted": true
+      }
+    }
+  },
+  "source_tests": 10,
+  "unexecuted": [
+    "physical power loss",
+    "simultaneous PostgreSQL and Redis durable-volume loss",
+    "prolonged production load",
+    "real AI/GPU workloads",
+    "non-neutral EV scheduling"
+  ]
+}

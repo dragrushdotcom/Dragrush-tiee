@@ -1,0 +1,68 @@
+{
+  "recorded_at": "2026-10-11T06:55:15.347454+00:00",
+  "base_commit": "6e12b5098699ba636cdb1112dd192da74d8f9bb3",
+  "branch": "tiee-core-v45-validation",
+  "services": {
+    "gateway": {
+      "image_id": "sha256:c10f80ee299521e6a425d038a2400f2c486d1ab9107b57f9d67bb8208bc9928b",
+      "status": "running",
+      "restart_count": 0
+    },
+    "relay": {
+      "image_id": "sha256:69354022ab3a7b88b5a07c84ab5a791018f023d50293c60c32354fe58db01d45",
+      "status": "running",
+      "restart_count": 0
+    },
+    "worker": {
+      "image_id": "sha256:72134c3c22b1bd50537222168f4a74d30955132b30e49a2cacfc8ba94b6dd61c",
+      "status": "running",
+      "restart_count": 0
+    },
+    "redis": {
+      "image_id": "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+      "status": "running",
+      "restart_count": 0
+    },
+    "postgres": {
+      "image_id": "sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24",
+      "status": "running",
+      "restart_count": 0
+    },
+    "probe": {
+      "image_id": "sha256:2797a0ade7628a38f5d2e8cd7cb041166dda7e634bf7055c99fd52bda1693fb8",
+      "status": "running",
+      "restart_count": 0
+    }
+  },
+  "application_options": {
+    "POLICY": "baseline",
+    "PG_POOL_SIZE": "0",
+    "QUEUE_CAPACITY": "1000",
+    "PILOT_DATABASE": null
+  },
+  "application_packages": [
+    "psycopg==3.2.4",
+    "psycopg-binary==3.2.4",
+    "psycopg-pool==3.2.6",
+    "redis==5.2.1",
+    "typing_extensions==4.16.0"
+  ],
+  "redis_version": "Redis server v=7.4.11 sha=00000000:0 malloc=jemalloc-5.3.0 bits=64 build=40ff01a501d8e4b6",
+  "postgres_version": "postgres (PostgreSQL) 17.11",
+  "redis_aof_config": [
+    "appendfsync",
+    "always",
+    "appendonly",
+    "yes"
+  ],
+  "postgres_durability": [
+    "fsync=on",
+    "full_page_writes=on",
+    "synchronous_commit=on"
+  ],
+  "published_ports": {
+    "gateway": "{}",
+    "redis": "{}",
+    "postgres": "{}"
+  }
+}

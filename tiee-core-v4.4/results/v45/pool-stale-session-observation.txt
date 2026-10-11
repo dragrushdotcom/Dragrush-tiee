@@ -1,0 +1,3 @@
+Observed Gateway log before rebuilding connection checks (captured through Codespace browser terminal):
+gateway error: OperationalError('consuming input failed: server closed the connection unexpectedly ...')
+Pool discarded closed connections after failed requests. This observation motivated checkout validation. See pool-integration-before-check.log for the actual failed suite.

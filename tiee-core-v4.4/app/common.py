@@ -2,13 +2,27 @@ import hashlib
 import json
 import os
 import time
+import threading
+_POOL = None
+_POOL_LOCK = threading.Lock()
 
 STREAM = 'tiee:events'
 GROUP = 'workers'
 
 def pg():
     import psycopg
-    return psycopg.connect(os.environ['PG_DSN'])
+    size=int(os.environ.get('PG_POOL_SIZE','0'))
+    if size == 0:
+        return psycopg.connect(os.environ['PG_DSN'])
+    if not 1 <= size <= 16:
+        raise ValueError('PG_POOL_SIZE must be 0..16')
+    global _POOL
+    if _POOL is None:
+        with _POOL_LOCK:
+            if _POOL is None:
+                from psycopg_pool import ConnectionPool
+                _POOL=ConnectionPool(os.environ['PG_DSN'],min_size=1,max_size=size,timeout=2,kwargs={'connect_timeout':2},check=ConnectionPool.check_connection)
+    return _POOL.connection()
 
 def rd():
     import redis
@@ -22,6 +36,8 @@ def fingerprint(event):
 
 def ensure_schema():
     with pg() as c:
+        # Serialize concurrent first-start DDL across services.
+        c.execute('SELECT pg_advisory_xact_lock(73420)')
         c.execute('''CREATE TABLE IF NOT EXISTS events (
           id TEXT PRIMARY KEY, fingerprint TEXT NOT NULL, payload JSONB NOT NULL,
           disposition TEXT NOT NULL CHECK (disposition IN ('ACCEPT','REJECT')),

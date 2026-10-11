@@ -1,0 +1,164 @@
+ Image tiee45pilot-probe Building 
+ Image tiee45pilot-gateway Building 
+ Image tiee45pilot-relay Building 
+ Image tiee45pilot-worker Building 
+ Image tiee45pilot-network_anchor Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 2.42kB done
+#1 DONE 0.0s
+
+#2 [worker internal] load build definition from Dockerfile
+#2 transferring dockerfile: 188B done
+#2 DONE 0.0s
+
+#3 [probe internal] load metadata for docker.io/library/python:3.12-slim
+#3 DONE 0.3s
+
+#4 [network_anchor internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [network_anchor internal] load build context
+#5 transferring context: 3.40kB 0.0s done
+#5 DONE 0.0s
+
+#6 [probe 1/5] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#6 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 0.0s done
+#6 DONE 0.0s
+
+#7 [relay 2/5] WORKDIR /srv
+#7 CACHED
+
+#8 [relay 3/5] COPY requirements.txt ./
+#8 CACHED
+
+#9 [relay 4/5] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [probe 5/5] COPY app ./app
+#10 DONE 0.0s
+
+#11 [gateway] exporting to image
+#11 exporting layers 0.1s done
+#11 exporting manifest sha256:ff9edab43a272f05d9110e075976db2befd331b839ca9288e6014bcb9dbfa89e 0.1s done
+#11 exporting config sha256:485ba2096c0a45a95968cffc6b5764f3b7008a202c6e31d13eaeaaf3631d91e5
+#11 exporting config sha256:485ba2096c0a45a95968cffc6b5764f3b7008a202c6e31d13eaeaaf3631d91e5 0.1s done
+#11 exporting attestation manifest sha256:561766f52651de84d8cf5c6a0193b44412fee0c4f80b80ebf7fd8636240e7902
+#11 exporting attestation manifest sha256:561766f52651de84d8cf5c6a0193b44412fee0c4f80b80ebf7fd8636240e7902 0.1s done
+#11 exporting manifest list sha256:c10f80ee299521e6a425d038a2400f2c486d1ab9107b57f9d67bb8208bc9928b 0.1s done
+#11 naming to docker.io/library/tiee45pilot-gateway:latest 0.0s done
+#11 unpacking to docker.io/library/tiee45pilot-gateway:latest
+#11 unpacking to docker.io/library/tiee45pilot-gateway:latest 0.1s done
+#11 DONE 0.7s
+
+#12 [worker] exporting to image
+#12 exporting layers 0.1s done
+#12 exporting manifest sha256:e26a7fa50dc0ffefa060796a094b84d5da898f661b9b59184efd55566e97bb44 0.1s done
+#12 exporting config sha256:51d30e6d9003f60a030dab0de34f33425e426c3e85b7a552ab7e1e8e3d5cf500 0.1s done
+#12 exporting attestation manifest sha256:6964542ebd7a89051370e693330e47d40f9ff6ba8f1d36c12133817b07ca5e1b 0.1s done
+#12 exporting manifest list sha256:72134c3c22b1bd50537222168f4a74d30955132b30e49a2cacfc8ba94b6dd61c 0.0s done
+#12 naming to docker.io/library/tiee45pilot-worker:latest 0.0s done
+#12 unpacking to docker.io/library/tiee45pilot-worker:latest 0.1s done
+#12 DONE 0.7s
+
+#13 [network_anchor] exporting to image
+#13 exporting layers 0.1s done
+#13 exporting manifest sha256:1bac9072418cfae5491f93f555b155b9f953623c109089325fab3ff37b87e94b 0.1s done
+#13 exporting config sha256:7e792444fc06d5d334abc3cd7dcb8f5dae546dcc8f32e6b09a47f64681a3073e 0.1s done
+#13 exporting attestation manifest sha256:6bfeab3713e2be16e66b13972dca5f0c4902df02dc7a726271e43646807665b6 0.1s done
+#13 exporting manifest list sha256:307c051b82d50ed0914e06b9789983cff89bfae3c745676352995af679d2b6b4 0.0s done
+#13 naming to docker.io/library/tiee45pilot-network_anchor:latest 0.0s done
+#13 unpacking to docker.io/library/tiee45pilot-network_anchor:latest 0.1s done
+#13 DONE 0.7s
+
+#14 [probe] exporting to image
+#14 exporting layers 0.1s done
+#14 exporting manifest sha256:e22f1442a8258fdc90989e66d505e1d2e87f8c725bdd576f7992fc0865772f6e 0.1s done
+#14 exporting config sha256:78c062be68bb37f1b2c25299e36b293bad76190466aab3646734807866cd5327 0.1s done
+#14 exporting attestation manifest sha256:66ead909c1411938e2797c89f6284ccb30f867bf6f7cd7fb69acac527bc5ac3e 0.1s done
+#14 exporting manifest list sha256:2797a0ade7628a38f5d2e8cd7cb041166dda7e634bf7055c99fd52bda1693fb8 0.1s done
+#14 naming to docker.io/library/tiee45pilot-probe:latest 0.0s done
+#14 unpacking to docker.io/library/tiee45pilot-probe:latest 0.1s done
+#14 DONE 0.7s
+
+#15 [relay] exporting to image
+#15 exporting layers 0.1s done
+#15 exporting manifest sha256:8f2ada88ecd2cc13090c14112662e7d029641b50fc7b86fb026cca185ad83e09 0.1s done
+#15 exporting config sha256:ca69d2e057dee7060310095f710f711d140b395b2117d29555f4c6c007bf941f 0.1s done
+#15 exporting attestation manifest sha256:f1a22829e754a6b29d91ae1406993f865815fb89e8892f4c59fe219379ffc684 0.1s done
+#15 exporting manifest list sha256:69354022ab3a7b88b5a07c84ab5a791018f023d50293c60c32354fe58db01d45 0.1s done
+#15 naming to docker.io/library/tiee45pilot-relay:latest 0.0s done
+#15 unpacking to docker.io/library/tiee45pilot-relay:latest 0.1s done
+#15 DONE 0.7s
+
+#16 [worker] resolving provenance for metadata file
+#16 DONE 0.2s
+
+#17 [gateway] resolving provenance for metadata file
+#17 DONE 0.1s
+
+#18 [network_anchor] resolving provenance for metadata file
+#18 DONE 0.2s
+
+#19 [relay] resolving provenance for metadata file
+#19 DONE 0.1s
+
+#20 [probe] resolving provenance for metadata file
+#20 DONE 0.0s
+ Image tiee45pilot-gateway Built 
+ Image tiee45pilot-network_anchor Built 
+ Image tiee45pilot-probe Built 
+ Image tiee45pilot-relay Built 
+ Image tiee45pilot-worker Built 
+ Container tiee45pilot-gateway-1 Stopping 
+ Container tiee45pilot-postgres-1 Stopping 
+ Container tiee45pilot-probe-1 Stopping 
+ Container tiee45pilot-redis-1 Stopping 
+ Container tiee45pilot-relay-1 Stopping 
+ Container tiee45pilot-worker-1 Stopping 
+ Container tiee45pilot-worker-1 Stopped 
+ Container tiee45pilot-postgres-1 Stopped 
+ Container tiee45pilot-redis-1 Stopped 
+ Container tiee45pilot-probe-1 Stopped 
+ Container tiee45pilot-gateway-1 Stopped 
+ Container tiee45pilot-relay-1 Stopped 
+ Container tiee45pilot-network_anchor-1 Recreate 
+ Container tiee45pilot-network_anchor-1 Recreated 
+ Container tiee45pilot-postgres-1 Recreate 
+ Container tiee45pilot-redis-1 Recreate 
+ Container tiee45pilot-probe-1 Recreate 
+ Container tiee45pilot-probe-1 Recreated 
+ Container tiee45pilot-postgres-1 Recreated 
+ Container tiee45pilot-redis-1 Recreated 
+ Container tiee45pilot-gateway-1 Recreate 
+ Container tiee45pilot-worker-1 Recreate 
+ Container tiee45pilot-relay-1 Recreate 
+ Container tiee45pilot-worker-1 Recreated 
+ Container tiee45pilot-relay-1 Recreated 
+ Container tiee45pilot-gateway-1 Recreated 
+ Container tiee45pilot-network_anchor-1 Starting 
+ Container tiee45pilot-network_anchor-1 Started 
+ Container tiee45pilot-probe-1 Starting 
+ Container tiee45pilot-redis-1 Starting 
+ Container tiee45pilot-postgres-1 Starting 
+ Container tiee45pilot-probe-1 Started 
+ Container tiee45pilot-postgres-1 Started 
+ Container tiee45pilot-redis-1 Started 
+ Container tiee45pilot-redis-1 Waiting 
+ Container tiee45pilot-postgres-1 Waiting 
+ Container tiee45pilot-postgres-1 Waiting 
+ Container tiee45pilot-redis-1 Waiting 
+ Container tiee45pilot-redis-1 Waiting 
+ Container tiee45pilot-postgres-1 Waiting 
+ Container tiee45pilot-postgres-1 Healthy 
+ Container tiee45pilot-postgres-1 Healthy 
+ Container tiee45pilot-postgres-1 Healthy 
+ Container tiee45pilot-redis-1 Healthy 
+ Container tiee45pilot-gateway-1 Starting 
+ Container tiee45pilot-redis-1 Healthy 
+ Container tiee45pilot-worker-1 Starting 
+ Container tiee45pilot-redis-1 Healthy 
+ Container tiee45pilot-relay-1 Starting 
+ Container tiee45pilot-relay-1 Started 
+ Container tiee45pilot-worker-1 Started 
+ Container tiee45pilot-gateway-1 Started 

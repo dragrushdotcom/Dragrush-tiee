@@ -1,0 +1,76 @@
+[
+  {
+    "stage": "training",
+    "pairs": 3,
+    "useful_completion_rps_ratio": {
+      "estimate": 3.115806313112306,
+      "ci95": [
+        2.8580680386181165,
+        3.356749482725565
+      ]
+    },
+    "completion_p95_ms_ratio": {
+      "estimate": 1.1495853957521012,
+      "ci95": [
+        0.784555896879514,
+        1.5661366144023767
+      ]
+    },
+    "total_service_cpu_seconds_ratio": {
+      "estimate": 0.2004258802861098,
+      "ci95": [
+        0.19824659718628457,
+        0.20255154719475352
+      ]
+    },
+    "baseline": {
+      "useful_completion_rps": 26.656593105664346,
+      "completion_p95_ms": 651.7701148986816,
+      "total_service_cpu_seconds": 11.353131666666668,
+      "sql_pending_peak": 16.333333333333332
+    },
+    "pooled": {
+      "useful_completion_rps": 83.01188002489327,
+      "completion_p95_ms": 750.7094542185465,
+      "total_service_cpu_seconds": 2.2757173333333336,
+      "sql_pending_peak": 58.333333333333336
+    }
+  },
+  {
+    "stage": "held_out",
+    "pairs": 3,
+    "useful_completion_rps_ratio": {
+      "estimate": 3.454311944373254,
+      "ci95": [
+        3.23000984487865,
+        3.829572214395385
+      ]
+    },
+    "completion_p95_ms_ratio": {
+      "estimate": 0.3349865582588283,
+      "ci95": [
+        0.2709069322021843,
+        0.37266876852281106
+      ]
+    },
+    "total_service_cpu_seconds_ratio": {
+      "estimate": 0.18563779089639082,
+      "ci95": [
+        0.18068202867268626,
+        0.1885616245397541
+      ]
+    },
+    "baseline": {
+      "useful_completion_rps": 19.3743234346715,
+      "completion_p95_ms": 10477.560043334961,
+      "total_service_cpu_seconds": 34.67265733333334,
+      "sql_pending_peak": 235.33333333333334
+    },
+    "pooled": {
+      "useful_completion_rps": 66.7980446912404,
+      "completion_p95_ms": 3493.131240208944,
+      "total_service_cpu_seconds": 6.436017333333334,
+      "sql_pending_peak": 304.6666666666667
+    }
+  }
+]

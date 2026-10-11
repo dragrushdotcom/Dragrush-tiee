@@ -26,17 +26,27 @@ def inside(op,a):
         r=redis.Redis.from_url(os.environ['REDIS_URL'])
         # Delete only this disposable pilot's stream, reproducing loss of group too.
         return {'deleted':r.delete('tiee:events')}
+    if op=='schema_race':
+        sys.path.insert(0,"/srv")
+        from app.common import ensure_schema
+        os.environ['PG_DSN']=os.environ['PG_DSN'].rsplit('/',1)[0]+'/'+a['database']
+        with concurrent.futures.ThreadPoolExecutor(max_workers=16) as ex: list(ex.map(lambda _:ensure_schema(),range(32)))
+        return {'concurrent_schema_calls':32}
+    if op=='redis_replay':
+        r=redis.Redis.from_url(os.environ['REDIS_URL'])
+        return [r.xadd('tiee:events',{'id':a['id']}).decode() for _ in range(a.get('count',40))]
     if op=='send': return http(a['event'],a.get('key'))
     if op=='bench':
         rng=random.Random(a['seed']); prefix=a['prefix']; n=a['n']
         events=[dict(id=f'{prefix}-{i}',kind='bot' if rng.random()<a['noise'] else 'valid',
             rounds=a['rounds'],body=hashlib.sha256(str((a['seed'],i)).encode()).hexdigest()) for i in range(n)]
-        sent={}; ack=[]; codes={}; lock=threading.Lock(); observed={}; poll_stop=threading.Event(); poll_errors=[]
+        sent={}; ack=[]; codes={}; lock=threading.Lock(); observed={}; queue_samples=[]; poll_stop=threading.Event(); poll_errors=[]
         def poll_commits():
             try:
                 with psycopg.connect(os.environ['PG_DSN'],autocommit=True) as c:
                     while not poll_stop.is_set():
                         found=c.execute('SELECT id FROM results WHERE id LIKE %s',(prefix+'-%',)).fetchall()
+                        queue_samples.append({'at':time.time(),'sql_pending':c.execute("SELECT count(*) FROM events WHERE disposition='ACCEPT' AND state!='DONE'").fetchone()[0],'stream_depth':redis.Redis.from_url(os.environ['REDIS_URL']).xlen('tiee:events')})
                         now=time.time()
                         for (eid,) in found: observed.setdefault(eid,now)
                         poll_stop.wait(.02)
@@ -74,14 +84,15 @@ def inside(op,a):
             admission_seconds=admission_elapsed,drain_seconds=elapsed,ingress_rps=n/admission_elapsed,
             useful_completion_rps=len(expected)/elapsed,ack_p50_ms=pct(ack,.5),ack_p95_ms=pct(ack,.95),ack_p99_ms=pct(ack,.99),
             completion_p50_ms=pct(lat,.5),completion_p95_ms=pct(lat,.95),completion_p99_ms=pct(lat,.99),
-            integrity_pass=True,states=states,completion_latencies_ms=lat,ack_latencies_ms=ack,
+            integrity_pass=True,states=states,queue_samples=queue_samples,sql_pending_peak=max((x['sql_pending'] for x in queue_samples),default=0),stream_depth_peak=max((x['stream_depth'] for x in queue_samples),default=0),completion_latencies_ms=lat,ack_latencies_ms=ack,
             workload_hash=hashlib.sha256(json.dumps([{k:v for k,v in e.items() if k!='id'} for e in events],sort_keys=True).encode()).hexdigest())
     raise ValueError(op)
 
-PROJECT='tiee44pilot'
+PROJECT=os.environ.get('COMPOSE_PROJECT_NAME','tiee45pilot')
 COMPOSE=['docker','compose','-p',PROJECT,'-f','docker-compose.yml','-f','compose.validation.yml']
-OUT=pathlib.Path('results'); OUT.mkdir(exist_ok=True)
+OUT=pathlib.Path(os.environ.get('VALIDATION_RESULTS','results/v45')); OUT.mkdir(parents=True,exist_ok=True)
 def run(args,check=True,**kw):
+    kw.setdefault("stdin",subprocess.DEVNULL)
     p=subprocess.run(args,text=True,capture_output=True,**kw)
     if check and p.returncode: raise RuntimeError(f'{args[:5]} exited {p.returncode}: {p.stderr[-1500:]}')
     return p

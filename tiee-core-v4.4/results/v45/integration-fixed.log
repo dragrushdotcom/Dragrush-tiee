@@ -1,0 +1,8 @@
+{"test": "admission_contracts", "pass_": true, "seconds": 4.758211188999667, "detail": {"valid_duplicate_conflict_malformed_auth_rejection": "PASS"}}
+{"test": "relay_SIGKILL", "pass_": true, "seconds": 2.793170248000024, "detail": {"recovery_seconds": 1.7864855019997776}}
+{"test": "worker_SIGKILL", "pass_": true, "seconds": 14.895612151000023, "detail": {"recovery_seconds": 2.1340982150004493, "note": "kill timing nondeterministic; additional deterministic pending test below"}}
+{"test": "pending_reclaim", "pass_": true, "seconds": 26.31518970900015, "detail": {"recovery_seconds": 4.701612142999693, "target_confirmed_in_dead_consumer_delivery": true}}
+{"test": "redis_SIGKILL_AOF", "pass_": true, "seconds": 16.181495561999327, "detail": {"recovery_seconds": 4.525109105999945}}
+{"test": "postgres_SIGKILL", "pass_": true, "seconds": 15.7896891219998, "detail": {"recovery_seconds": 4.491551577999417}}
+{"test": "gateway_SIGKILL", "pass_": true, "seconds": 3.579414136000196, "detail": {"admitted_event_survived": true}}
+{"test": "redis_stream_and_group_loss", "pass_": true, "seconds": 17.301605122999717, "detail": {"recovery_seconds": 1.7283850189996883, "deleted": 1}}

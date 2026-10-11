@@ -1,0 +1,16 @@
+{
+  "verified_commit": "6e12b5098699ba636cdb1112dd192da74d8f9bb3",
+  "original_backup": "/workspaces/tiee-backup-20261010T100752Z",
+  "fresh_backup": "/workspaces/tiee-preserve-v45-20261011T061415Z",
+  "original_worktree_status_unchanged": true,
+  "original_status": "A  TiEE_Database_Probe_v0.4.zip\nA  TiEE_Robotics_Baseline_v0.1a.zip\nA  TiEE_Robotics_Dynamic_v0.1b.zip\nA  TiEE_Starter_v0.3.zip\nA  tiee-starter/ROBOTICS_DYNAMIC_README.md\nA  tiee-starter/TiEE_Robotics_Baseline_v0.1a/ROBOTICS_BASELINE_README.md\nA  tiee-starter/TiEE_Robotics_Baseline_v0.1a/ROBOTICS_BASELINE_VERIFICATION.md\nA  tiee-starter/TiEE_Robotics_Baseline_v0.1a/robotics/__init__.py\nA  tiee-starter/TiEE_Robotics_Baseline_v0.1a/robotics/baseline.py\nA  tiee-starter/TiEE_Robotics_Baseline_v0.1a/robotics/replay.html\nA  tiee-starter/TiEE_Robotics_Baseline_v0.1a/robotics/run.py\nA  tiee-starter/TiEE_Robotics_Baseline_v0.1a/robotics/tests/test_baseline.py\nA  tiee-starter/robotics/dynamic.py\nA  tiee-starter/robotics/run_dynamic.py\nA  tiee-starter/robotics/tests/test_dynamic.py\n?? TiEE_Core_v4_4_Reconciliation_Pilot.zip\n?? TiEE_Validation_Harness.zip\n?? TiEE_Validation_Harness_v2.zip\n?? TiEE_Validation_Harness_v3.zip\n",
+  "branches": "  database-probe-v04                1940215 [origin/database-probe-v04] Add database probe and mixed results from 99 correctness-passing trials\n  main                              256700a [origin/main] Add TiEE starter and passing PostgreSQL correctness gate\n+ robotics-v01                      6e12b50 (/workspaces/Dragrush-tiee) [origin/robotics-v01: ahead 1] Integrate TiEE v4.4 recovery validation\n* tiee-core-v45-validation          6e12b50 Integrate TiEE v4.4 recovery validation\n  remotes/origin/HEAD               -> origin/main\n  remotes/origin/database-probe-v04 1940215 Add database probe and mixed results from 99 correctness-passing trials\n  remotes/origin/main               256700a Add TiEE starter and passing PostgreSQL correctness gate\n  remotes/origin/robotics-v01       f59de27 Add static warehouse robot baseline and verified replay\n",
+  "backup_sha256": {
+    "/workspaces/tiee-backup-20261010T100752Z/repository.tar.gz": "0071f7868af6467bab876459975f749ebeed4eda54b63caf5f703509388f0ec2",
+    "/workspaces/tiee-preserve-v45-20261011T061415Z/repository.tar.gz": "9b49165abe97c38748e78565847a57f6911125b8794b1dee3ad020bc84c6f829"
+  },
+  "cpu_quota": "max 100000\n",
+  "memory_limit": "max\n",
+  "original_files_byte_identical_to_fresh_backup": 404,
+  "final_original_status_unchanged": true
+}

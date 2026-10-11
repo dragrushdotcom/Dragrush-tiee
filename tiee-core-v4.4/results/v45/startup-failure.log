@@ -1,0 +1,23 @@
+worker-1  | Traceback (most recent call last):
+worker-1  |   File "<frozen runpy>", line 198, in _run_module_as_main
+worker-1  |   File "<frozen runpy>", line 88, in _run_code
+worker-1  |   File "/srv/app/worker.py", line 5, in <module>
+worker-1  |     ensure_schema();r=rd()
+worker-1  |     ^^^^^^^^^^^^^^^
+worker-1  |   File "/srv/app/common.py", line 25, in ensure_schema
+worker-1  |     c.execute('''CREATE TABLE IF NOT EXISTS events (
+worker-1  |   File "/usr/local/lib/python3.12/site-packages/psycopg/connection.py", line 251, in execute
+worker-1  |     raise ex.with_traceback(None)
+worker-1  | psycopg.errors.UniqueViolation: duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+worker-1  | DETAIL:  Key (typname, typnamespace)=(events, 2200) already exists.
+gateway-1  | Traceback (most recent call last):
+gateway-1  |   File "<frozen runpy>", line 198, in _run_module_as_main
+gateway-1  |   File "<frozen runpy>", line 88, in _run_code
+gateway-1  |   File "/srv/app/gateway.py", line 46, in <module>
+gateway-1  |     ensure_schema()
+gateway-1  |   File "/srv/app/common.py", line 25, in ensure_schema
+gateway-1  |     c.execute('''CREATE TABLE IF NOT EXISTS events (
+gateway-1  |   File "/usr/local/lib/python3.12/site-packages/psycopg/connection.py", line 251, in execute
+gateway-1  |     raise ex.with_traceback(None)
+gateway-1  | psycopg.errors.UniqueViolation: duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+gateway-1  | DETAIL:  Key (typname, typnamespace)=(events, 2200) already exists.

@@ -1,0 +1,15 @@
+test_conflict (test_contract.Contracts.test_conflict) ... ok
+test_deterministic_output (test_contract.Contracts.test_deterministic_output) ... ok
+test_equal_policy (test_contract.Contracts.test_equal_policy) ... ok
+test_fingerprint_canonical (test_contract.Contracts.test_fingerprint_canonical) ... ok
+test_bad_interval_rejected (test_reconciliation.ReconciliationContracts.test_bad_interval_rejected) ... ok
+test_completed_or_rejected_not_relayed (test_reconciliation.ReconciliationContracts.test_completed_or_rejected_not_relayed) ... ok
+test_enqueued_not_early (test_reconciliation.ReconciliationContracts.test_enqueued_not_early) ... ok
+test_enqueued_recovery_after_interval (test_reconciliation.ReconciliationContracts.test_enqueued_recovery_after_interval) ... ok
+test_old_schema_null_retry (test_reconciliation.ReconciliationContracts.test_old_schema_null_retry) ... ok
+test_pending_relay (test_reconciliation.ReconciliationContracts.test_pending_relay) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+OK

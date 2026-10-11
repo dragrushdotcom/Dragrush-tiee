@@ -18,8 +18,8 @@ if __name__=='__main__':
             for mid,fields in msgs:
                 eid=fields['id']
                 with pg() as c:
-                    row=c.execute('SELECT payload,state FROM events WHERE id=%s',(eid,)).fetchone()
-                    if row and row[1]!='DONE':
+                    row=c.execute('SELECT payload,state FROM events WHERE id=%s FOR UPDATE',(eid,)).fetchone()
+                    if row and row[1] in ('PENDING','ENQUEUED'):
                         event=row[0]
                         digest=digest_work(event)
                         c.execute('INSERT INTO results(id,digest) VALUES(%s,%s) ON CONFLICT(id) DO NOTHING',(eid,digest))
@@ -27,5 +27,15 @@ if __name__=='__main__':
                         c.execute('INSERT INTO audit(id,action) VALUES(%s,%s)',(eid,'DONE'))
                 # ACK only after Postgres transaction commits.
                 r.xack(STREAM,GROUP,mid);r.xdel(STREAM,mid)
+        except redis.exceptions.ResponseError as exc:
+            if 'NOGROUP' in str(exc):
+                try: r.xgroup_create(STREAM,GROUP,id='0',mkstream=True)
+                except redis.exceptions.ResponseError as group_exc:
+                    if 'BUSYGROUP' not in str(group_exc):
+                        print('group recovery retry',repr(group_exc),flush=True);time.sleep(.5)
+                except Exception as group_exc:
+                    print('group recovery retry',repr(group_exc),flush=True);time.sleep(.5)
+            else:
+                print('worker redis retry',repr(exc),flush=True);time.sleep(.5)
         except Exception as exc:
             print('worker retry',repr(exc),flush=True);time.sleep(.5)

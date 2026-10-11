@@ -1,4 +1,13 @@
 services:
+  probe:
+    build: .
+    command: ["sleep", "infinity"]
+    network_mode: service:network_anchor
+    volumes: ["./validation:/validation:ro", "./results:/results"]
+    environment:
+      API_KEY: ${API_KEY}
+      PG_DSN: postgresql://tiee:${POSTGRES_PASSWORD}@127.0.0.1:5432/${PILOT_DATABASE:-tiee}
+      REDIS_URL: redis://127.0.0.1:6379/0
   network_anchor:
     build: .
     command: ["sleep", "infinity"]
@@ -12,7 +21,7 @@ services:
     ports: !reset []
     volumes: ["./validation:/validation:ro", "./results:/results"]
     environment:
-      QUEUE_CAPACITY: "1000"
+      QUEUE_CAPACITY: "${QUEUE_CAPACITY:-1000}"
       PG_DSN: postgresql://tiee:${POSTGRES_PASSWORD}@127.0.0.1:5432/${PILOT_DATABASE:-tiee}
       REDIS_URL: redis://127.0.0.1:6379/0
   relay:

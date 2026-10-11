@@ -1,0 +1,337 @@
+[
+  {
+    "stage": "training",
+    "noise": 0,
+    "paired_runs": 3,
+    "ratio_ci_method": "geometric paired bootstrap; 10000 resamples; seed 451012; descriptive with n=3",
+    "useful_completion_rps_ratio": {
+      "estimate": 1.0082541223458907,
+      "ci95": [
+        0.9720234711939646,
+        1.0501027038340216
+      ]
+    },
+    "completion_p95_ms_ratio": {
+      "estimate": 0.9978554418176712,
+      "ci95": [
+        0.9138678010729973,
+        1.0629657291168306
+      ]
+    },
+    "total_service_cpu_seconds_ratio": {
+      "estimate": 1.0141684562767537,
+      "ci95": [
+        0.9876252914092575,
+        1.0439224570211072
+      ]
+    },
+    "baseline": {
+      "useful_completion_rps": 27.414874547278767,
+      "completion_p50_ms": 4122.095425923665,
+      "completion_p95_ms": 6608.0020268758135,
+      "completion_p99_ms": 6845.187584559123,
+      "total_service_cpu_seconds": 21.434555666666665,
+      "sql_pending_peak": 208.33333333333334,
+      "stream_depth_peak": 468.6666666666667,
+      "sampled_working_set_peak_bytes": 244436697.088,
+      "sql_table_growth_bytes": 428714.6666666667,
+      "wal_growth_bytes": 885954.6666666666,
+      "redis_aof_disk_growth_bytes": 365909.3333333333,
+      "service_cpu_seconds": {
+        "gateway": 0.9691333333333333,
+        "relay": 0.546372,
+        "worker": 1.8631133333333334,
+        "redis": 0.8209420000000005,
+        "postgres": 17.234994999999998
+      }
+    },
+    "tiee": {
+      "useful_completion_rps": 27.645937445071027,
+      "completion_p50_ms": 4281.551996866862,
+      "completion_p95_ms": 6601.372400919597,
+      "completion_p99_ms": 6806.851148605347,
+      "total_service_cpu_seconds": 21.763151666666655,
+      "sql_pending_peak": 207.33333333333334,
+      "stream_depth_peak": 467,
+      "sampled_working_set_peak_bytes": 237531474.60266668,
+      "sql_table_growth_bytes": 428714.6666666667,
+      "wal_growth_bytes": 814618.6666666666,
+      "redis_aof_disk_growth_bytes": 364544,
+      "service_cpu_seconds": {
+        "gateway": 0.9729943333333334,
+        "relay": 0.5556016666666667,
+        "worker": 1.8841826666666668,
+        "redis": 0.8226266666666667,
+        "postgres": 17.527746333333322
+      }
+    }
+  },
+  {
+    "stage": "training",
+    "noise": 0.5,
+    "paired_runs": 3,
+    "ratio_ci_method": "geometric paired bootstrap; 10000 resamples; seed 451012; descriptive with n=3",
+    "useful_completion_rps_ratio": {
+      "estimate": 1.0047952559782356,
+      "ci95": [
+        0.9600716328997565,
+        1.0332968663904614
+      ]
+    },
+    "completion_p95_ms_ratio": {
+      "estimate": 1.2057052231599108,
+      "ci95": [
+        0.977787334594207,
+        1.4897030003539569
+      ]
+    },
+    "total_service_cpu_seconds_ratio": {
+      "estimate": 0.9849591775269431,
+      "ci95": [
+        0.9731824371640154,
+        1.0018231647055929
+      ]
+    },
+    "baseline": {
+      "useful_completion_rps": 26.94049556832612,
+      "completion_p50_ms": 510.13986269632977,
+      "completion_p95_ms": 704.4111887613932,
+      "completion_p99_ms": 743.799606959025,
+      "total_service_cpu_seconds": 12.158733333333322,
+      "sql_pending_peak": 19.666666666666668,
+      "stream_depth_peak": 18.333333333333332,
+      "sampled_working_set_peak_bytes": 237954050.73066667,
+      "sql_table_growth_bytes": 311296,
+      "wal_growth_bytes": 471829.3333333333,
+      "redis_aof_disk_growth_bytes": 90112,
+      "service_cpu_seconds": {
+        "gateway": 0.944754,
+        "relay": 0.266369,
+        "worker": 0.8181043333333333,
+        "redis": 0.4084146666666661,
+        "postgres": 9.721091333333321
+      }
+    },
+    "tiee": {
+      "useful_completion_rps": 27.08614044065839,
+      "completion_p50_ms": 523.8116582234701,
+      "completion_p95_ms": 865.123987197876,
+      "completion_p99_ms": 924.5644410451254,
+      "total_service_cpu_seconds": 11.973029999999998,
+      "sql_pending_peak": 22,
+      "stream_depth_peak": 20.666666666666668,
+      "sampled_working_set_peak_bytes": 235534286.848,
+      "sql_table_growth_bytes": 308565.3333333333,
+      "wal_growth_bytes": 421837.3333333333,
+      "redis_aof_disk_growth_bytes": 90112,
+      "service_cpu_seconds": {
+        "gateway": 0.9540583333333333,
+        "relay": 0.254065,
+        "worker": 0.815016,
+        "redis": 0.3939040000000005,
+        "postgres": 9.555986666666664
+      }
+    }
+  },
+  {
+    "stage": "training",
+    "noise": 0.9,
+    "paired_runs": 3,
+    "ratio_ci_method": "geometric paired bootstrap; 10000 resamples; seed 451012; descriptive with n=3",
+    "useful_completion_rps_ratio": {
+      "estimate": 1.0105897889958348,
+      "ci95": [
+        0.9524763147264121,
+        1.0932589367189385
+      ]
+    },
+    "completion_p95_ms_ratio": {
+      "estimate": 1.065053845139647,
+      "ci95": [
+        1.0571112088802022,
+        1.0767950095448713
+      ]
+    },
+    "total_service_cpu_seconds_ratio": {
+      "estimate": 0.9977851708026311,
+      "ci95": [
+        0.9731505066230788,
+        1.0182477121741926
+      ]
+    },
+    "baseline": {
+      "useful_completion_rps": 8.167206987561075,
+      "completion_p50_ms": 195.1305071512858,
+      "completion_p95_ms": 250.70675214131674,
+      "completion_p99_ms": 291.015625,
+      "total_service_cpu_seconds": 8.614164333333333,
+      "sql_pending_peak": 3,
+      "stream_depth_peak": 2.6666666666666665,
+      "sampled_working_set_peak_bytes": 179535435.09333333,
+      "sql_table_growth_bytes": 204800,
+      "wal_growth_bytes": 299197.3333333333,
+      "redis_aof_disk_growth_bytes": 21845.333333333332,
+      "service_cpu_seconds": {
+        "gateway": 0.9153863333333333,
+        "relay": 0.18577500000000002,
+        "worker": 0.21135466666666666,
+        "redis": 0.27929366666666694,
+        "postgres": 7.022354666666666
+      }
+    },
+    "tiee": {
+      "useful_completion_rps": 8.22111827937204,
+      "completion_p50_ms": 199.3880271911621,
+      "completion_p95_ms": 266.91873868306476,
+      "completion_p99_ms": 283.0151716868083,
+      "total_service_cpu_seconds": 8.598002333333337,
+      "sql_pending_peak": 3.3333333333333335,
+      "stream_depth_peak": 3,
+      "sampled_working_set_peak_bytes": 175632285.696,
+      "sql_table_growth_bytes": 204800,
+      "wal_growth_bytes": 293082.6666666667,
+      "redis_aof_disk_growth_bytes": 23210.666666666668,
+      "service_cpu_seconds": {
+        "gateway": 0.9263699999999999,
+        "relay": 0.1835826666666666,
+        "worker": 0.211414,
+        "redis": 0.2709030000000001,
+        "postgres": 7.00573266666667
+      }
+    }
+  },
+  {
+    "stage": "held_out",
+    "noise": 0.25,
+    "paired_runs": 3,
+    "ratio_ci_method": "geometric paired bootstrap; 10000 resamples; seed 451012; descriptive with n=3",
+    "useful_completion_rps_ratio": {
+      "estimate": 0.9664451303829671,
+      "ci95": [
+        0.913475499511754,
+        1.0067649996909338
+      ]
+    },
+    "completion_p95_ms_ratio": {
+      "estimate": 1.042651192294012,
+      "ci95": [
+        0.9847410277387676,
+        1.1057630535454948
+      ]
+    },
+    "total_service_cpu_seconds_ratio": {
+      "estimate": 1.0345587540167367,
+      "ci95": [
+        1.0124753327962697,
+        1.047766446777361
+      ]
+    },
+    "baseline": {
+      "useful_completion_rps": 20.572673667696847,
+      "completion_p50_ms": 6360.955238342285,
+      "completion_p95_ms": 10039.661963780722,
+      "completion_p99_ms": 10431.78661664327,
+      "total_service_cpu_seconds": 33.72854333333331,
+      "sql_pending_peak": 241.33333333333334,
+      "stream_depth_peak": 746.6666666666666,
+      "sampled_working_set_peak_bytes": 282612553.0453333,
+      "sql_table_growth_bytes": 529749.3333333334,
+      "wal_growth_bytes": 1160610.6666666667,
+      "redis_aof_disk_growth_bytes": 551594.6666666666,
+      "service_cpu_seconds": {
+        "gateway": 1.3702263333333333,
+        "relay": 0.805441,
+        "worker": 4.675426,
+        "redis": 1.2136426666666658,
+        "postgres": 25.663807333333313
+      }
+    },
+    "tiee": {
+      "useful_completion_rps": 19.887766635720126,
+      "completion_p50_ms": 6567.2173500061035,
+      "completion_p95_ms": 10461.990515391031,
+      "completion_p99_ms": 10849.306106567383,
+      "total_service_cpu_seconds": 34.88877133333334,
+      "sql_pending_peak": 242,
+      "stream_depth_peak": 782.6666666666666,
+      "sampled_working_set_peak_bytes": 282528666.96533334,
+      "sql_table_growth_bytes": 543402.6666666666,
+      "wal_growth_bytes": 1110178.6666666667,
+      "redis_aof_disk_growth_bytes": 562517.3333333334,
+      "service_cpu_seconds": {
+        "gateway": 1.4361053333333333,
+        "relay": 0.843682,
+        "worker": 4.815485333333333,
+        "redis": 1.2732133333333355,
+        "postgres": 26.520285333333334
+      }
+    }
+  },
+  {
+    "stage": "held_out",
+    "noise": 0.75,
+    "paired_runs": 3,
+    "ratio_ci_method": "geometric paired bootstrap; 10000 resamples; seed 451012; descriptive with n=3",
+    "useful_completion_rps_ratio": {
+      "estimate": 1.0836512043742756,
+      "ci95": [
+        1.0436818555945016,
+        1.1298199914671412
+      ]
+    },
+    "completion_p95_ms_ratio": {
+      "estimate": 0.8924970405150645,
+      "ci95": [
+        0.7864275523570906,
+        0.9565435569830861
+      ]
+    },
+    "total_service_cpu_seconds_ratio": {
+      "estimate": 0.9698071116218916,
+      "ci95": [
+        0.9584656040955659,
+        0.9922083879937306
+      ]
+    },
+    "baseline": {
+      "useful_completion_rps": 14.500313056669807,
+      "completion_p50_ms": 254.38674290974936,
+      "completion_p95_ms": 384.0343157450358,
+      "completion_p99_ms": 475.1083056131999,
+      "total_service_cpu_seconds": 11.741663999999995,
+      "sql_pending_peak": 5.333333333333333,
+      "stream_depth_peak": 4.333333333333333,
+      "sampled_working_set_peak_bytes": 283966963.712,
+      "sql_table_growth_bytes": 283989.3333333333,
+      "wal_growth_bytes": 417333.3333333333,
+      "redis_aof_disk_growth_bytes": 57344,
+      "service_cpu_seconds": {
+        "gateway": 1.075344,
+        "relay": 0.256263,
+        "worker": 0.700304,
+        "redis": 0.39102233333333203,
+        "postgres": 9.318730666666662
+      }
+    },
+    "tiee": {
+      "useful_completion_rps": 15.707800366137656,
+      "completion_p50_ms": 242.46708552042642,
+      "completion_p95_ms": 342.8771495819092,
+      "completion_p99_ms": 371.8869686126709,
+      "total_service_cpu_seconds": 11.384299666666676,
+      "sql_pending_peak": 5,
+      "stream_depth_peak": 4.666666666666667,
+      "sampled_working_set_peak_bytes": 284360529.23733336,
+      "sql_table_growth_bytes": 286720,
+      "wal_growth_bytes": 390512,
+      "redis_aof_disk_growth_bytes": 57344,
+      "service_cpu_seconds": {
+        "gateway": 1.055379,
+        "relay": 0.23512366666666665,
+        "worker": 0.6973343333333333,
+        "redis": 0.3803233333333343,
+        "postgres": 9.016139333333342
+      }
+    }
+  }
+]

@@ -30,6 +30,7 @@ services:
       API_KEY: ${API_KEY:-dev-only-change-me}
       QUEUE_CAPACITY: '1000'
       POLICY: ${POLICY:-baseline}
+      PG_POOL_SIZE: ${PG_POOL_SIZE:-0}
     ports: ["127.0.0.1:8087:8087"]
   relay:
     build: .
