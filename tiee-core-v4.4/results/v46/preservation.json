@@ -1,0 +1,6 @@
+{
+  "backup": "/workspaces/tiee-preserve-v46-20261011T090841Z",
+  "original_status": "A  TiEE_Database_Probe_v0.4.zip\nA  TiEE_Robotics_Baseline_v0.1a.zip\nA  TiEE_Robotics_Dynamic_v0.1b.zip\nA  TiEE_Starter_v0.3.zip\nA  tiee-starter/ROBOTICS_DYNAMIC_README.md\nA  tiee-starter/TiEE_Robotics_Baseline_v0.1a/ROBOTICS_BASELINE_README.md\nA  tiee-starter/TiEE_Robotics_Baseline_v0.1a/ROBOTICS_BASELINE_VERIFICATION.md\nA  tiee-starter/TiEE_Robotics_Baseline_v0.1a/robotics/__init__.py\nA  tiee-starter/TiEE_Robotics_Baseline_v0.1a/robotics/baseline.py\nA  tiee-starter/TiEE_Robotics_Baseline_v0.1a/robotics/replay.html\nA  tiee-starter/TiEE_Robotics_Baseline_v0.1a/robotics/run.py\nA  tiee-starter/TiEE_Robotics_Baseline_v0.1a/robotics/tests/test_baseline.py\nA  tiee-starter/robotics/dynamic.py\nA  tiee-starter/robotics/run_dynamic.py\nA  tiee-starter/robotics/tests/test_dynamic.py\n?? TiEE_Core_v4_4_Reconciliation_Pilot.zip\n?? TiEE_Validation_Harness.zip\n?? TiEE_Validation_Harness_v2.zip\n?? TiEE_Validation_Harness_v3.zip\n",
+  "base_commit": "0a0334569d5767902d34752fdafedcee4eb3b94c",
+  "archive_sha256": "77b57a7576ecfc550f67d665250c00c371caddc81eed8a038c43fbbb69c09d9f"
+}

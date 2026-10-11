@@ -1,0 +1,16 @@
+{"index": 0, "condition": "fixed_admission", "arm": "A2", "net_total_utility": 329.1728535, "net_utility_per_cpu": 39.79619734835361, "service_cpu_seconds": 8.271465000000008, "drain_pass": false, "http_errors": 0}
+{"index": 1, "condition": "fixed_admission", "arm": "A1", "net_total_utility": 275.1625482, "net_utility_per_cpu": 32.8571206366742, "service_cpu_seconds": 8.374518000000013, "drain_pass": false, "http_errors": 0}
+{"index": 2, "condition": "fixed_admission", "arm": "A4", "net_total_utility": 215.1483698, "net_utility_per_cpu": 25.263121223272798, "service_cpu_seconds": 8.516301999999978, "drain_pass": false, "http_errors": 1}
+{"index": 3, "condition": "fixed_admission", "arm": "A0", "net_total_utility": 265.1658488, "net_utility_per_cpu": 31.788703151179305, "service_cpu_seconds": 8.341512, "drain_pass": false, "http_errors": 0}
+{"index": 4, "condition": "fixed_admission", "arm": "A3", "net_total_utility": 227.1793634, "net_utility_per_cpu": 27.68330871423477, "service_cpu_seconds": 8.206366000000003, "drain_pass": false, "http_errors": 0}
+{"index": 5, "condition": "fixed_admission", "arm": "A0", "net_total_utility": 469.1721582, "net_utility_per_cpu": 56.67413244897757, "service_cpu_seconds": 8.278418, "drain_pass": false, "http_errors": 0}
+{"index": 6, "condition": "fixed_admission", "arm": "A1", "net_total_utility": 471.1845827, "net_utility_per_cpu": 57.784472159224414, "service_cpu_seconds": 8.15417300000001, "drain_pass": false, "http_errors": 0}
+{"index": 7, "condition": "fixed_admission", "arm": "A3", "net_total_utility": 433.1899695, "net_utility_per_cpu": 53.47822946173006, "service_cpu_seconds": 8.100305000000013, "drain_pass": false, "http_errors": 0}
+{"index": 8, "condition": "fixed_admission", "arm": "A4", "net_total_utility": 469.169452, "net_utility_per_cpu": 56.48914355341281, "service_cpu_seconds": 8.305480000000017, "drain_pass": false, "http_errors": 0}
+{"index": 9, "condition": "fixed_admission", "arm": "A2", "net_total_utility": 513.1855957, "net_utility_per_cpu": 63.01361568203907, "service_cpu_seconds": 8.144042999999993, "drain_pass": false, "http_errors": 0}
+{"index": 10, "condition": "fixed_admission", "arm": "A2", "net_total_utility": 307.1946459, "net_utility_per_cpu": 38.14404693537888, "service_cpu_seconds": 8.053541000000049, "drain_pass": false, "http_errors": 0}
+{"index": 11, "condition": "fixed_admission", "arm": "A0", "net_total_utility": 273.1843211, "net_utility_per_cpu": 33.49164985143051, "service_cpu_seconds": 8.156789, "drain_pass": false, "http_errors": 0}
+{"index": 12, "condition": "fixed_admission", "arm": "A4", "net_total_utility": 251.1885598, "net_utility_per_cpu": 30.955892966604196, "service_cpu_seconds": 8.114402000000032, "drain_pass": false, "http_errors": 0}
+{"index": 13, "condition": "fixed_admission", "arm": "A1", "net_total_utility": 231.1883815, "net_utility_per_cpu": 28.484858526512042, "service_cpu_seconds": 8.11618500000003, "drain_pass": false, "http_errors": 0}
+{"index": 14, "condition": "fixed_admission", "arm": "A3", "net_total_utility": 317.170714, "net_utility_per_cpu": 38.24624001852179, "service_cpu_seconds": 8.292860000000037, "drain_pass": false, "http_errors": 0}
+COMPLETED fixed_admission 15

@@ -1,0 +1,10 @@
+{
+  "existing_codespace": "scaling potato",
+  "billing_observed_compute_2_core_hours": 5.36,
+  "billing_observed_amount_due": 0,
+  "github_free_core_hours": 120,
+  "documentation": "https://docs.github.com/en/billing/concepts/product-billing/github-codespaces",
+  "maximum_additional_wall_hours": 3,
+  "maximum_additional_core_hours": 6,
+  "no_paid_changes": true
+}

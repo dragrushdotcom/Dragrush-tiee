@@ -1,0 +1,7 @@
+{'pool': 0, 'script': 'validate.py', 'exit': 0}
+{'pool': 0, 'script': 'v45_extended.py', 'exit': 0}
+{'pool': 0, 'script': 'v45_regression.py', 'exit': 0}
+{'pool': 8, 'script': 'validate.py', 'exit': 0}
+{'pool': 8, 'script': 'v45_extended.py', 'exit': 0}
+{'pool': 8, 'script': 'v45_regression.py', 'exit': 0}
+LEGACY FINISHED

@@ -1,0 +1,5 @@
+{"test": "deterministic_AOF_without_reconciliation", "pass_": true, "seconds": 10.383004180999933, "detail": {"recovery_seconds": 6.468332047999866, "entry_and_group_persisted_without_relay": true, "redis_config": ["appendfsync", "always", "appendonly", "yes"]}}
+{"test": "rejected_duplicate_conflict", "pass_": true, "seconds": 6.412326902000132, "detail": {"rejected_identity_is_protected": true, "broker_replay_cannot_execute_rejected_event": true}}
+{"test": "concurrent_idempotent_commits", "pass_": true, "seconds": 27.008347501000117, "detail": {"worker_processes": 2, "duplicate_publications": 40, "result_rows": 1, "done_audits": 1}}
+{"test": "cold_schema_concurrency", "pass_": true, "seconds": 2.593687277000072, "detail": {"concurrent_schema_calls": 32}}
+{"test": "deterministic_stream_group_loss", "pass_": true, "seconds": 8.826956984999924, "detail": {"recovery_seconds": 3.1108109630001763, "worker_not_restarted": true, "initialized_group_deleted": true}}

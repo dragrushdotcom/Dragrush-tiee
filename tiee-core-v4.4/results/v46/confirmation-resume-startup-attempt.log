@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/workspaces/Dragrush-tiee-v46/tiee-core-v4.4/validation/v46_benchmark.py", line 50, in <module>
+    if __name__=='__main__':main(sys.argv[1])
+                            ~~~~^^^^^^^^^^^^^
+  File "/workspaces/Dragrush-tiee-v46/tiee-core-v4.4/validation/v46_benchmark.py", line 46, in main
+    row=run(job,index)
+  File "/workspaces/Dragrush-tiee-v46/tiee-core-v4.4/validation/v46_benchmark.py", line 24, in run
+    database='v46_'+job['stage'][:1]+'_'+str(time.time_ns())[-13:];h.dc('exec','-T','postgres','createdb','-U','tiee',database);h.configure(job['arm'],database=database)
+                                                                   ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Dragrush-tiee-v46/tiee-core-v4.4/validation/v46_harness.py", line 7, in dc
+    if check and p.returncode:raise RuntimeError(str(args)+': '+p.stderr[-1200:])
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: ('exec', '-T', 'postgres', 'createdb', '-U', 'tiee', 'v46_c_2036986108707'): createdb: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  the database system is not yet accepting connections
+DETAIL:  Consistent recovery state has not been yet reached.
+

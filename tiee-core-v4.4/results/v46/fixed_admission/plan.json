@@ -1,0 +1,137 @@
+[
+  {
+    "stage": "fixed_admission",
+    "condition": "fixed_admission",
+    "block": 2,
+    "seed": 461502,
+    "arm": "A2",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "fixed_admission",
+    "condition": "fixed_admission",
+    "block": 2,
+    "seed": 461502,
+    "arm": "A1",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "fixed_admission",
+    "condition": "fixed_admission",
+    "block": 2,
+    "seed": 461502,
+    "arm": "A4",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "fixed_admission",
+    "condition": "fixed_admission",
+    "block": 2,
+    "seed": 461502,
+    "arm": "A0",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "fixed_admission",
+    "condition": "fixed_admission",
+    "block": 2,
+    "seed": 461502,
+    "arm": "A3",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "fixed_admission",
+    "condition": "fixed_admission",
+    "block": 1,
+    "seed": 461501,
+    "arm": "A0",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "fixed_admission",
+    "condition": "fixed_admission",
+    "block": 1,
+    "seed": 461501,
+    "arm": "A1",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "fixed_admission",
+    "condition": "fixed_admission",
+    "block": 1,
+    "seed": 461501,
+    "arm": "A3",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "fixed_admission",
+    "condition": "fixed_admission",
+    "block": 1,
+    "seed": 461501,
+    "arm": "A4",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "fixed_admission",
+    "condition": "fixed_admission",
+    "block": 1,
+    "seed": 461501,
+    "arm": "A2",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "fixed_admission",
+    "condition": "fixed_admission",
+    "block": 0,
+    "seed": 461500,
+    "arm": "A2",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "fixed_admission",
+    "condition": "fixed_admission",
+    "block": 0,
+    "seed": 461500,
+    "arm": "A0",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "fixed_admission",
+    "condition": "fixed_admission",
+    "block": 0,
+    "seed": 461500,
+    "arm": "A4",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "fixed_admission",
+    "condition": "fixed_admission",
+    "block": 0,
+    "seed": 461500,
+    "arm": "A1",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "fixed_admission",
+    "condition": "fixed_admission",
+    "block": 0,
+    "seed": 461500,
+    "arm": "A3",
+    "n": 240,
+    "rate": 240
+  }
+]

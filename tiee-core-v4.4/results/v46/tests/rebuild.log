@@ -1,0 +1,54 @@
+ Image tiee46pilot-network_anchor Building 
+ Image tiee46pilot-worker Building 
+ Image tiee46pilot-gateway Building 
+ Image tiee46pilot-relay Building 
+ Image tiee46pilot-probe Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 2.64kB done
+#1 DONE 0.0s
+
+#2 [worker internal] load build definition from Dockerfile
+#2 transferring dockerfile: 214B done
+#2 DONE 0.0s
+
+#3 [network_anchor internal] load metadata for docker.io/library/python:3.12-slim
+#3 DONE 0.2s
+
+#4 [gateway internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [gateway internal] load build context
+#5 transferring context: 1.49kB done
+#5 DONE 0.0s
+
+#6 [probe 1/6] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#6 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 0.0s done
+#6 DONE 0.0s
+
+#7 [gateway 2/6] WORKDIR /srv
+#7 CACHED
+
+#8 [probe 3/6] COPY requirements.txt ./
+#8 ERROR: failed to prepare g16rlmr858knl2h0d10jgzp9b as p0iinsfptwskg6cby8wz8t27m: parent snapshot g16rlmr858knl2h0d10jgzp9b does not exist: not found
+------
+ > [probe 3/6] COPY requirements.txt ./:
+------
+Dockerfile:3
+
+--------------------
+
+   1 |     FROM python:3.12-slim
+
+   2 |     WORKDIR /srv
+
+   3 | >>> COPY requirements.txt ./
+
+   4 |     RUN pip install --no-cache-dir -r requirements.txt
+
+   5 |     COPY app ./app
+
+--------------------
+
+target worker: failed to solve: failed to prepare g16rlmr858knl2h0d10jgzp9b as p0iinsfptwskg6cby8wz8t27m: parent snapshot g16rlmr858knl2h0d10jgzp9b does not exist: not found
+

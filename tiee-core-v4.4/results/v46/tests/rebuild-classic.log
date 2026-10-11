@@ -1,0 +1,66 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  4.845MB
+Step 1/7 : FROM python:3.12-slim
+3.12-slim: Pulling from library/python
+bbc5a1223747: Pulling fs layer
+ecc510c1e359: Pulling fs layer
+75b6a36c64a1: Pulling fs layer
+6912e23eb445: Pulling fs layer
+bbc5a1223747: Download complete
+75b6a36c64a1: Download complete
+6912e23eb445: Download complete
+ecc510c1e359: Download complete
+97c6e8c8dabe: Download complete
+611ca50ea732: Download complete
+ecc510c1e359: Pull complete
+75b6a36c64a1: Pull complete
+bbc5a1223747: Pull complete
+6912e23eb445: Pull complete
+Digest: sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+Status: Downloaded newer image for python:3.12-slim
+ ---> a6e34c598f24
+Step 2/7 : WORKDIR /srv
+ ---> Running in 94ac7d2d3237
+ ---> Removed intermediate container 94ac7d2d3237
+ ---> 4db514e00d1c
+Step 3/7 : COPY requirements.txt ./
+ ---> 85303e2f4cf6
+Step 4/7 : RUN pip install --no-cache-dir -r requirements.txt
+ ---> Running in 7a0dfcb59825
+Collecting redis==5.2.1 (from -r requirements.txt (line 1))
+  Downloading redis-5.2.1-py3-none-any.whl.metadata (9.1 kB)
+Collecting psycopg==3.2.4 (from psycopg[binary]==3.2.4->-r requirements.txt (line 2))
+  Downloading psycopg-3.2.4-py3-none-any.whl.metadata (4.3 kB)
+Collecting psycopg-pool==3.2.6 (from -r requirements.txt (line 4))
+  Downloading psycopg_pool-3.2.6-py3-none-any.whl.metadata (2.6 kB)
+Collecting typing-extensions>=4.6 (from psycopg==3.2.4->psycopg[binary]==3.2.4->-r requirements.txt (line 2))
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting psycopg-binary==3.2.4 (from psycopg[binary]==3.2.4->-r requirements.txt (line 2))
+  Downloading psycopg_binary-3.2.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+Downloading redis-5.2.1-py3-none-any.whl (261 kB)
+Downloading psycopg-3.2.4-py3-none-any.whl (198 kB)
+Downloading psycopg_pool-3.2.6-py3-none-any.whl (38 kB)
+Downloading psycopg_binary-3.2.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 369.3 MB/s eta 0:00:00
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Installing collected packages: typing-extensions, redis, psycopg-binary, psycopg-pool, psycopg
+Successfully installed psycopg-3.2.4 psycopg-binary-3.2.4 psycopg-pool-3.2.6 redis-5.2.1 typing-extensions-4.16.0
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+[0m[91m
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+[0m ---> Removed intermediate container 7a0dfcb59825
+ ---> 36d3d30c5fbd
+Step 5/7 : COPY app ./app
+ ---> e94d100e6e47
+Step 6/7 : ENV PYTHONUNBUFFERED=1
+ ---> Running in b8355f8ff539
+ ---> Removed intermediate container b8355f8ff539
+ ---> 66e4baca15e4
+Step 7/7 : COPY policies ./policies
+ ---> 724ffc1e6c33
+Successfully built 724ffc1e6c33
+Successfully tagged tiee46pilot-gateway:latest

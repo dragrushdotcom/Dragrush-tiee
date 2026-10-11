@@ -1,0 +1,7 @@
+{"test": "durable_202_pg_crash", "pass_": true, "seconds": 10.699658008000142, "detail": {"recovery_seconds": 7.549419311000065, "acknowledged_row_survived_db_crash": true}}
+{"test": "backpressure_safe_retry", "pass_": true, "seconds": 63.96537240199996, "detail": {"capacity": 32, "503_not_admitted": true, "same_id_retry_completed": true}}
+{"test": "redis_publish_failure", "pass_": true, "seconds": 5.104546503999927, "detail": {"recovery_seconds": 1.6645498430000316, "failed_publish_remained_pending": true}}
+{"test": "relay_transaction_rollback_after_xadd", "pass_": true, "seconds": 12.666299608000145, "detail": {"xadd_observed_before_sql_rollback": true, "idempotent_recovery": true}}
+{"test": "result_transaction_rollback", "pass_": true, "seconds": 10.829841603999967, "detail": {"recovery_seconds": 2.0806600409998737, "uncommitted_result_not_acknowledged": true}}
+{"test": "postgres_unavailable_no_false_ack", "pass_": true, "seconds": 10.143289231999916, "detail": {"no_false_202": true, "safe_retry": true}}
+{"test": "final_accounting_idempotent_audit", "pass_": true, "seconds": 5.03354745799993, "detail": {"events": [["REJECT", "REJECTED", 3], ["ACCEPT", "DONE", 97]], "results": [[97]], "terminal_accounting": true}}

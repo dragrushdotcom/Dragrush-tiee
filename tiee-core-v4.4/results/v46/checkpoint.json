@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-11T18:16:44.030946+00:00",
+  "counts": {
+    "confirmation": 77,
+    "training": 45,
+    "fixed_admission": 15
+  },
+  "confirmation_planned": 300,
+  "confirmation_status": "INCOMPLETE",
+  "source_preserved": true
+}

@@ -1,0 +1,81 @@
+{
+  "services": [
+    {
+      "name": "/tiee46pilot-gateway-1",
+      "id": "d282fec76f76f0864040b04da88c5ad3af4563293ccfc3c13d35f6c2b8d7ab17",
+      "image": "sha256:19067ba2300fa8bef6dc14f409872273ce1f1cfaf57848f9fdf393bd5a9c9ab1",
+      "nano_cpus": 0,
+      "memory": 0,
+      "ports": {},
+      "networks": []
+    },
+    {
+      "name": "/tiee46pilot-network_anchor-1",
+      "id": "b2f5976813af35fd8532d30d35d75d189dd0b1902a6645e85b8db88afdde3918",
+      "image": "sha256:5e4b6d94c940fd0e3bc13e432b4b1ed34e725e8002a219d04a1506b736eb65d9",
+      "nano_cpus": 0,
+      "memory": 0,
+      "ports": {},
+      "networks": [
+        "tiee46pilot_pilot_internal"
+      ]
+    },
+    {
+      "name": "/tiee46pilot-postgres-1",
+      "id": "3972fb9b9d149520ed6bb9c3540e104f40c8ebd3a248afe9bf29f622e7a7f79f",
+      "image": "sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24",
+      "nano_cpus": 0,
+      "memory": 0,
+      "ports": {},
+      "networks": []
+    },
+    {
+      "name": "/tiee46pilot-probe-1",
+      "id": "9ed1a3d8409e57c5966063b655bab115ed4227bc1db51e10547a191d6d9dbcfe",
+      "image": "sha256:1d8fe06b60fe994da83e425ac50b0313a1cb54f45e41df22296c3f5ee73bec9c",
+      "nano_cpus": 0,
+      "memory": 0,
+      "ports": {},
+      "networks": []
+    },
+    {
+      "name": "/tiee46pilot-redis-1",
+      "id": "1c85b16878015919c6d75d44f67a855a09b97b46e567f1229b0a6a58226efee8",
+      "image": "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+      "nano_cpus": 0,
+      "memory": 0,
+      "ports": {},
+      "networks": []
+    },
+    {
+      "name": "/tiee46pilot-relay-1",
+      "id": "29c459c1f5092cf88a09cdb2622381a0777143318f29fab0072871318f678665",
+      "image": "sha256:927b06e02db39ded4711f7a62512fac7e32b61172e4470ba4afb2d776cd9f819",
+      "nano_cpus": 0,
+      "memory": 0,
+      "ports": {},
+      "networks": []
+    },
+    {
+      "name": "/tiee46pilot-worker-1",
+      "id": "c7dd6422a19753e40da905ebbe0cbb1e2d9ba14d45c0239d6e8230c915ffe9ad",
+      "image": "sha256:b4d3aec2f64fb161fc22063e28cc9088058ac80b0255fcd230470f43afe1aa6e",
+      "nano_cpus": 0,
+      "memory": 0,
+      "ports": {},
+      "networks": []
+    },
+    {
+      "name": "/tiee46pilot-worker-2",
+      "id": "8b1c9f5ceb059e043dadb9d238c4a24eb22fe830843ee4fdb2fc8c4ead8a50bc",
+      "image": "sha256:b4d3aec2f64fb161fc22063e28cc9088058ac80b0255fcd230470f43afe1aa6e",
+      "nano_cpus": 0,
+      "memory": 0,
+      "ports": {},
+      "networks": []
+    }
+  ],
+  "host_nproc": "2",
+  "kernel": "6.8.0-1064-azure",
+  "redis_durability": "appendfilename\nappendonly.aof\nappenddirname\nappendonlydir\nappendfsync\nalways\nappendonly\nyes\n"
+}

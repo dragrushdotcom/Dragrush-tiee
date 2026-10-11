@@ -1,0 +1,407 @@
+[
+  {
+    "stage": "training",
+    "condition": "train_high",
+    "block": 1,
+    "seed": 460501,
+    "arm": "A4",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_high",
+    "block": 1,
+    "seed": 460501,
+    "arm": "A0",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_high",
+    "block": 1,
+    "seed": 460501,
+    "arm": "A1",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_high",
+    "block": 1,
+    "seed": 460501,
+    "arm": "A3",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_high",
+    "block": 1,
+    "seed": 460501,
+    "arm": "A2",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_high",
+    "block": 0,
+    "seed": 460500,
+    "arm": "A4",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_high",
+    "block": 0,
+    "seed": 460500,
+    "arm": "A3",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_high",
+    "block": 0,
+    "seed": 460500,
+    "arm": "A1",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_high",
+    "block": 0,
+    "seed": 460500,
+    "arm": "A2",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_high",
+    "block": 0,
+    "seed": 460500,
+    "arm": "A0",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "normal",
+    "block": 0,
+    "seed": 460100,
+    "arm": "A4",
+    "n": 240,
+    "rate": 120
+  },
+  {
+    "stage": "training",
+    "condition": "normal",
+    "block": 0,
+    "seed": 460100,
+    "arm": "A0",
+    "n": 240,
+    "rate": 120
+  },
+  {
+    "stage": "training",
+    "condition": "normal",
+    "block": 0,
+    "seed": 460100,
+    "arm": "A2",
+    "n": 240,
+    "rate": 120
+  },
+  {
+    "stage": "training",
+    "condition": "normal",
+    "block": 0,
+    "seed": 460100,
+    "arm": "A3",
+    "n": 240,
+    "rate": 120
+  },
+  {
+    "stage": "training",
+    "condition": "normal",
+    "block": 0,
+    "seed": 460100,
+    "arm": "A1",
+    "n": 240,
+    "rate": 120
+  },
+  {
+    "stage": "training",
+    "condition": "normal",
+    "block": 2,
+    "seed": 460102,
+    "arm": "A1",
+    "n": 240,
+    "rate": 120
+  },
+  {
+    "stage": "training",
+    "condition": "normal",
+    "block": 2,
+    "seed": 460102,
+    "arm": "A3",
+    "n": 240,
+    "rate": 120
+  },
+  {
+    "stage": "training",
+    "condition": "normal",
+    "block": 2,
+    "seed": 460102,
+    "arm": "A0",
+    "n": 240,
+    "rate": 120
+  },
+  {
+    "stage": "training",
+    "condition": "normal",
+    "block": 2,
+    "seed": 460102,
+    "arm": "A2",
+    "n": 240,
+    "rate": 120
+  },
+  {
+    "stage": "training",
+    "condition": "normal",
+    "block": 2,
+    "seed": 460102,
+    "arm": "A4",
+    "n": 240,
+    "rate": 120
+  },
+  {
+    "stage": "training",
+    "condition": "train_low",
+    "block": 2,
+    "seed": 460402,
+    "arm": "A2",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_low",
+    "block": 2,
+    "seed": 460402,
+    "arm": "A0",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_low",
+    "block": 2,
+    "seed": 460402,
+    "arm": "A4",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_low",
+    "block": 2,
+    "seed": 460402,
+    "arm": "A1",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_low",
+    "block": 2,
+    "seed": 460402,
+    "arm": "A3",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_high",
+    "block": 2,
+    "seed": 460502,
+    "arm": "A0",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_high",
+    "block": 2,
+    "seed": 460502,
+    "arm": "A1",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_high",
+    "block": 2,
+    "seed": 460502,
+    "arm": "A2",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_high",
+    "block": 2,
+    "seed": 460502,
+    "arm": "A3",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_high",
+    "block": 2,
+    "seed": 460502,
+    "arm": "A4",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_low",
+    "block": 1,
+    "seed": 460401,
+    "arm": "A2",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_low",
+    "block": 1,
+    "seed": 460401,
+    "arm": "A3",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_low",
+    "block": 1,
+    "seed": 460401,
+    "arm": "A4",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_low",
+    "block": 1,
+    "seed": 460401,
+    "arm": "A0",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_low",
+    "block": 1,
+    "seed": 460401,
+    "arm": "A1",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_low",
+    "block": 0,
+    "seed": 460400,
+    "arm": "A0",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_low",
+    "block": 0,
+    "seed": 460400,
+    "arm": "A1",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_low",
+    "block": 0,
+    "seed": 460400,
+    "arm": "A2",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_low",
+    "block": 0,
+    "seed": 460400,
+    "arm": "A3",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "train_low",
+    "block": 0,
+    "seed": 460400,
+    "arm": "A4",
+    "n": 240,
+    "rate": 240
+  },
+  {
+    "stage": "training",
+    "condition": "normal",
+    "block": 1,
+    "seed": 460101,
+    "arm": "A2",
+    "n": 240,
+    "rate": 120
+  },
+  {
+    "stage": "training",
+    "condition": "normal",
+    "block": 1,
+    "seed": 460101,
+    "arm": "A0",
+    "n": 240,
+    "rate": 120
+  },
+  {
+    "stage": "training",
+    "condition": "normal",
+    "block": 1,
+    "seed": 460101,
+    "arm": "A4",
+    "n": 240,
+    "rate": 120
+  },
+  {
+    "stage": "training",
+    "condition": "normal",
+    "block": 1,
+    "seed": 460101,
+    "arm": "A3",
+    "n": 240,
+    "rate": 120
+  },
+  {
+    "stage": "training",
+    "condition": "normal",
+    "block": 1,
+    "seed": 460101,
+    "arm": "A1",
+    "n": 240,
+    "rate": 120
+  }
+]

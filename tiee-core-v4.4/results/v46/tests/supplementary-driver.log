@@ -1,0 +1,8 @@
+{"test": "deferred_receipt_pg_gateway_crash", "pool": 0, "status": "PASSED", "detail": {"recovery_seconds": 0.4759832929998993, "receipt_retained": true}, "elapsed_seconds": 22.677223779999622}
+{"test": "v46_AOF_without_reconciliation", "pool": 0, "status": "PASSED", "detail": {"settings": "appendonly\nyes\nappendfsync\nalways", "recovery_seconds": 3.491210358999979, "reconciler_stopped_during_observation": true}, "elapsed_seconds": 11.356152921000103}
+{"test": "mixed_legacy_new_migration", "pool": 0, "status": "PASSED", "detail": {"old_and_new_results_verified": true}, "elapsed_seconds": 12.382582192999962}
+{"test": "competing_schedulers", "pool": 0, "status": "PASSED", "detail": {"two_schedulers": true, "authoritative_delivery_bound": 2}, "elapsed_seconds": 15.737190187000124}
+{"test": "deferred_receipt_pg_gateway_crash", "pool": 8, "status": "PASSED", "detail": {"recovery_seconds": 0.34900841999979093, "receipt_retained": true}, "elapsed_seconds": 25.293241708000096}
+{"test": "v46_AOF_without_reconciliation", "pool": 8, "status": "PASSED", "detail": {"settings": "appendonly\nyes\nappendfsync\nalways", "recovery_seconds": 3.182147331000124, "reconciler_stopped_during_observation": true}, "elapsed_seconds": 10.579991828999937}
+{"test": "mixed_legacy_new_migration", "pool": 8, "status": "PASSED", "detail": {"old_and_new_results_verified": true}, "elapsed_seconds": 11.152801549000287}
+{"test": "competing_schedulers", "pool": 8, "status": "PASSED", "detail": {"two_schedulers": true, "authoritative_delivery_bound": 2}, "elapsed_seconds": 13.882535698000083}

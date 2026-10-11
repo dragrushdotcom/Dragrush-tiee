@@ -1,0 +1,20 @@
+{"test": "admission_contracts", "pass_": true, "seconds": 7.509052098999973, "detail": {"valid_duplicate_conflict_malformed_auth_rejection": "PASS"}}
+{"test": "relay_SIGKILL", "pass_": true, "seconds": 5.1292754600001444, "detail": {"recovery_seconds": 3.9213400119999733}}
+{"test": "worker_SIGKILL", "pass_": true, "seconds": 18.00948273599988, "detail": {"recovery_seconds": 3.30454887399992, "note": "kill timing nondeterministic; additional deterministic pending test below"}}
+{"test": "pending_reclaim", "pass_": true, "seconds": 29.61203129699993, "detail": {"recovery_seconds": 5.455318755999997, "target_confirmed_in_dead_consumer_delivery": true}}
+{"test": "redis_SIGKILL_AOF", "pass_": true, "seconds": 19.95749931199998, "detail": {"recovery_seconds": 6.8344947030000185}}
+{"test": "postgres_SIGKILL", "pass_": true, "seconds": 18.971911241000043, "detail": {"recovery_seconds": 6.610091422999858}}
+{"test": "gateway_SIGKILL", "pass_": true, "seconds": 8.186476715000026, "detail": {"admitted_event_survived": true}}
+{"test": "redis_stream_and_group_loss", "pass_": true, "seconds": 17.345921614999952, "detail": {"recovery_seconds": 2.0197729409999283, "deleted": 1}}
+{"test": "durable_202_pg_crash", "pass_": true, "seconds": 6.862638292999918, "detail": {"recovery_seconds": 5.182901491000166, "acknowledged_row_survived_db_crash": true}}
+{"test": "backpressure_safe_retry", "pass_": true, "seconds": 58.20008582899982, "detail": {"capacity": 32, "503_not_admitted": true, "same_id_retry_completed": true}}
+{"test": "redis_publish_failure", "pass_": true, "seconds": 8.07063816599998, "detail": {"recovery_seconds": 2.9589996489999066, "failed_publish_remained_pending": true}}
+{"test": "relay_transaction_rollback_after_xadd", "pass_": true, "seconds": 10.847202901000173, "detail": {"xadd_observed_before_sql_rollback": true, "idempotent_recovery": true}}
+{"test": "result_transaction_rollback", "pass_": true, "seconds": 13.237476056000105, "detail": {"recovery_seconds": 2.9466084829998636, "uncommitted_result_not_acknowledged": true}}
+{"test": "postgres_unavailable_no_false_ack", "pass_": true, "seconds": 3.8336616999999933, "detail": {"no_false_202": true, "safe_retry": true}}
+{"test": "final_accounting_idempotent_audit", "pass_": true, "seconds": 2.0626667189999353, "detail": {"events": [["REJECT", "REJECTED", 1], ["ACCEPT", "DONE", 47]], "results": [[47]], "terminal_accounting": true}}
+{"test": "deterministic_AOF_without_reconciliation", "pass_": true, "seconds": 6.626788195000017, "detail": {"recovery_seconds": 4.999484638000013, "entry_and_group_persisted_without_relay": true, "redis_config": ["appendfsync", "always", "appendonly", "yes"]}}
+{"test": "rejected_duplicate_conflict", "pass_": true, "seconds": 3.5998078130000977, "detail": {"rejected_identity_is_protected": true, "broker_replay_cannot_execute_rejected_event": true}}
+{"test": "concurrent_idempotent_commits", "pass_": true, "seconds": 20.22662187800006, "detail": {"worker_processes": 2, "duplicate_publications": 40, "result_rows": 1, "done_audits": 1}}
+{"test": "cold_schema_concurrency", "pass_": true, "seconds": 1.752377137999929, "detail": {"concurrent_schema_calls": 32}}
+{"test": "deterministic_stream_group_loss", "pass_": true, "seconds": 3.0560385360001874, "detail": {"recovery_seconds": 1.6409877609999057, "worker_not_restarted": true, "initialized_group_deleted": true}}

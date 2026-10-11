@@ -1,0 +1,52 @@
+{
+  "no_deferral": {
+    "counts": {
+      "ALLOW": 1826,
+      "DEFER": 0,
+      "REJECT": 1174
+    },
+    "decision_changes": 7,
+    "probe_cpu_seconds": 0.0016680000000000028,
+    "scope": "offline policy counterfactual; scheduling throughput unexecuted"
+  },
+  "no_cost": {
+    "counts": {
+      "ALLOW": 1826,
+      "DEFER": 0,
+      "REJECT": 1174
+    },
+    "decision_changes": 7,
+    "probe_cpu_seconds": 0.001907947000000021,
+    "scope": "offline policy counterfactual; scheduling throughput unexecuted"
+  },
+  "harmony": {
+    "counts": {
+      "ALLOW": 1825,
+      "DEFER": 6,
+      "REJECT": 1169
+    },
+    "decision_changes": 1,
+    "probe_cpu_seconds": 0.33752804799999997,
+    "scope": "offline policy counterfactual; scheduling throughput unexecuted"
+  },
+  "destructive": {
+    "counts": {
+      "ALLOW": 308,
+      "DEFER": 2692,
+      "REJECT": 0
+    },
+    "decision_changes": 2685,
+    "probe_cpu_seconds": 0.23609595300000008,
+    "scope": "offline policy counterfactual; scheduling throughput unexecuted"
+  },
+  "no_aging": {
+    "counts": {
+      "ALLOW": 1824,
+      "DEFER": 7,
+      "REJECT": 1169
+    },
+    "decision_changes": 0,
+    "probe_cpu_seconds": 0.002742405999999975,
+    "scope": "offline policy counterfactual; scheduling throughput unexecuted"
+  }
+}

@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 
 .env.v45
+.env.v46
+results/v46/**/runs.jsonl
