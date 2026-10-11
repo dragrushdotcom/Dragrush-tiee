@@ -5,3 +5,5 @@ __pycache__/
 .env.v45
 .env.v46
 results/v46/**/runs.jsonl
+results/v46/finalizer.log
+results/v46/finish_state.json

@@ -75,3 +75,9 @@ Raw run JSONL archives are committed as runs.jsonl.gz. Decompress before analysi
     python -c "import gzip,pathlib; [p.with_suffix('').write_bytes(gzip.decompress(p.read_bytes())) for p in pathlib.Path('results/v46').glob('*/runs.jsonl.gz')]"
 
 After analysis, run python validation/v46_report.py to export stage/resource CSV metrics, regenerate the report, and produce deterministic lossless raw archives.
+
+After resuming the frozen confirmation process in the background, the optional guarded finalizer is:
+
+    nohup python validation/v46_finalize.py BENCHMARK_PID >results/v46/finalizer.log 2>&1 &
+
+It waits at most 7,500 seconds, requires all 300 planned runs, checks frozen source/model hashes and preservation, generates CSV/JSON/report/archive/manifest artifacts, scans private values, and commits/pushes only the development branch. If confirmation is incomplete or a check fails, it records BLOCKED_OR_INCOMPLETE in results/v46/finish_state.json and exits without claiming completion. It does not create a Codespace or deploy anything. Check this state and remote Git hash before reporting final completion.
