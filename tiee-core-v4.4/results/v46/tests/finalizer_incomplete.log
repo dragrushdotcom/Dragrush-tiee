@@ -1,0 +1,10 @@
+{"status": "WAITING", "benchmark_pid": 6215, "runs": 86, "utc": "2026-10-11T18:19:14.881467+00:00"}
+{"status": "BLOCKED_OR_INCOMPLETE", "error": "Confirmation incomplete: 213/300; resume frozen jobs before finalization", "runs": 213, "utc": "2026-10-11T18:56:36.265596+00:00"}
+Traceback (most recent call last):
+  File "/workspaces/Dragrush-tiee-v46/tiee-core-v4.4/validation/v46_finalize.py", line 43, in <module>
+    try:main()
+        ~~~~^^
+  File "/workspaces/Dragrush-tiee-v46/tiee-core-v4.4/validation/v46_finalize.py", line 12, in main
+    plan=json.loads((R/'confirmation/plan.json').read_text());assert count()==len(plan['jobs']),f'Confirmation incomplete: {count()}/{len(plan["jobs"])}; resume frozen jobs before finalization'
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Confirmation incomplete: 213/300; resume frozen jobs before finalization

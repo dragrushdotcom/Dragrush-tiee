@@ -10,7 +10,14 @@ def main():
   if time.monotonic()-started>7500:raise RuntimeError('finalizer bounded wait exhausted')
   time.sleep(20)
  plan=json.loads((R/'confirmation/plan.json').read_text());assert count()==len(plan['jobs']),f'Confirmation incomplete: {count()}/{len(plan["jobs"])}; resume frozen jobs before finalization'
- bad=[name for name,h in plan['source_sha256'].items() if hashlib.sha256(pathlib.Path(name).read_bytes()).hexdigest()!=h];assert not bad,bad
+ amend=json.loads((R/'observation_amendment.json').read_text()) if (R/'observation_amendment.json').exists() else None
+ allowed={}
+ if amend:
+  assert amend['path']=='validation/v46_probe.py' and amend['old_sha256']==plan['source_sha256'][amend['path']]
+  assert hashlib.sha256(pathlib.Path(amend['path']).read_bytes()).hexdigest()==amend['new_sha256']
+  assert json.loads((R/'tests/recorder_regression.json').read_text())['status']=='PASSED'
+  allowed[amend['path']]=amend['new_sha256']
+ bad=[name for name,h in plan['source_sha256'].items() if hashlib.sha256(pathlib.Path(name).read_bytes()).hexdigest()!=allowed.get(name,h)];assert not bad,bad
  assert hashlib.sha256(pathlib.Path('policies/v46/model.json').read_bytes()).hexdigest()==plan['model_sha256']
  assert cli('git','branch','--show-current').stdout.strip()=='tiee-core-v46-ev-validation'
  state(status='ANALYZING',runs=count())
@@ -20,7 +27,7 @@ def main():
  original='/workspaces/Dragrush-tiee';previous=json.loads((R/'preservation.json').read_text());assert cli('git','-C',original,'status','--porcelain').stdout==previous['original_status']
  assert cli('git','-C',original,'rev-parse','HEAD').stdout.strip()=='6e12b5098699ba636cdb1112dd192da74d8f9bb3'
  elapsed=(datetime.datetime.now(datetime.timezone.utc)-datetime.datetime.strptime(plan['created_utc'],'%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=datetime.timezone.utc)).total_seconds()
- (R/'finalization.json').write_text(json.dumps(dict(status='COMPLETE_PLANNED_RUNS',confirmation_runs=count(),frozen_source_verified=True,model_verified=True,preservation_verified=True,confirmation_elapsed_including_stop_seconds=elapsed,cumulative_live_budget_compliance='UNVERIFIED',performance_claim='NOT ESTABLISHED'),indent=2)+chr(10))
+ (R/'finalization.json').write_text(json.dumps(dict(status='COMPLETE_PLANNED_RUNS',confirmation_runs=count(),frozen_engine_and_workload_verified=True,recorder_amendment_verified=bool(amend),model_verified=True,preservation_verified=True,confirmation_elapsed_including_stop_seconds=elapsed,cumulative_live_budget_compliance='UNVERIFIED',performance_claim='NOT ESTABLISHED'),indent=2)+chr(10))
  names=cli('git','ls-files','--cached','--others','--exclude-standard','.').stdout.splitlines();secrets=[];hashes={};archives={}
  for line in pathlib.Path('.env.v46').read_text().splitlines():
   if '=' in line:

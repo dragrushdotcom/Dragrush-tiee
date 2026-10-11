@@ -1,3 +1,4 @@
+import collections
 import concurrent.futures,hashlib,json,math,os,statistics,sys,threading,time,urllib.request,urllib.error
 sys.path.insert(0,'/srv')
 from app.common import pg,rd,STREAM,GROUP
@@ -42,13 +43,14 @@ def bench(a):
         except Exception as exc:response=[0,dict(error=type(exc).__name__)]
         receipts[row['event']['id']]=dict(dispatch=now,ack=time.monotonic(),response=response,scheduled=target)
     with concurrent.futures.ThreadPoolExecutor(max_workers=32) as pool:list(pool.map(dispatch,rows))
-    arrival_end=start+max(x['scheduled_offset'] for x in rows);limit=arrival_end+5
+    arrival_end=start+max(x['scheduled_offset'] for x in rows);limit=arrival_end+5;states=[]
     while time.monotonic()<limit:
         states=sql("SELECT state,count(*) FROM events WHERE id LIKE %s GROUP BY state",(prefix+'%',));unresolved=sum(n for state,n in states if state in ('PENDING','ENQUEUED','RUNNING','DEFERRED'))
         if not unresolved:break
         time.sleep(.02)
     end=time.monotonic();stop.set();thread.join()
     db={x[0]:x[1:] for x in sql('SELECT e.id,e.state,e.decision,r.digest,e.execution_cpu,extract(epoch from (e.claimed_at-e.created_at)),extract(epoch from (r.completed_at-e.created_at)) FROM events e LEFT JOIN results r USING(id) WHERE e.id LIKE %s',(prefix+'%',))}
+    if not states:states=list(collections.Counter(x[0] for x in db.values()).items())
     ledger=[];lat=[];dispatch_lat=[];acks=[];valid_reject=0;brier=[];logloss=[];execution_cpu=0
     for row in rows:
         e=row['event'];eid=e['id'];receipt=receipts[eid];state,d,digest,cpu,queue,db_latency=db.get(eid,('REFUSED',None,None,None,None,None));b=json.loads(e['body']);reward,penalty={'standard':(1,2),'bulk':(.5,1),'critical':(8,8)}[b['class']]

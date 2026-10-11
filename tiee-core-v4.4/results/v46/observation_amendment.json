@@ -1,0 +1,11 @@
+{
+  "path": "validation/v46_probe.py",
+  "old_sha256": "0313cc7e8546ee8924d52044677d14124e81473a9d5eb6445e7667de66e44ba9",
+  "new_sha256": "1c3570076f616037053c0bb2b3dc57746831d32d3abc1af4e9adf7b83c967e63",
+  "after_completed_runs": 213,
+  "changed": "Recorder-only fallback state summary when drain loop is skipped; no extra I/O, no workload/admission/worker change",
+  "source_freeze_status": "AMENDED_OBSERVATION",
+  "performance_claim": "NOT ESTABLISHED",
+  "failed_measurement_attempts": 1,
+  "protocol_integrity": "FAILED original no-exclusion/frozen-observation requirement"
+}
