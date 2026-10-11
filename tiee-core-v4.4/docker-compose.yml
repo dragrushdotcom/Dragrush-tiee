@@ -1,0 +1,50 @@
+services:
+  redis:
+    image: redis:7.4-alpine
+    command: ["redis-server","--appendonly","yes","--appendfsync","always","--save","60","1000"]
+    volumes: ["redis_data:/data"]
+    healthcheck:
+      test: ["CMD","redis-cli","ping"]
+      interval: 3s
+      retries: 30
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: tiee
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local-testing-only}
+      POSTGRES_DB: tiee
+    volumes: ["pg_data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL","pg_isready -U tiee -d tiee"]
+      interval: 3s
+      retries: 30
+  gateway:
+    build: .
+    command: ["python","-m","app.gateway"]
+    depends_on:
+      redis: {condition: service_healthy}
+      postgres: {condition: service_healthy}
+    environment: &env
+      PG_DSN: postgresql://tiee:${POSTGRES_PASSWORD:-local-testing-only}@postgres:5432/tiee
+      REDIS_URL: redis://redis:6379/0
+      API_KEY: ${API_KEY:-dev-only-change-me}
+      QUEUE_CAPACITY: '1000'
+      POLICY: ${POLICY:-baseline}
+    ports: ["127.0.0.1:8087:8087"]
+  relay:
+    build: .
+    command: ["python","-m","app.relay"]
+    depends_on:
+      redis: {condition: service_healthy}
+      postgres: {condition: service_healthy}
+    environment: *env
+  worker:
+    build: .
+    command: ["python","-m","app.worker"]
+    depends_on:
+      redis: {condition: service_healthy}
+      postgres: {condition: service_healthy}
+    environment: *env
+volumes:
+  redis_data: {}
+  pg_data: {}

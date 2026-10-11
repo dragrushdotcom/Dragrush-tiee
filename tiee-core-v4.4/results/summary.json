@@ -1,0 +1,48 @@
+{
+  "trials": 18,
+  "integrity_all_pass": true,
+  "groups": [
+    {
+      "noise": 0,
+      "arm": "baseline",
+      "runs": 3,
+      "useful_completion_rps": 30.89873836900966,
+      "completion_p95_ms": 3877.573013305664
+    },
+    {
+      "noise": 0,
+      "arm": "tiee",
+      "runs": 3,
+      "useful_completion_rps": 31.22557607323436,
+      "completion_p95_ms": 3874.423027038574
+    },
+    {
+      "noise": 0.5,
+      "arm": "baseline",
+      "runs": 3,
+      "useful_completion_rps": 17.75264931743072,
+      "completion_p95_ms": 772.8865146636963
+    },
+    {
+      "noise": 0.5,
+      "arm": "tiee",
+      "runs": 3,
+      "useful_completion_rps": 22.01601925040736,
+      "completion_p95_ms": 813.5626316070557
+    },
+    {
+      "noise": 0.9,
+      "arm": "baseline",
+      "runs": 3,
+      "useful_completion_rps": 5.292783384430842,
+      "completion_p95_ms": 432.4171543121338
+    },
+    {
+      "noise": 0.9,
+      "arm": "tiee",
+      "runs": 3,
+      "useful_completion_rps": 5.3945557220695015,
+      "completion_p95_ms": 377.92348861694336
+    }
+  ]
+}

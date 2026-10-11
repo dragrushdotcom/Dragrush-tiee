@@ -1,0 +1,13 @@
+{
+  "events": 3,
+  "initial_statuses": [
+    202,
+    202,
+    503
+  ],
+  "retry_after_drain": 202,
+  "final_states": {
+    "DONE": 3
+  },
+  "capacity": 2
+}

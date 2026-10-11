@@ -1,0 +1,135 @@
+ Image tiee44pilot-gateway Building 
+ Image tiee44pilot-network_anchor Building 
+ Image tiee44pilot-relay Building 
+ Image tiee44pilot-worker Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.93kB done
+#1 DONE 0.0s
+
+#2 [gateway internal] load build definition from Dockerfile
+#2 transferring dockerfile: 188B done
+#2 DONE 0.0s
+
+#3 [relay internal] load metadata for docker.io/library/python:3.12-slim
+#3 DONE 0.3s
+
+#4 [relay internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [worker internal] load build context
+#5 transferring context: 600B done
+#5 DONE 0.0s
+
+#6 [network_anchor 1/5] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#6 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 0.0s done
+#6 DONE 0.0s
+
+#7 [worker 2/5] WORKDIR /srv
+#7 CACHED
+
+#8 [worker 3/5] COPY requirements.txt ./
+#8 CACHED
+
+#9 [worker 4/5] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [worker 5/5] COPY app ./app
+#10 CACHED
+
+#11 [relay] exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:1df2b501ea9d17fbda66af0cf9ae94435611b0fcb736779a84019b08a3172cf3 0.0s done
+#11 exporting config sha256:9df03bf19627781897ba0103dcd73ad53e0d3b243c085245f26afa679b2b09a1 0.0s done
+#11 exporting attestation manifest sha256:831a9a82a81f18768501ec041a0cb2bb451dec0e021070d61b40d83de9ae7c5c 0.1s done
+#11 exporting manifest list sha256:0a78e596f126eb5b4c8ab1816131b94f183cf4a76ca9c66f5d2ae8695e18cc9b
+#11 exporting manifest list sha256:0a78e596f126eb5b4c8ab1816131b94f183cf4a76ca9c66f5d2ae8695e18cc9b 0.0s done
+#11 naming to docker.io/library/tiee44pilot-relay:latest 0.0s done
+#11 unpacking to docker.io/library/tiee44pilot-relay:latest 0.0s done
+#11 DONE 0.3s
+
+#12 [worker] exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:e6a5141bdfc7a708d4842cc2142b3a44f6d2f653145feb587bb01b4380c89e98 done
+#12 exporting config sha256:1b89c94d0c34956f888648e54344e707fa99578ede232d2a9d228257ab326c83 0.0s done
+#12 exporting attestation manifest sha256:1d1834026460f722a13f47fd540f9349032cf01ca796de4e176f5dd8540bf6ea 0.1s done
+#12 exporting manifest list sha256:fd62b4e30824211bfaa4464901e12ca1d68350c086820daf87bf8e23d6350efe 0.0s done
+#12 naming to docker.io/library/tiee44pilot-worker:latest 0.0s done
+#12 unpacking to docker.io/library/tiee44pilot-worker:latest 0.0s done
+#12 DONE 0.3s
+
+#13 [gateway] exporting to image
+#13 exporting layers done
+#13 exporting manifest sha256:c042dfe642a77fbc6b5c62fc3e76a13dc60c6a90cac1015528c8cd3a061efe1b 0.0s done
+#13 exporting config sha256:8fa142b8751aaccd6923a9a445925bb229fc5542a17aebd4856702ba5228d7b4 0.0s done
+#13 exporting attestation manifest sha256:c78b755273b03b382dd3fbd418c27558642f2e48049a8bf16c9c66733362956e 0.1s done
+#13 exporting manifest list sha256:d4d67213b4e0e829939477e5eafa422713c507286ea28869ecfd81f3275acd08 0.0s done
+#13 naming to docker.io/library/tiee44pilot-gateway:latest 0.0s done
+#13 unpacking to docker.io/library/tiee44pilot-gateway:latest 0.0s done
+#13 DONE 0.3s
+
+#14 [network_anchor] exporting to image
+#14 exporting layers done
+#14 exporting manifest sha256:515a4769a24395120ec349dfe23a1c26ca36e523e01f5a21357adbcb56c3da19 0.0s done
+#14 exporting config sha256:05ae38efd46af9f48a23b8273bdf51b098822c489910542112287c40536d9355 0.0s done
+#14 exporting attestation manifest sha256:5d04aa093fa6fa509b7d5daa1a6e2308349a98787970e044bede1c38caefd05d 0.1s done
+#14 exporting manifest list sha256:5404e8cdbc6218755a5f879b9e066ada30c26fbf3291dac7cd53baf67768741a 0.0s done
+#14 naming to docker.io/library/tiee44pilot-network_anchor:latest done
+#14 unpacking to docker.io/library/tiee44pilot-network_anchor:latest 0.0s done
+#14 DONE 0.3s
+
+#15 [worker] resolving provenance for metadata file
+#15 DONE 0.1s
+
+#16 [gateway] resolving provenance for metadata file
+#16 DONE 0.1s
+
+#17 [relay] resolving provenance for metadata file
+#17 DONE 0.1s
+
+#18 [network_anchor] resolving provenance for metadata file
+#18 DONE 0.0s
+ Image tiee44pilot-network_anchor Built 
+ Image tiee44pilot-worker Built 
+ Image tiee44pilot-gateway Built 
+ Image tiee44pilot-relay Built 
+ Network tiee44pilot_pilot_internal Creating 
+ Network tiee44pilot_pilot_internal Creating 
+ Network tiee44pilot_pilot_internal Created 
+ Network tiee44pilot_pilot_internal Created 
+ Container tiee44pilot-network_anchor-1 Creating 
+ Container tiee44pilot-network_anchor-1 Created 
+ Container tiee44pilot-redis-1 Recreate 
+ Container tiee44pilot-postgres-1 Recreate 
+ Container tiee44pilot-postgres-1 Recreated 
+ Container tiee44pilot-redis-1 Recreated 
+ Container tiee44pilot-gateway-1 Recreate 
+ Container tiee44pilot-worker-1 Recreate 
+ Container tiee44pilot-relay-1 Recreate 
+ Container tiee44pilot-worker-1 Recreated 
+ Container tiee44pilot-relay-1 Recreated 
+ Container tiee44pilot-gateway-1 Recreated 
+ Container tiee44pilot-network_anchor-1 Starting 
+ Container tiee44pilot-network_anchor-1 Started 
+ Container tiee44pilot-postgres-1 Starting 
+ Container tiee44pilot-redis-1 Starting 
+ Container tiee44pilot-redis-1 Started 
+ Container tiee44pilot-postgres-1 Started 
+ Container tiee44pilot-postgres-1 Waiting 
+ Container tiee44pilot-redis-1 Waiting 
+ Container tiee44pilot-redis-1 Waiting 
+ Container tiee44pilot-postgres-1 Waiting 
+ Container tiee44pilot-redis-1 Waiting 
+ Container tiee44pilot-postgres-1 Waiting 
+ Container tiee44pilot-postgres-1 Healthy 
+ Container tiee44pilot-redis-1 Healthy 
+ Container tiee44pilot-gateway-1 Starting 
+ Container tiee44pilot-postgres-1 Healthy 
+ Container tiee44pilot-redis-1 Healthy 
+ Container tiee44pilot-redis-1 Healthy 
+ Container tiee44pilot-relay-1 Starting 
+ Container tiee44pilot-postgres-1 Healthy 
+ Container tiee44pilot-worker-1 Starting 
+ Container tiee44pilot-gateway-1 Started 
+ Container tiee44pilot-worker-1 Started 
+ Container tiee44pilot-relay-1 Started 

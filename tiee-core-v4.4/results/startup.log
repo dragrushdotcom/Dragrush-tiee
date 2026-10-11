@@ -1,0 +1,302 @@
+ Image postgres:17-alpine Pulling 
+ Image redis:7.4-alpine Pulling 
+ 4eb14bae0e1d Pulling fs layer 0B
+ 7eb50503c2b0 Pulling fs layer 0B
+ 16333ee0c00f Pulling fs layer 0B
+ 83234986c742 Pulling fs layer 0B
+ 9928009b15c8 Pulling fs layer 0B
+ 1522f9c6f453 Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ 4f4fb700ef54 Already exists 0B
+ 16333ee0c00f Downloading 1.049MB
+ 4eb14bae0e1d Downloading 599B
+ 7eb50503c2b0 Downloading 198.6kB
+ 4eb14bae0e1d Downloading 599B
+ 7eb50503c2b0 Downloading 198.6kB
+ 16333ee0c00f Downloading 2.556MB
+ 83234986c742 Download complete 0B
+ 9928009b15c8 Downloading 100B
+ 4eb14bae0e1d Download complete 0B
+ 7eb50503c2b0 Downloading 198.6kB
+ 16333ee0c00f Downloading 3.626MB
+ 9928009b15c8 Downloading 100B
+ 1522f9c6f453 Downloading 4.194MB
+ 9928009b15c8 Download complete 0B
+ 1522f9c6f453 Downloading 12.42MB
+ 7eb50503c2b0 Download complete 0B
+ 16333ee0c00f Download complete 0B
+ 16333ee0c00f Extracting 1B
+ 1522f9c6f453 Downloading 12.42MB
+ 16333ee0c00f Extracting 1B
+ 1522f9c6f453 Downloading 12.42MB
+ 16333ee0c00f Extracting 1B
+ 1522f9c6f453 Download complete 0B
+ 16333ee0c00f Extracting 1B
+ 16333ee0c00f Extracting 1B
+ a8a481ae6efc Pulling fs layer 0B
+ e2de96513ba9 Pulling fs layer 0B
+ 4ece9a32c307 Pulling fs layer 0B
+ 43f9814c9a3b Pulling fs layer 0B
+ eb805f20f060 Pulling fs layer 0B
+ 3333950675b2 Pulling fs layer 0B
+ f3b07e8a357c Pulling fs layer 0B
+ 93a3470d5852 Pulling fs layer 0B
+ 7ccdb0dcae74 Pulling fs layer 0B
+ b0a0d9d2abf2 Pulling fs layer 0B
+ 54779914f171 Downloading 24.69kB
+ 3beebc06c4ca Downloading 462.6kB
+ 16333ee0c00f Extracting 1B
+ 54779914f171 Downloading 24.69kB
+ 3beebc06c4ca Downloading 462.6kB
+ 656469e78267 Downloading 41.69kB
+ fa8e66b88311 Downloading 598kB
+ 16333ee0c00f Extracting 1B
+ 656469e78267 Download complete 0B
+ 54779914f171 Download complete 0B
+ fa8e66b88311 Download complete 0B
+ a8a481ae6efc Downloading 183B
+ 3beebc06c4ca Download complete 0B
+ 16333ee0c00f Pull complete 0B
+ eb805f20f060 Downloading 9.999kB
+ e2de96513ba9 Downloading 3.85MB
+ 4ece9a32c307 Download complete 0B
+ 93a3470d5852 Downloading 169B
+ a8a481ae6efc Download complete 0B
+ 43f9814c9a3b Downloading 901.4kB
+ 43f9814c9a3b Download complete 0B
+ eb805f20f060 Download complete 0B
+ 7ccdb0dcae74 Downloading 128B
+ b0a0d9d2abf2 Download complete 0B
+ e2de96513ba9 Download complete 0B
+ 3333950675b2 Downloading 116B
+ f3b07e8a357c Downloading 9.437MB
+ 93a3470d5852 Download complete 0B
+ 83234986c742 Extracting 1B
+ e2de96513ba9 Extracting 1B
+ 7ccdb0dcae74 Download complete 0B
+ 83234986c742 Pull complete 0B
+ 3333950675b2 Download complete 0B
+ f3b07e8a357c Downloading 17.83MB
+ 7eb50503c2b0 Extracting 1B
+ e2de96513ba9 Extracting 1B
+ f3b07e8a357c Downloading 24.12MB
+ 7eb50503c2b0 Extracting 1B
+ e2de96513ba9 Extracting 1B
+ f3b07e8a357c Downloading 31.46MB
+ 7eb50503c2b0 Extracting 1B
+ e2de96513ba9 Extracting 1B
+ f3b07e8a357c Downloading 40.39MB
+ 7eb50503c2b0 Pull complete 0B
+ e2de96513ba9 Extracting 1B
+ 1522f9c6f453 Extracting 1B
+ f3b07e8a357c Downloading 46.14MB
+ 1522f9c6f453 Extracting 1B
+ e2de96513ba9 Pull complete 0B
+ f3b07e8a357c Downloading 50.66MB
+ 1522f9c6f453 Extracting 1B
+ f3b07e8a357c Downloading 57.67MB
+ 4ece9a32c307 Pull complete 0B
+ 43f9814c9a3b Extracting 1B
+ 1522f9c6f453 Extracting 1B
+ f3b07e8a357c Downloading 63.96MB
+ 43f9814c9a3b Pull complete 0B
+ 1522f9c6f453 Extracting 1B
+ f3b07e8a357c Downloading 73.97MB
+ 1522f9c6f453 Extracting 1B
+ 3333950675b2 Pull complete 0B
+ f3b07e8a357c Downloading 85.98MB
+ 1522f9c6f453 Extracting 1B
+ f3b07e8a357c Downloading 96.47MB
+ 1522f9c6f453 Extracting 1B
+ f3b07e8a357c Downloading 110.1MB
+ 1522f9c6f453 Pull complete 0B
+ f3b07e8a357c Downloading 112.4MB
+ 9928009b15c8 Pull complete 0B
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Downloading 112.4MB
+ f3b07e8a357c Download complete 0B
+ f3b07e8a357c Extracting 1B
+ 4f4fb700ef54 Pull complete 0B
+ 4eb14bae0e1d Pull complete 0B
+ f3b07e8a357c Extracting 1B
+ f3b07e8a357c Extracting 1B
+ Image redis:7.4-alpine Pulled 
+ f3b07e8a357c Extracting 1B
+ f3b07e8a357c Extracting 1B
+ f3b07e8a357c Extracting 1B
+ f3b07e8a357c Extracting 1B
+ f3b07e8a357c Extracting 1B
+ f3b07e8a357c Extracting 1B
+ f3b07e8a357c Extracting 1B
+ f3b07e8a357c Extracting 2B
+ f3b07e8a357c Extracting 2B
+ f3b07e8a357c Extracting 2B
+ f3b07e8a357c Extracting 2B
+ f3b07e8a357c Extracting 2B
+ f3b07e8a357c Extracting 2B
+ f3b07e8a357c Extracting 2B
+ f3b07e8a357c Extracting 2B
+ f3b07e8a357c Extracting 2B
+ f3b07e8a357c Extracting 2B
+ f3b07e8a357c Extracting 2B
+ f3b07e8a357c Extracting 3B
+ f3b07e8a357c Extracting 3B
+ f3b07e8a357c Extracting 3B
+ f3b07e8a357c Extracting 3B
+ f3b07e8a357c Extracting 3B
+ f3b07e8a357c Extracting 3B
+ eb805f20f060 Pull complete 0B
+ 93a3470d5852 Extracting 1B
+ 7ccdb0dcae74 Pull complete 0B
+ f3b07e8a357c Pull complete 0B
+ a8a481ae6efc Pull complete 0B
+ b0a0d9d2abf2 Pull complete 0B
+ 93a3470d5852 Pull complete 0B
+ Image postgres:17-alpine Pulled 
+ Image tiee44pilot-gateway Building 
+ Image tiee44pilot-relay Building 
+ Image tiee44pilot-worker Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.45kB done
+#1 DONE 0.0s
+
+#2 [gateway internal] load build definition from Dockerfile
+#2 transferring dockerfile: 188B 0.0s done
+#2 DONE 0.0s
+
+#3 [worker internal] load metadata for docker.io/library/python:3.12-slim
+#3 ...
+
+#4 [auth] library/python:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#3 [worker internal] load metadata for docker.io/library/python:3.12-slim
+#3 DONE 0.6s
+
+#5 [relay internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [gateway internal] load build context
+#6 transferring context: 600B done
+#6 DONE 0.0s
+
+#7 [relay 1/5] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#7 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 0.0s done
+#7 DONE 0.0s
+
+#8 [relay 3/5] COPY requirements.txt ./
+#8 CACHED
+
+#9 [relay 4/5] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [relay 2/5] WORKDIR /srv
+#10 CACHED
+
+#11 [relay 5/5] COPY app ./app
+#11 CACHED
+
+#12 [gateway] exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:c042dfe642a77fbc6b5c62fc3e76a13dc60c6a90cac1015528c8cd3a061efe1b done
+#12 exporting config sha256:8fa142b8751aaccd6923a9a445925bb229fc5542a17aebd4856702ba5228d7b4 0.0s done
+#12 exporting attestation manifest sha256:55bec017432cd38464b373a776ead9d292d7872c3477d867ac3ab40aa725c403 0.0s done
+#12 exporting manifest list sha256:c247180063acd3bed57c8529a7187652033ac07d2aa7397d8e0807c40876624e 0.0s done
+#12 naming to docker.io/library/tiee44pilot-gateway:latest done
+#12 unpacking to docker.io/library/tiee44pilot-gateway:latest
+#12 unpacking to docker.io/library/tiee44pilot-gateway:latest 0.0s done
+#12 DONE 0.2s
+
+#13 [worker] exporting to image
+#13 exporting layers done
+#13 exporting manifest sha256:e6a5141bdfc7a708d4842cc2142b3a44f6d2f653145feb587bb01b4380c89e98 done
+#13 exporting config sha256:1b89c94d0c34956f888648e54344e707fa99578ede232d2a9d228257ab326c83 done
+#13 exporting attestation manifest sha256:6aa7ceff6c43aa4c89d5a3d2fbd685c60c94a7075d5b517e3f7cfc1fb74e9592 0.0s done
+#13 exporting manifest list sha256:0d068e8e3465d44032e6fc2f90d1d6a6756e6c68daf1efc19f5f5606aeb5b731 0.0s done
+#13 naming to docker.io/library/tiee44pilot-worker:latest 0.0s done
+#13 unpacking to docker.io/library/tiee44pilot-worker:latest 0.0s done
+#13 DONE 0.2s
+
+#14 [relay] exporting to image
+#14 exporting layers done
+#14 exporting manifest sha256:1df2b501ea9d17fbda66af0cf9ae94435611b0fcb736779a84019b08a3172cf3 done
+#14 exporting config sha256:9df03bf19627781897ba0103dcd73ad53e0d3b243c085245f26afa679b2b09a1 done
+#14 exporting attestation manifest sha256:3fa6b53b564d858ebd47ff9973120735be6b66a19120e73c6082aefc6994651c 0.0s done
+#14 exporting manifest list sha256:bf1e441026434120a889e2f90efe986a5583223685b6aa4e023d47a88bedba21 0.0s done
+#14 naming to docker.io/library/tiee44pilot-relay:latest done
+#14 unpacking to docker.io/library/tiee44pilot-relay:latest 0.0s done
+#14 DONE 0.2s
+
+#15 [worker] resolving provenance for metadata file
+#15 DONE 0.1s
+
+#16 [relay] resolving provenance for metadata file
+#16 DONE 0.0s
+
+#17 [gateway] resolving provenance for metadata file
+#17 DONE 0.0s
+ Image tiee44pilot-relay Built 
+ Image tiee44pilot-worker Built 
+ Image tiee44pilot-gateway Built 
+ Volume tiee44pilot_redis_data Creating 
+ Volume tiee44pilot_redis_data Creating 
+ Network tiee44pilot_default Creating 
+ Network tiee44pilot_default Creating 
+ Volume tiee44pilot_pg_data Creating 
+ Volume tiee44pilot_pg_data Creating 
+ Volume tiee44pilot_pg_data Created 
+ Volume tiee44pilot_pg_data Created 
+ Volume tiee44pilot_redis_data Created 
+ Volume tiee44pilot_redis_data Created 
+ Network tiee44pilot_default Created 
+ Network tiee44pilot_default Created 
+ Container tiee44pilot-redis-1 Creating 
+ Container tiee44pilot-postgres-1 Creating 
+ Container tiee44pilot-redis-1 Created 
+ Container tiee44pilot-postgres-1 Created 
+ Container tiee44pilot-worker-1 Creating 
+ Container tiee44pilot-gateway-1 Creating 
+ Container tiee44pilot-relay-1 Creating 
+ Container tiee44pilot-relay-1 Created 
+ Container tiee44pilot-gateway-1 Created 
+ Container tiee44pilot-worker-1 Created 
+ Container tiee44pilot-redis-1 Starting 
+ Container tiee44pilot-postgres-1 Starting 
+ Container tiee44pilot-postgres-1 Started 
+ Container tiee44pilot-redis-1 Started 
+ Container tiee44pilot-redis-1 Waiting 
+ Container tiee44pilot-postgres-1 Waiting 
+ Container tiee44pilot-redis-1 Waiting 
+ Container tiee44pilot-postgres-1 Waiting 
+ Container tiee44pilot-postgres-1 Waiting 
+ Container tiee44pilot-redis-1 Waiting 
+ Container tiee44pilot-redis-1 Healthy 
+ Container tiee44pilot-redis-1 Healthy 
+ Container tiee44pilot-postgres-1 Healthy 
+ Container tiee44pilot-postgres-1 Healthy 
+ Container tiee44pilot-worker-1 Starting 
+ Container tiee44pilot-redis-1 Healthy 
+ Container tiee44pilot-relay-1 Starting 
+ Container tiee44pilot-postgres-1 Healthy 
+ Container tiee44pilot-gateway-1 Starting 
+ Container tiee44pilot-relay-1 Started 
+ Container tiee44pilot-gateway-1 Started 
+ Container tiee44pilot-worker-1 Started 

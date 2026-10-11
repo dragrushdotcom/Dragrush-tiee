@@ -1,0 +1,31 @@
+services:
+  network_anchor:
+    build: .
+    command: ["sleep", "infinity"]
+    networks: [pilot_internal]
+  postgres:
+    network_mode: service:network_anchor
+  redis:
+    network_mode: service:network_anchor
+  gateway:
+    network_mode: service:network_anchor
+    ports: !reset []
+    volumes: ["./validation:/validation:ro", "./results:/results"]
+    environment:
+      QUEUE_CAPACITY: "1000"
+      PG_DSN: postgresql://tiee:${POSTGRES_PASSWORD}@127.0.0.1:5432/${PILOT_DATABASE:-tiee}
+      REDIS_URL: redis://127.0.0.1:6379/0
+  relay:
+    network_mode: service:network_anchor
+    environment:
+      RELAY_RETRY_SECONDS: '2'
+      PG_DSN: postgresql://tiee:${POSTGRES_PASSWORD}@127.0.0.1:5432/${PILOT_DATABASE:-tiee}
+      REDIS_URL: redis://127.0.0.1:6379/0
+  worker:
+    network_mode: service:network_anchor
+    environment:
+      PG_DSN: postgresql://tiee:${POSTGRES_PASSWORD}@127.0.0.1:5432/${PILOT_DATABASE:-tiee}
+      REDIS_URL: redis://127.0.0.1:6379/0
+networks:
+  pilot_internal:
+    internal: true
