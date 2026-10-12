@@ -32,6 +32,10 @@ HTTP responses: 118 x 202 and 2 x 200. PostgreSQL reconciled to 120 event rows (
 - **Not run in v4.9:** candidate-vs-control benchmark, repeated randomized runs, held-out confirmation, CPU/RAM/storage/queue-depth measurement, crash/restart and AOF tests, broad recovery/integration suite, or an optimization. v4.8's 18/18 integration checks remain the prior round's result, not a v4.9 rerun.
 
 ## Interpretation and next experiment
+### Safe-candidate review
+
+Connection pooling was considered because connection and transaction begin averaged 2.127 ms, about 3.65% of the 58.272 ms mean transaction time in this single run. That is only an estimate of the measured component, not a projected pooling gain. The runtime does not currently include `psycopg_pool`, and a persistent-connection pool would add connection lifecycle and restart behavior that needs its own correctness and crash tests. Given advisory-lock wait averaged 48.838 ms, this profile does not justify introducing that complexity. **Decision: defer connection pooling; no performance optimization was implemented or tested in v4.9.** A matched randomized benchmark is required before revisiting it.
+
 
 The largest observed component in this single profiled run was advisory-lock wait. Because all requests contend on capacity accounting and this run used concurrency 8, the result is consistent with serialization being a bottleneck. The sample is small and instrumented; it has no matched baseline and no uncertainty interval. It is not enough to estimate the production bottleneck or justify removing capacity serialization. Keep the durable 202 behavior and serialization intact.
 
