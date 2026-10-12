@@ -33,3 +33,7 @@ After verification, stop only this private project; retain its volumes:
     docker compose -p tiee47pilot --env-file .env.v47 -f docker-compose.yml -f compose.validation.yml -f compose.v47.yml stop -t 1
 
 No production deployment, machine upgrade, new Codespace, PR merge or physical robotics work is part of this reproduction. Batching, physical power loss, volume loss, production failover and large powered confirmation remain unexecuted.
+
+## Frozen pilot versus final transport correction
+
+The published 27-run pilot used immutable commit 721e3bf36f1eaf7fffdca3cc7818f86a7a0cd0bb. Re-analyze its raw data from that commit/worktree so source hashes match plan.json. Final development source adds a Gateway backlog of 128 after collection; its tests are separate. For the final-source burst check, run validation/v47_http_regression.py with the corrected image; retain before.json, backlog_fix.json and gateway_before_fix.py. The matched 27-run experiment has not been repeated on the post-pilot transport patch.

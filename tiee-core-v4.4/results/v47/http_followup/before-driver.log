@@ -1,0 +1,1 @@
+{"status": "MEASURED_BEFORE_FIX", "pool": 8, "offered": 96, "successful_http": 91, "http_errors": 5, "request_queue_size": 5, "error_types": {"0:ConnectionResetError": 5}}

@@ -1,0 +1,10 @@
+{
+  "test": "patched_gateway_durable_receipt_crash",
+  "pool": 8,
+  "status": "PASSED",
+  "detail": {
+    "receipt_immutable": true,
+    "marker_immutable": true
+  },
+  "seconds": 19.776892508999936
+}

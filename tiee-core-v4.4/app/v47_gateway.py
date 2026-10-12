@@ -4,6 +4,9 @@ from .gateway import Handler as LegacyHandler
 from .common import pg,fingerprint
 from .v47_policy import decide,features
 from .v47_store import migrate,audit,ACTIVE
+class Server(ThreadingHTTPServer):
+    request_queue_size=128
+
 class Handler(LegacyHandler):
     def do_POST(self):
         if self.path!='/ingest' or self.headers.get('X-API-Key')!=os.environ['API_KEY']: return self.respond(403,dict(error='forbidden'))
@@ -46,4 +49,4 @@ class Handler(LegacyHandler):
         except Exception as exc:
             print('v46 admission transaction failed',type(exc).__name__,flush=True);return self.respond(503,dict(error='database_unavailable',retry_after=1))
 if __name__=='__main__':
-    migrate();ThreadingHTTPServer(('0.0.0.0',8087),Handler).serve_forever()
+    migrate();Server(('0.0.0.0',8087),Handler).serve_forever()

@@ -1,0 +1,16 @@
+{
+  "status": "COMPLETE_VERIFIED",
+  "integration_checks_passed": 21,
+  "policy_parity_examples": 2000,
+  "matched_pilot_runs": 27,
+  "offered_pilot_events": 6480,
+  "pilot_source_commit": "721e3bf36f1eaf7fffdca3cc7818f86a7a0cd0bb",
+  "post_collection_gateway_only_change_verified": true,
+  "model_workload_worker_logic_unchanged": true,
+  "pilot_overall_acceptance": "FAILED HTTP resets retained",
+  "A3_iid_useful_loss_bounds": "PASSED all three conditions",
+  "patched_burst_events_verified": 192,
+  "matched_benchmark_after_transport_fix": "UNEXECUTED",
+  "performance_claim": "NOT ESTABLISHED",
+  "utc": "2026-10-12T01:03:32.914221+00:00"
+}

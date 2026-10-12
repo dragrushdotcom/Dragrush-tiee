@@ -1,0 +1,116 @@
+{
+  "postgres": {
+    "fsync": "on",
+    "full_page_writes": "on",
+    "synchronous_commit": "on"
+  },
+  "redis_aof": "appendfsync\nalways\nappendonly\nyes\n",
+  "gateway_request_queue_size": 128,
+  "services": [
+    {
+      "name": "/tiee47pilot-gateway-1",
+      "image": "sha256:a346ea02e6d6ff6e4d56622d322d61a663b8e0c30c60d68a85b94d8f35464112",
+      "command": [
+        "python",
+        "-m",
+        "app.v47_gateway"
+      ],
+      "memory_limit": 0,
+      "nano_cpus": 0,
+      "ports": {}
+    },
+    {
+      "name": "/tiee47pilot-network_anchor-1",
+      "image": "sha256:b7b08d6512dae92f155a95219bb81e03e1b1b7c153338ab50d7df7e5134645ec",
+      "command": [
+        "sleep",
+        "infinity"
+      ],
+      "memory_limit": 0,
+      "nano_cpus": 0,
+      "ports": {}
+    },
+    {
+      "name": "/tiee47pilot-postgres-1",
+      "image": "sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24",
+      "command": [
+        "postgres"
+      ],
+      "memory_limit": 0,
+      "nano_cpus": 0,
+      "ports": {}
+    },
+    {
+      "name": "/tiee47pilot-probe-1",
+      "image": "sha256:a346ea02e6d6ff6e4d56622d322d61a663b8e0c30c60d68a85b94d8f35464112",
+      "command": [
+        "sleep",
+        "infinity"
+      ],
+      "memory_limit": 0,
+      "nano_cpus": 0,
+      "ports": {}
+    },
+    {
+      "name": "/tiee47pilot-redis-1",
+      "image": "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+      "command": [
+        "redis-server",
+        "--appendonly",
+        "yes",
+        "--appendfsync",
+        "always",
+        "--save",
+        "60",
+        "1000"
+      ],
+      "memory_limit": 0,
+      "nano_cpus": 0,
+      "ports": {}
+    },
+    {
+      "name": "/tiee47pilot-relay-1",
+      "image": "sha256:a346ea02e6d6ff6e4d56622d322d61a663b8e0c30c60d68a85b94d8f35464112",
+      "command": [
+        "python",
+        "-m",
+        "app.v47_relay"
+      ],
+      "memory_limit": 0,
+      "nano_cpus": 0,
+      "ports": {}
+    },
+    {
+      "name": "/tiee47pilot-worker-1",
+      "image": "sha256:a346ea02e6d6ff6e4d56622d322d61a663b8e0c30c60d68a85b94d8f35464112",
+      "command": [
+        "python",
+        "-m",
+        "app.v47_worker"
+      ],
+      "memory_limit": 0,
+      "nano_cpus": 0,
+      "ports": {}
+    },
+    {
+      "name": "/tiee47pilot-worker-2",
+      "image": "sha256:a346ea02e6d6ff6e4d56622d322d61a663b8e0c30c60d68a85b94d8f35464112",
+      "command": [
+        "python",
+        "-m",
+        "app.v47_worker"
+      ],
+      "memory_limit": 0,
+      "nano_cpus": 0,
+      "ports": {}
+    }
+  ],
+  "networks": [
+    {
+      "name": "tiee47pilot_pilot_internal",
+      "internal": true
+    }
+  ],
+  "host_cores": 2,
+  "utc": "2026-10-12T01:01:12.013571+00:00"
+}

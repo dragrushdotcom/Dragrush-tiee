@@ -1,0 +1,11 @@
+{
+  "pilot_commit": "721e3bf36f1eaf7fffdca3cc7818f86a7a0cd0bb",
+  "path": "app/v47_gateway.py",
+  "old_sha256": "53486f570e82194e29aa07f3e056cba4490f6487a1680012a27308b445e39170",
+  "new_sha256": "182142efd1a4084ee75f3cf539a34cf6f56666e9f6be8f31fe3ce1a90aa88c12",
+  "changed_after_collection": true,
+  "request_queue_size_before": 5,
+  "request_queue_size_after": 128,
+  "admission_durability_and_worker_logic_unchanged": true,
+  "utc": "2026-10-12T00:58:03.655702+00:00"
+}

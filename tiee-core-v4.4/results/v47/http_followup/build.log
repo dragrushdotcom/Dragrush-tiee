@@ -1,0 +1,26 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  73.69MB
+Step 1/7 : FROM python:3.12-slim
+ ---> a6e34c598f24
+Step 2/7 : WORKDIR /srv
+ ---> Using cache
+ ---> 774421ca3f7b
+Step 3/7 : COPY requirements.txt ./
+ ---> Using cache
+ ---> c683bde679f1
+Step 4/7 : RUN pip install --no-cache-dir -r requirements.txt
+ ---> Using cache
+ ---> 2758b8ffcdb5
+Step 5/7 : COPY app ./app
+ ---> 12ae5e53621f
+Step 6/7 : ENV PYTHONUNBUFFERED=1
+ ---> Running in 6c38671f2fd8
+ ---> Removed intermediate container 6c38671f2fd8
+ ---> 99639e7474ec
+Step 7/7 : COPY policies ./policies
+ ---> a346ea02e6d6
+Successfully built a346ea02e6d6
+Successfully tagged tiee47pilot-gateway:latest
