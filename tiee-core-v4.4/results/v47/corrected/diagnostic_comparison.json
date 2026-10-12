@@ -1,0 +1,305 @@
+{
+  "scope": "same-trace sequential repeat; host-time and order confounds preclude causal speed claims",
+  "runtime_source_changes": [
+    "app/v47_gateway.py"
+  ],
+  "pairs": [
+    {
+      "index": 0,
+      "arm": "A3",
+      "condition": "burst",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 161,
+      "after_useful": 161,
+      "before_cpu": 11.363763999999998,
+      "after_cpu": 11.508306
+    },
+    {
+      "index": 1,
+      "arm": "A4",
+      "condition": "burst",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 161,
+      "after_useful": 161,
+      "before_cpu": 11.505522000000001,
+      "after_cpu": 12.007631
+    },
+    {
+      "index": 2,
+      "arm": "A1",
+      "condition": "burst",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 161,
+      "after_useful": 161,
+      "before_cpu": 11.11514,
+      "after_cpu": 11.111435999999998
+    },
+    {
+      "index": 3,
+      "arm": "A4",
+      "condition": "burst",
+      "before_http_errors": 3,
+      "after_http_errors": 0,
+      "before_useful": 154,
+      "after_useful": 155,
+      "before_cpu": 11.292527999999995,
+      "after_cpu": 11.349444
+    },
+    {
+      "index": 4,
+      "arm": "A3",
+      "condition": "burst",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 155,
+      "after_useful": 155,
+      "before_cpu": 11.454270999999995,
+      "after_cpu": 11.135330000000005
+    },
+    {
+      "index": 5,
+      "arm": "A1",
+      "condition": "burst",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 155,
+      "after_useful": 155,
+      "before_cpu": 11.723936999999996,
+      "after_cpu": 11.186474999999998
+    },
+    {
+      "index": 6,
+      "arm": "A4",
+      "condition": "normal",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 164,
+      "after_useful": 164,
+      "before_cpu": 9.107850999999993,
+      "after_cpu": 9.051628
+    },
+    {
+      "index": 7,
+      "arm": "A1",
+      "condition": "normal",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 165,
+      "after_useful": 165,
+      "before_cpu": 8.835502999999996,
+      "after_cpu": 8.664239999999998
+    },
+    {
+      "index": 8,
+      "arm": "A3",
+      "condition": "normal",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 164,
+      "after_useful": 164,
+      "before_cpu": 9.156879,
+      "after_cpu": 9.628413000000002
+    },
+    {
+      "index": 9,
+      "arm": "A4",
+      "condition": "shift",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 119,
+      "after_useful": 119,
+      "before_cpu": 10.100055999999999,
+      "after_cpu": 10.743651999999997
+    },
+    {
+      "index": 10,
+      "arm": "A3",
+      "condition": "shift",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 119,
+      "after_useful": 119,
+      "before_cpu": 10.304731000000004,
+      "after_cpu": 11.001377999999995
+    },
+    {
+      "index": 11,
+      "arm": "A1",
+      "condition": "shift",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 119,
+      "after_useful": 119,
+      "before_cpu": 10.773943,
+      "after_cpu": 10.616182000000009
+    },
+    {
+      "index": 12,
+      "arm": "A3",
+      "condition": "shift",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 126,
+      "after_useful": 126,
+      "before_cpu": 10.474753,
+      "after_cpu": 10.816211999999988
+    },
+    {
+      "index": 13,
+      "arm": "A1",
+      "condition": "shift",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 126,
+      "after_useful": 126,
+      "before_cpu": 9.996664000000004,
+      "after_cpu": 9.812104000000001
+    },
+    {
+      "index": 14,
+      "arm": "A4",
+      "condition": "shift",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 126,
+      "after_useful": 126,
+      "before_cpu": 11.110479000000002,
+      "after_cpu": 10.121849
+    },
+    {
+      "index": 15,
+      "arm": "A1",
+      "condition": "shift",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 128,
+      "after_useful": 128,
+      "before_cpu": 9.880181999999989,
+      "after_cpu": 9.829854000000008
+    },
+    {
+      "index": 16,
+      "arm": "A3",
+      "condition": "shift",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 128,
+      "after_useful": 128,
+      "before_cpu": 9.832598000000008,
+      "after_cpu": 9.870103999999996
+    },
+    {
+      "index": 17,
+      "arm": "A4",
+      "condition": "shift",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 128,
+      "after_useful": 128,
+      "before_cpu": 9.878532000000018,
+      "after_cpu": 10.062195999999995
+    },
+    {
+      "index": 18,
+      "arm": "A3",
+      "condition": "burst",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 170,
+      "after_useful": 170,
+      "before_cpu": 11.58206300000001,
+      "after_cpu": 11.376179999999998
+    },
+    {
+      "index": 19,
+      "arm": "A1",
+      "condition": "burst",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 170,
+      "after_useful": 170,
+      "before_cpu": 11.855563,
+      "after_cpu": 11.093256000000004
+    },
+    {
+      "index": 20,
+      "arm": "A4",
+      "condition": "burst",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 170,
+      "after_useful": 170,
+      "before_cpu": 11.483790999999995,
+      "after_cpu": 11.602225000000008
+    },
+    {
+      "index": 21,
+      "arm": "A4",
+      "condition": "normal",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 171,
+      "after_useful": 171,
+      "before_cpu": 10.595171000000011,
+      "after_cpu": 10.466922
+    },
+    {
+      "index": 22,
+      "arm": "A1",
+      "condition": "normal",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 171,
+      "after_useful": 171,
+      "before_cpu": 9.675150000000007,
+      "after_cpu": 9.299135999999995
+    },
+    {
+      "index": 23,
+      "arm": "A3",
+      "condition": "normal",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 171,
+      "after_useful": 171,
+      "before_cpu": 9.90460399999999,
+      "after_cpu": 9.684026000000006
+    },
+    {
+      "index": 24,
+      "arm": "A3",
+      "condition": "normal",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 160,
+      "after_useful": 160,
+      "before_cpu": 9.964617000000004,
+      "after_cpu": 10.069242999999991
+    },
+    {
+      "index": 25,
+      "arm": "A1",
+      "condition": "normal",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 160,
+      "after_useful": 160,
+      "before_cpu": 9.11581900000001,
+      "after_cpu": 9.411656999999984
+    },
+    {
+      "index": 26,
+      "arm": "A4",
+      "condition": "normal",
+      "before_http_errors": 0,
+      "after_http_errors": 0,
+      "before_useful": 160,
+      "after_useful": 160,
+      "before_cpu": 9.997917999999993,
+      "after_cpu": 9.600603000000007
+    }
+  ]
+}

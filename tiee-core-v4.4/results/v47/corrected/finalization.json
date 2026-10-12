@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE_VERIFIED",
+  "matched_runs": 27,
+  "events_accounted": 6480,
+  "operational_gates_pass": true,
+  "iid_screen_pass": true,
+  "current_round_integration_tests": "NOT RERUN; 21 previously passed on base source",
+  "policy_parity": "2000 examples previously passed; not rerun",
+  "independent_powered_confirmation": "UNEXECUTED",
+  "superiority": "NOT ESTABLISHED",
+  "original_runtime_changes": [
+    "app/v47_gateway.py"
+  ]
+}

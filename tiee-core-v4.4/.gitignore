@@ -10,3 +10,6 @@ results/v46/finish_state.json
 
 .env.v47
 results/v47/driver-live.log
+
+results/v47/corrected/driver-live.log
+results/v47/corrected/runs.jsonl

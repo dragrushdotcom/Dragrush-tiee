@@ -1,0 +1,396 @@
+{
+  "status": "COMPLETE",
+  "planned_runs": 27,
+  "events_accounted": 6480,
+  "paired_blocks": 9,
+  "source_freeze_verified": true,
+  "guardrails": {
+    "normal": {
+      "valid_count": 496,
+      "valid_rejected": 1,
+      "valid_not_done": 1,
+      "rejection_rate": 0.0020161290322580645,
+      "loss_rate": 0.0020161290322580645,
+      "rejection_upper95": 0.009528222728563508,
+      "loss_upper95": 0.009528222728563508,
+      "iid_screen_pass": true
+    },
+    "shift": {
+      "valid_count": 373,
+      "valid_rejected": 0,
+      "valid_not_done": 0,
+      "rejection_rate": 0.0,
+      "loss_rate": 0.0,
+      "rejection_upper95": 0.007999287862024886,
+      "loss_upper95": 0.007999287862024886,
+      "iid_screen_pass": true
+    },
+    "burst": {
+      "valid_count": 486,
+      "valid_rejected": 0,
+      "valid_not_done": 0,
+      "rejection_rate": 0.0,
+      "loss_rate": 0.0,
+      "rejection_upper95": 0.006145099343887903,
+      "loss_upper95": 0.006145099343887903,
+      "iid_screen_pass": true
+    }
+  },
+  "trace_sensitivity": {
+    "normal": [
+      {
+        "block": 0,
+        "valid_count": 165,
+        "valid_not_done": 1
+      },
+      {
+        "block": 2,
+        "valid_count": 171,
+        "valid_not_done": 0
+      },
+      {
+        "block": 1,
+        "valid_count": 160,
+        "valid_not_done": 0
+      }
+    ],
+    "shift": [
+      {
+        "block": 0,
+        "valid_count": 119,
+        "valid_not_done": 0
+      },
+      {
+        "block": 1,
+        "valid_count": 126,
+        "valid_not_done": 0
+      },
+      {
+        "block": 2,
+        "valid_count": 128,
+        "valid_not_done": 0
+      }
+    ],
+    "burst": [
+      {
+        "block": 1,
+        "valid_count": 161,
+        "valid_not_done": 0
+      },
+      {
+        "block": 2,
+        "valid_count": 155,
+        "valid_not_done": 0
+      },
+      {
+        "block": 0,
+        "valid_count": 170,
+        "valid_not_done": 0
+      }
+    ]
+  },
+  "operational_gates_pass": true,
+  "iid_screen_pass": true,
+  "production_cluster_rate_certification": "NOT ESTABLISHED: three trace blocks per condition",
+  "superiority_power": "UNEXECUTED; this is a small acceptance pilot",
+  "performance_claim": "NOT ESTABLISHED",
+  "contrasts": {
+    "A4": {
+      "paired_difference": 0.19400752528279389,
+      "ci_adjusted975": [
+        -0.0818624294898369,
+        0.5541504282244819
+      ],
+      "ci95": [
+        -0.05951184282074293,
+        0.508006619193388
+      ],
+      "pairs": 9,
+      "raw_points": [
+        -0.46492069494667554,
+        1.0311228362737737,
+        -0.5114421073491897,
+        0.21260027871258735,
+        0.6278945599924324,
+        -0.11121480931643557,
+        0.4552868652774258,
+        0.2541315852555801,
+        0.2526092136456466
+      ]
+    },
+    "A1": {
+      "paired_difference": 0.6879386823041777,
+      "ci_adjusted975": [
+        0.4763393476670878,
+        0.9568219771393865
+      ],
+      "ci95": [
+        0.4926185276373598,
+        0.9216373423378467
+      ],
+      "pairs": 9,
+      "raw_points": [
+        0.5442235862386369,
+        0.07463755140856243,
+        0.11795743468235642,
+        1.1693290125853366,
+        1.5481416962804513,
+        1.2446251332783032,
+        0.2389271349175086,
+        1.2237059290866465,
+        0.029900662259796817
+      ]
+    }
+  },
+  "metrics": {
+    "A1": {
+      "runs": 9,
+      "useful_throughput_mean": 20.455423871800946,
+      "net_utility_per_cpu_mean": 4.223502145692292,
+      "cpu_seconds_mean": 10.113815555555554,
+      "valid_count": 1355,
+      "valid_rejected": 0,
+      "valid_not_done": 0,
+      "http_errors": 0,
+      "poll_errors": 0,
+      "drain_failures": 0,
+      "missing_terminal_timing": 0,
+      "held": 0,
+      "offered_observed_ms": {
+        "0.5": 1855.1215030001913,
+        "0.95": 5865.822041000229,
+        "0.99": 6663.6423060003835
+      },
+      "dispatch_observed_ms": {
+        "0.5": 1478.8697170001797,
+        "0.95": 4090.0602110000364,
+        "0.99": 4406.860626999787
+      },
+      "ack_ms": {
+        "0.5": 398.00760700018145,
+        "0.95": 599.2355709995536,
+        "0.99": 712.8922259998944
+      },
+      "terminal_state_write_ms": {
+        "0.5": 1060.025,
+        "0.95": 3739.578,
+        "0.99": 4077.94
+      },
+      "ram_working_set_peak_bytes": 347992064,
+      "queue_peak": 143,
+      "table_growth_mean": 1514609.7777777778,
+      "wal_growth_mean": 2127451.5555555555,
+      "aof_growth_mean": 137443.55555555556,
+      "recorded_digest_cpu_fraction": 0.15273962110573946,
+      "http_error_classes": {},
+      "scoring_ms": {
+        "0.5": 0.1744850001159648,
+        "0.95": 2.1880230001443124,
+        "0.99": 4.431248999935633
+      },
+      "admission_lock_wait_ms": {
+        "0.5": 76.56709499997305,
+        "0.95": 162.58639400030006,
+        "0.99": 209.8607319999246
+      },
+      "admission_prewrite_ms": {
+        "0.5": 376.92903000015576,
+        "0.95": 571.5247699999964,
+        "0.99": 675.6749529999979
+      }
+    },
+    "A3": {
+      "runs": 9,
+      "useful_throughput_mean": 19.672688302268423,
+      "net_utility_per_cpu_mean": 4.911440827996469,
+      "cpu_seconds_mean": 10.565465777777776,
+      "valid_count": 1355,
+      "valid_rejected": 1,
+      "valid_not_done": 1,
+      "http_errors": 0,
+      "poll_errors": 0,
+      "drain_failures": 0,
+      "missing_terminal_timing": 0,
+      "held": 0,
+      "offered_observed_ms": {
+        "0.5": 1933.3452750001925,
+        "0.95": 6138.823440000124,
+        "0.99": 6890.487292000216
+      },
+      "dispatch_observed_ms": {
+        "0.5": 1686.7746610000722,
+        "0.95": 4458.353578999777,
+        "0.99": 4801.781914000003
+      },
+      "ack_ms": {
+        "0.5": 333.85671399992134,
+        "0.95": 612.7709709999181,
+        "0.99": 735.7364469999084
+      },
+      "terminal_state_write_ms": {
+        "0.5": 1251.265,
+        "0.95": 4105.902999999999,
+        "0.99": 4482.171
+      },
+      "ram_working_set_peak_bytes": 347144192,
+      "queue_peak": 154,
+      "table_growth_mean": 2025244.4444444445,
+      "wal_growth_mean": 2661240,
+      "aof_growth_mean": 133802.66666666666,
+      "recorded_digest_cpu_fraction": 0.14326530656607117,
+      "http_error_classes": {},
+      "scoring_ms": {
+        "0.5": 0.16937600003075204,
+        "0.95": 1.6840829998727713,
+        "0.99": 3.8224629997785087
+      },
+      "admission_lock_wait_ms": {
+        "0.5": 71.50341400028992,
+        "0.95": 165.05976200005534,
+        "0.99": 223.30197800010865
+      },
+      "admission_prewrite_ms": {
+        "0.5": 313.19032999999763,
+        "0.95": 589.0673069998229,
+        "0.99": 711.4478740004415
+      }
+    },
+    "A4": {
+      "runs": 9,
+      "useful_throughput_mean": 18.994652511058487,
+      "net_utility_per_cpu_mean": 4.717433302713676,
+      "cpu_seconds_mean": 10.55623888888889,
+      "valid_count": 1355,
+      "valid_rejected": 1,
+      "valid_not_done": 1,
+      "http_errors": 0,
+      "poll_errors": 0,
+      "drain_failures": 0,
+      "missing_terminal_timing": 0,
+      "held": 0,
+      "offered_observed_ms": {
+        "0.5": 1906.6648909997639,
+        "0.95": 6460.206786000072,
+        "0.99": 7483.210546000009
+      },
+      "dispatch_observed_ms": {
+        "0.5": 1707.9398569999285,
+        "0.95": 4651.35003100022,
+        "0.99": 5047.682963999705
+      },
+      "ack_ms": {
+        "0.5": 346.38162700002795,
+        "0.95": 670.6306540004334,
+        "0.99": 909.3326990000605
+      },
+      "terminal_state_write_ms": {
+        "0.5": 1305.798,
+        "0.95": 4152.343,
+        "0.99": 4690.501
+      },
+      "ram_working_set_peak_bytes": 346251264,
+      "queue_peak": 152,
+      "table_growth_mean": 2024334.2222222222,
+      "wal_growth_mean": 2663326.222222222,
+      "aof_growth_mean": 133802.66666666666,
+      "recorded_digest_cpu_fraction": 0.1437621446401101,
+      "http_error_classes": {},
+      "scoring_ms": {
+        "0.5": 0.1717810000627651,
+        "0.95": 1.8253570001434127,
+        "0.99": 4.635298999801307
+      },
+      "admission_lock_wait_ms": {
+        "0.5": 73.51038100023288,
+        "0.95": 161.9858449998901,
+        "0.99": 251.73750800013295
+      },
+      "admission_prewrite_ms": {
+        "0.5": 329.29674500019246,
+        "0.95": 648.0731350002316,
+        "0.99": 892.8124300000491
+      }
+    }
+  },
+  "component_profiles": {
+    "A1": {
+      "gateway": {
+        "cpu_seconds": 6.932388,
+        "fraction": 0.07615971728001544
+      },
+      "network_anchor": {
+        "cpu_seconds": 2.341956000000002,
+        "fraction": 0.025728898446283732
+      },
+      "postgres": {
+        "cpu_seconds": 38.62902799999999,
+        "fraction": 0.4243813028471285
+      },
+      "redis": {
+        "cpu_seconds": 5.955364000000001,
+        "fraction": 0.06542606076572488
+      },
+      "relay": {
+        "cpu_seconds": 12.575679,
+        "fraction": 0.13815732143732104
+      },
+      "worker": {
+        "cpu_seconds": 24.589925,
+        "fraction": 0.2701466992235264
+      }
+    },
+    "A3": {
+      "gateway": {
+        "cpu_seconds": 7.032375999999999,
+        "fraction": 0.07395557636035019
+      },
+      "network_anchor": {
+        "cpu_seconds": 2.44909,
+        "fraction": 0.02575571364619441
+      },
+      "postgres": {
+        "cpu_seconds": 41.32684799999998,
+        "fraction": 0.43461141198886183
+      },
+      "redis": {
+        "cpu_seconds": 6.042128000000005,
+        "fraction": 0.06354169041629891
+      },
+      "relay": {
+        "cpu_seconds": 13.789361999999999,
+        "fraction": 0.14501502967866212
+      },
+      "worker": {
+        "cpu_seconds": 24.449388000000006,
+        "fraction": 0.25712057790963255
+      }
+    },
+    "A4": {
+      "gateway": {
+        "cpu_seconds": 6.999001,
+        "fraction": 0.07366892564323467
+      },
+      "network_anchor": {
+        "cpu_seconds": 2.3968599999999993,
+        "fraction": 0.025228472051546127
+      },
+      "postgres": {
+        "cpu_seconds": 41.695192,
+        "fraction": 0.4388683469438557
+      },
+      "redis": {
+        "cpu_seconds": 6.091928000000006,
+        "fraction": 0.06412140687734431
+      },
+      "relay": {
+        "cpu_seconds": 13.450932999999997,
+        "fraction": 0.14157960300464756
+      },
+      "worker": {
+        "cpu_seconds": 24.372236,
+        "fraction": 0.2565332454793716
+      }
+    }
+  },
+  "statistical_method": "one-sided exact Clopper-Pearson 95% bounds under synthetic IID validity; independently stratified paired trace bootstrap, 20000 draws, Bonferroni 97.5% intervals for two contrasts; exploratory only"
+}

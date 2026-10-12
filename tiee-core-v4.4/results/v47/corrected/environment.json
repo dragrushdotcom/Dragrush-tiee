@@ -1,0 +1,110 @@
+{
+  "server_backlog": 128,
+  "postgres": [
+    [
+      "on",
+      "on",
+      "on"
+    ]
+  ],
+  "redis": "appendfsync\nalways\nappendonly\nyes\n",
+  "containers": [
+    {
+      "name": "/tiee47pilot-gateway-1",
+      "image": "sha256:a346ea02e6d6ff6e4d56622d322d61a663b8e0c30c60d68a85b94d8f35464112",
+      "command": [
+        "python",
+        "-m",
+        "app.v47_gateway"
+      ],
+      "ports": {},
+      "nano_cpus": 0,
+      "memory": 0
+    },
+    {
+      "name": "/tiee47pilot-network_anchor-1",
+      "image": "sha256:a346ea02e6d6ff6e4d56622d322d61a663b8e0c30c60d68a85b94d8f35464112",
+      "command": [
+        "sleep",
+        "infinity"
+      ],
+      "ports": {},
+      "nano_cpus": 0,
+      "memory": 0
+    },
+    {
+      "name": "/tiee47pilot-postgres-1",
+      "image": "sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24",
+      "command": [
+        "postgres"
+      ],
+      "ports": {},
+      "nano_cpus": 0,
+      "memory": 0
+    },
+    {
+      "name": "/tiee47pilot-probe-1",
+      "image": "sha256:a346ea02e6d6ff6e4d56622d322d61a663b8e0c30c60d68a85b94d8f35464112",
+      "command": [
+        "sleep",
+        "infinity"
+      ],
+      "ports": {},
+      "nano_cpus": 0,
+      "memory": 0
+    },
+    {
+      "name": "/tiee47pilot-redis-1",
+      "image": "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+      "command": [
+        "redis-server",
+        "--appendonly",
+        "yes",
+        "--appendfsync",
+        "always",
+        "--save",
+        "60",
+        "1000"
+      ],
+      "ports": {},
+      "nano_cpus": 0,
+      "memory": 0
+    },
+    {
+      "name": "/tiee47pilot-relay-1",
+      "image": "sha256:a346ea02e6d6ff6e4d56622d322d61a663b8e0c30c60d68a85b94d8f35464112",
+      "command": [
+        "python",
+        "-m",
+        "app.v47_relay"
+      ],
+      "ports": {},
+      "nano_cpus": 0,
+      "memory": 0
+    },
+    {
+      "name": "/tiee47pilot-worker-1",
+      "image": "sha256:a346ea02e6d6ff6e4d56622d322d61a663b8e0c30c60d68a85b94d8f35464112",
+      "command": [
+        "python",
+        "-m",
+        "app.v47_worker"
+      ],
+      "ports": {},
+      "nano_cpus": 0,
+      "memory": 0
+    },
+    {
+      "name": "/tiee47pilot-worker-2",
+      "image": "sha256:a346ea02e6d6ff6e4d56622d322d61a663b8e0c30c60d68a85b94d8f35464112",
+      "command": [
+        "python",
+        "-m",
+        "app.v47_worker"
+      ],
+      "ports": {},
+      "nano_cpus": 0,
+      "memory": 0
+    }
+  ]
+}
