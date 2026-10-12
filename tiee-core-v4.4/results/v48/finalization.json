@@ -160,5 +160,8 @@
   ],
   "production_deployed": false,
   "frozen_analyzer_sha256": "1ea9458391e94d3324020f507c38420f4959686d0ec2f4295153c9e5a222b146",
-  "postcollection_analyzer_sha256": "48396d33c48fec3a5262b6888c457f4813b8a5bb7753048340b1730a6951c3e1"
+  "postcollection_analyzer_sha256": "48396d33c48fec3a5262b6888c457f4813b8a5bb7753048340b1730a6951c3e1",
+  "report_path": "V4_8_ENGINEERING_REPORT.md",
+  "analysis_correction_record": "validation/ANALYZER_CORRECTION.md",
+  "report_correction_present": true
 }

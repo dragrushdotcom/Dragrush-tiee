@@ -20,7 +20,7 @@ Build one identical application image for all services/variants:
     python validation/v48_analyze_postcollection.py
 python validation/v48_secondary.py
     /workspaces/tiee-v46-report-venv/bin/python validation/v48_report.py
-python validation/v48_write_report.py
+python validation/v48_report_correction.py
 
 The existing report virtual environment supplies matplotlib; exact version is saved in figure_metadata.json. Polling bounds/default validation is recorded in poll_config.json; rerun with app.v48_relay.poll_seconds for accepted values 0.005, 0.02, 0.1 and rejected values 0, -1, 0.004, 0.101, nan, inf, -inf and invalid, and verify unset default equals 0.005.
 

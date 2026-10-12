@@ -102,6 +102,12 @@ Total check time includes setup and assertions; individual recovery durations re
 
 Retain the frozen result even if the candidate fails. Profile admission critical-section hold time and transaction boundaries next, then evaluate one safe improvement without removing capacity serialization or weakening durable 202 receipts. A distinct TiEE scheduling mechanism requires a separate falsifiable implementation and an equally optimized conventional control.
 
+## Post-collection analyzer correction
+
+The preregistered validation/v48_analyze.py was frozen before collection, but its first post-collection run raised a TypeError when it summed the list-valued poll_errors field as a scalar. The failed traceback is retained at results/v48/analysis-driver.log. The raw poll error list is empty in all 36 measured runs.
+
+The corrected results were generated with validation/v48_analyze_postcollection.py. Its sole difference from the frozen analyzer is counting poll error entries with len before summing. Raw observations, pairs, endpoints, bootstrap procedure, interval levels, adoption thresholds, and benchmark inputs did not change. The successful output is results/v48/analysis-driver-postcollection.log. Both analyzer hashes and the source diff are documented in validation/ANALYZER_CORRECTION.md.
+
 ## Reproduction and preservation
 
 See REPRODUCE_V4_8.md and V4_8_ENGINEERING_SPECIFICATION.md. Source hashes, plan, raw lossless JSON, CSV ledgers/resources, SQL profiles, failed attempts, test details and PNG/PDF/SVG figures are under results/v48. Original robotics workspace, v4.6 and v4.7 source/reports/results/backups are preserved. Only private tiee47pilot services were used and are stopped with volumes retained.
