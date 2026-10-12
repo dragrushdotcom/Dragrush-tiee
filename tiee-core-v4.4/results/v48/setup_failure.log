@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/workspaces/Dragrush-tiee-v47/tiee-core-v4.4/validation/v48_profile.py", line 15, in <module>
+    h.dc('up','-d','--no-build','--scale','worker=2');h.ready()
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Dragrush-tiee-v47/tiee-core-v4.4/validation/v47_harness.py", line 7, in dc
+    if check and p.returncode:raise RuntimeError(str(args)+': '+p.stderr[-1200:])
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: ('up', '-d', '--no-build', '--scale', 'worker=2'):  Container tiee47pilot-gateway-1 Stopping 
+ Container tiee47pilot-worker-2 Stopping 
+ Container tiee47pilot-postgres-1 Stopping 
+ Container tiee47pilot-probe-1 Stopping 
+ Container tiee47pilot-relay-1 Stopping 
+ Container tiee47pilot-worker-1 Stopping 
+ Container tiee47pilot-redis-1 Stopping 
+ Container tiee47pilot-postgres-1 Stopped 
+ Container tiee47pilot-gateway-1 Stopped 
+ Container tiee47pilot-redis-1 Stopped 
+ Container tiee47pilot-probe-1 Stopped 
+ Container tiee47pilot-relay-1 Stopped 
+ Container tiee47pilot-worker-1 Stopped 
+ Container tiee47pilot-worker-2 Stopped 
+ Container tiee47pilot-network_anchor-1 Recreate 
+ Container tiee47pilot-network_anchor-1 Error response from daemon: No such image: tiee47pilot-network_anchor:latest 
+Error response from daemon: No such image: tiee47pilot-network_anchor:latest
+

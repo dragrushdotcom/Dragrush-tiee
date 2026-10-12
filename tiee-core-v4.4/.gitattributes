@@ -8,3 +8,7 @@ results/v47/**/*.csv whitespace=cr-at-eol
 results/v47/**/*.svg whitespace=-blank-at-eol
 results/v47/**/*.log whitespace=-blank-at-eof,-blank-at-eol
 results/v47/*.log whitespace=-blank-at-eof,-blank-at-eol
+
+results/v48/**/*.svg whitespace=-blank-at-eol
+results/v48/**/*.log whitespace=-blank-at-eof,-blank-at-eol
+results/v48/*.log whitespace=-blank-at-eof,-blank-at-eol

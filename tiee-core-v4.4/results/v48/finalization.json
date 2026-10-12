@@ -1,0 +1,164 @@
+{
+  "experiment": "v4.8 generic relay cadence only; baseline 5ms, candidate 20ms; same A3",
+  "adoption_gate_pass": false,
+  "recommendation": "retain default 5ms; candidate failed frozen adoption gate",
+  "default_poll_seconds": 0.005,
+  "distinct_tiee_superiority_established": false,
+  "benchmark_runs": 36,
+  "offered_requests": 8640,
+  "stages": {
+    "training": {
+      "operational_pass": true,
+      "no_additional_valid_loss": true,
+      "mean_targets_pass": true,
+      "endpoints": {
+        "cpu_per_useful": {
+          "mean_relative_change": -0.050780455196658,
+          "bonferroni98333_interval": [
+            -0.07256844673809604,
+            -0.031178151206051583
+          ]
+        },
+        "useful_throughput": {
+          "mean_relative_change": -0.03480113074851903,
+          "bonferroni98333_interval": [
+            -0.05789954878082607,
+            -0.005511606431469529
+          ]
+        },
+        "offered_p95_ms": {
+          "mean_relative_change": 0.05669495208081362,
+          "bonferroni98333_interval": [
+            0.017172252097674034,
+            0.0936410698894024
+          ]
+        }
+      }
+    },
+    "heldout": {
+      "operational_pass": true,
+      "no_additional_valid_loss": true,
+      "mean_targets_pass": false,
+      "endpoints": {
+        "cpu_per_useful": {
+          "mean_relative_change": -0.036863228302227324,
+          "bonferroni98333_interval": [
+            -0.06970855278408933,
+            -0.008600361220317808
+          ]
+        },
+        "useful_throughput": {
+          "mean_relative_change": -0.04064052854826372,
+          "bonferroni98333_interval": [
+            -0.06914541042106019,
+            -0.00715032549079712
+          ]
+        },
+        "offered_p95_ms": {
+          "mean_relative_change": 0.07768985355133667,
+          "bonferroni98333_interval": [
+            0.00998279744933412,
+            0.13004923411528146
+          ]
+        }
+      }
+    }
+  },
+  "integration_tests": {
+    "passed": 18,
+    "total": 18
+  },
+  "poll_config_cases": {
+    "status": "PASSED",
+    "default_seconds": 0.005,
+    "cases": [
+      {
+        "value": "0.005",
+        "accepted": true,
+        "result": 0.005,
+        "status": "PASSED"
+      },
+      {
+        "value": "0.02",
+        "accepted": true,
+        "result": 0.02,
+        "status": "PASSED"
+      },
+      {
+        "value": "0.1",
+        "accepted": true,
+        "result": 0.1,
+        "status": "PASSED"
+      },
+      {
+        "value": "0",
+        "accepted": false,
+        "result": null,
+        "status": "PASSED"
+      },
+      {
+        "value": "-1",
+        "accepted": false,
+        "result": null,
+        "status": "PASSED"
+      },
+      {
+        "value": "0.004",
+        "accepted": false,
+        "result": null,
+        "status": "PASSED"
+      },
+      {
+        "value": "0.101",
+        "accepted": false,
+        "result": null,
+        "status": "PASSED"
+      },
+      {
+        "value": "nan",
+        "accepted": false,
+        "result": null,
+        "status": "PASSED"
+      },
+      {
+        "value": "inf",
+        "accepted": false,
+        "result": null,
+        "status": "PASSED"
+      },
+      {
+        "value": "-inf",
+        "accepted": false,
+        "result": null,
+        "status": "PASSED"
+      },
+      {
+        "value": "invalid",
+        "accepted": false,
+        "result": null,
+        "status": "PASSED"
+      }
+    ]
+  },
+  "prior_evidence_preserved": {
+    "status": "PASSED",
+    "prior_runtime_model_and_result_files_hash_verified": 93,
+    "prior_commit": "e064eec5a1c2202d28dca6971ab47e371edde940"
+  },
+  "private_services_shutdown": {
+    "status": "STOPPED",
+    "project": "tiee47pilot",
+    "volumes_retained": true
+  },
+  "unexecuted": [
+    "physical power loss",
+    "host loss",
+    "disk corruption",
+    "powered superiority study",
+    "other locking/schema/batching changes",
+    "production workload validation"
+  ],
+  "production_deployed": false,
+  "frozen_analyzer_sha256": "1ea9458391e94d3324020f507c38420f4959686d0ec2f4295153c9e5a222b146",
+  "postcollection_analyzer_sha256": "48396d33c48fec3a5262b6888c457f4813b8a5bb7753048340b1730a6951c3e1"
+}

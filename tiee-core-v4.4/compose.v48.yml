@@ -1,0 +1,5 @@
+services:
+  relay:
+    command: [python, -m, app.v48_relay]
+    environment:
+      RELAY_POLL_SECONDS: ${RELAY_POLL_SECONDS:-0.005}

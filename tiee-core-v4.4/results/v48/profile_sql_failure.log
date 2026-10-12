@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/workspaces/Dragrush-tiee-v47/tiee-core-v4.4/validation/v48_profile.py", line 18, in <module>
+    data=json.loads(sql_db(row['database'],Q));(R/'baseline_statements.json').write_text(json.dumps(dict(scope='24 warm-up events plus 240 measurement events; statement instrumentation enabled',statements=data),indent=2)+chr(10))
+                    ~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Dragrush-tiee-v47/tiee-core-v4.4/validation/v48_profile.py", line 5, in sql_db
+    def sql_db(db,q):return h.dc('exec','-T','postgres','psql','-U','tiee','-d',db,'-At','-c',q).stdout
+                            ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Dragrush-tiee-v47/tiee-core-v4.4/validation/v47_harness.py", line 7, in dc
+    if check and p.returncode:raise RuntimeError(str(args)+': '+p.stderr[-1200:])
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: ('exec', '-T', 'postgres', 'psql', '-U', 'tiee', '-d', 'v47_p_1982437982628', '-At', '-c', "SELECT COALESCE(json_agg(row_to_json(t)),'[]'::json) FROM (SELECT queryid,query,calls,total_exec_time,mean_exec_time,rows,shared_blks_hit,shared_blks_read,shared_blks_dirtied,shared_blks_written,blk_read_time,blk_write_time,wal_records,wal_bytes FROM pg_stat_statements WHERE dbid=(SELECT oid FROM pg_database WHERE datname=current_database()) ORDER BY total_exec_time DESC) t"): ERROR:  column "blk_read_time" does not exist
+LINE 1: ...blks_read,shared_blks_dirtied,shared_blks_written,blk_read_t...
+                                                             ^
+

@@ -1,0 +1,18 @@
+{"test": "receipt_crash", "pool": 0, "status": "PASSED", "detail": {"receipt_immutable": true, "marker_immutable": true}, "seconds": 23.629686430999982, "poll_seconds": 0.02}
+{"test": "bounded_defer", "pool": 0, "status": "PASSED", "detail": {"deferrals": 4, "final": "DONE"}, "seconds": 8.10794471500003, "poll_seconds": 0.02}
+{"test": "destructive_expiry", "pool": 0, "status": "PASSED", "detail": {"no_held": true}, "seconds": 9.515975141000013, "poll_seconds": 0.02}
+{"test": "rollback_fence", "pool": 0, "status": "PASSED", "detail": {"stale_fenced": true, "atomic_marker": true}, "seconds": 12.635148063000088, "poll_seconds": 0.02}
+{"test": "recovery", "pool": 0, "status": "PASSED", "detail": {"recovery_seconds": {"gateway": 2.826052751999896, "relay": 2.2391000790000817, "worker": 2.96739404799996, "postgres": 7.5909763949998705}, "stream_loss_recovered": true}, "seconds": 29.538922435000018, "poll_seconds": 0.02}
+{"test": "capacity_auth", "pool": 0, "status": "PASSED", "detail": {"safe_retry": true, "spoof_blocked": true}, "seconds": 10.168409972999825, "poll_seconds": 0.02}
+{"test": "recorder", "pool": 0, "status": "PASSED", "detail": {"real_http": 6, "missing_terminal_timing": 0, "ack_not_completion": true}, "seconds": 11.423542549999866, "poll_seconds": 0.02}
+{"test": "reject_and_scorer", "pool": 0, "status": "PASSED", "detail": {"reject_marker": true, "scorer_failure_never_released": true}, "seconds": 9.458285891999822, "poll_seconds": 0.02}
+{"test": "audit_marker_rollback", "pool": 0, "status": "PASSED", "detail": {"result_state_marker_audit_atomic": true}, "seconds": 11.693799038999941, "poll_seconds": 0.02}
+{"test": "receipt_crash", "pool": 8, "status": "PASSED", "detail": {"receipt_immutable": true, "marker_immutable": true}, "seconds": 18.832871426999873, "poll_seconds": 0.02}
+{"test": "bounded_defer", "pool": 8, "status": "PASSED", "detail": {"deferrals": 4, "final": "DONE"}, "seconds": 7.366754393000065, "poll_seconds": 0.02}
+{"test": "destructive_expiry", "pool": 8, "status": "PASSED", "detail": {"no_held": true}, "seconds": 9.819672030999982, "poll_seconds": 0.02}
+{"test": "rollback_fence", "pool": 8, "status": "PASSED", "detail": {"stale_fenced": true, "atomic_marker": true}, "seconds": 12.445742526999993, "poll_seconds": 0.02}
+{"test": "recovery", "pool": 8, "status": "PASSED", "detail": {"recovery_seconds": {"gateway": 2.1106856480000715, "relay": 2.2326074099999005, "worker": 2.3979867240000203, "postgres": 5.595052370000076}, "stream_loss_recovered": true}, "seconds": 26.279609728999958, "poll_seconds": 0.02}
+{"test": "capacity_auth", "pool": 8, "status": "PASSED", "detail": {"safe_retry": true, "spoof_blocked": true}, "seconds": 9.793562706000102, "poll_seconds": 0.02}
+{"test": "recorder", "pool": 8, "status": "PASSED", "detail": {"real_http": 6, "missing_terminal_timing": 0, "ack_not_completion": true}, "seconds": 11.304552420999926, "poll_seconds": 0.02}
+{"test": "reject_and_scorer", "pool": 8, "status": "PASSED", "detail": {"reject_marker": true, "scorer_failure_never_released": true}, "seconds": 8.937021029999869, "poll_seconds": 0.02}
+{"test": "audit_marker_rollback", "pool": 8, "status": "PASSED", "detail": {"result_state_marker_audit_atomic": true}, "seconds": 10.867682180999964, "poll_seconds": 0.02}

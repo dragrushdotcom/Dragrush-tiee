@@ -1,0 +1,5 @@
+{
+  "analysis_sha256": "d06923a59b14cb3c913bed0f4960899db6cdecde739ff47f7e68cb8d34b4a90c",
+  "scope": "generic relay cadence experiment; 98.333% paired bootstrap intervals; no TiEE superiority claim",
+  "matplotlib": "3.11.2"
+}

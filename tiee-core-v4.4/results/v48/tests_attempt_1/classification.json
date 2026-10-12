@@ -1,0 +1,5 @@
+{
+  "status": "SETUP_FAILURE_CORRECTED",
+  "cause": "Generated Compose interpolation contained a control character; 17 cases blocked before exercising properties; one atomic commit check completed",
+  "not_engine_correctness_failure": true
+}

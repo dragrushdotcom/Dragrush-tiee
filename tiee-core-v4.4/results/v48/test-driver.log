@@ -1,0 +1,19 @@
+{"test": "receipt_crash", "pool": 0, "status": "PASSED", "seconds": 23.629686430999982}
+{"test": "bounded_defer", "pool": 0, "status": "PASSED", "seconds": 8.10794471500003}
+{"test": "destructive_expiry", "pool": 0, "status": "PASSED", "seconds": 9.515975141000013}
+{"test": "rollback_fence", "pool": 0, "status": "PASSED", "seconds": 12.635148063000088}
+{"test": "recovery", "pool": 0, "status": "PASSED", "seconds": 29.538922435000018}
+{"test": "capacity_auth", "pool": 0, "status": "PASSED", "seconds": 10.168409972999825}
+{"test": "recorder", "pool": 0, "status": "PASSED", "seconds": 11.423542549999866}
+{"test": "reject_and_scorer", "pool": 0, "status": "PASSED", "seconds": 9.458285891999822}
+{"test": "audit_marker_rollback", "pool": 0, "status": "PASSED", "seconds": 11.693799038999941}
+{"test": "receipt_crash", "pool": 8, "status": "PASSED", "seconds": 18.832871426999873}
+{"test": "bounded_defer", "pool": 8, "status": "PASSED", "seconds": 7.366754393000065}
+{"test": "destructive_expiry", "pool": 8, "status": "PASSED", "seconds": 9.819672030999982}
+{"test": "rollback_fence", "pool": 8, "status": "PASSED", "seconds": 12.445742526999993}
+{"test": "recovery", "pool": 8, "status": "PASSED", "seconds": 26.279609728999958}
+{"test": "capacity_auth", "pool": 8, "status": "PASSED", "seconds": 9.793562706000102}
+{"test": "recorder", "pool": 8, "status": "PASSED", "seconds": 11.304552420999926}
+{"test": "reject_and_scorer", "pool": 8, "status": "PASSED", "seconds": 8.937021029999869}
+{"test": "audit_marker_rollback", "pool": 8, "status": "PASSED", "seconds": 10.867682180999964}
+V48_CANDIDATE_INTEGRATION_COMPLETE

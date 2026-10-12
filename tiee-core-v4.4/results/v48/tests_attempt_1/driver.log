@@ -1,0 +1,23 @@
+{"test": "receipt_crash", "pool": 0, "status": "FAILED", "seconds": 0.4455335320000131}
+{"test": "bounded_defer", "pool": 0, "status": "FAILED", "seconds": 0.40159189999997125}
+{"test": "destructive_expiry", "pool": 0, "status": "FAILED", "seconds": 0.42176409699993656}
+{"test": "rollback_fence", "pool": 0, "status": "FAILED", "seconds": 0.41819276199998967}
+{"test": "recovery", "pool": 0, "status": "FAILED", "seconds": 0.3986658799999532}
+{"test": "capacity_auth", "pool": 0, "status": "FAILED", "seconds": 0.42704099299999143}
+{"test": "recorder", "pool": 0, "status": "FAILED", "seconds": 0.38894081099999767}
+{"test": "reject_and_scorer", "pool": 0, "status": "FAILED", "seconds": 0.38394694599992363}
+{"test": "audit_marker_rollback", "pool": 0, "status": "FAILED", "seconds": 0.4875651620000099}
+{"test": "receipt_crash", "pool": 8, "status": "FAILED", "seconds": 0.5184700639999846}
+{"test": "bounded_defer", "pool": 8, "status": "FAILED", "seconds": 0.471703944000069}
+{"test": "destructive_expiry", "pool": 8, "status": "FAILED", "seconds": 0.4195352419999381}
+{"test": "rollback_fence", "pool": 8, "status": "FAILED", "seconds": 0.45165196699997523}
+{"test": "recovery", "pool": 8, "status": "FAILED", "seconds": 0.510947457000043}
+{"test": "capacity_auth", "pool": 8, "status": "FAILED", "seconds": 0.42908362399998623}
+{"test": "recorder", "pool": 8, "status": "FAILED", "seconds": 0.4212592989999848}
+{"test": "reject_and_scorer", "pool": 8, "status": "FAILED", "seconds": 0.47912488499991923}
+{"test": "audit_marker_rollback", "pool": 8, "status": "PASSED", "seconds": 12.660868240000013}
+Traceback (most recent call last):
+  File "/workspaces/Dragrush-tiee-v47/tiee-core-v4.4/validation/v48_tests.py", line 17, in <module>
+    if failed:raise RuntimeError(str(failed)+' v48 candidate integration checks failed')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: 17 v48 candidate integration checks failed

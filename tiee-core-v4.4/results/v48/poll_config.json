@@ -1,0 +1,72 @@
+{
+  "status": "PASSED",
+  "default_seconds": 0.005,
+  "cases": [
+    {
+      "value": "0.005",
+      "accepted": true,
+      "result": 0.005,
+      "status": "PASSED"
+    },
+    {
+      "value": "0.02",
+      "accepted": true,
+      "result": 0.02,
+      "status": "PASSED"
+    },
+    {
+      "value": "0.1",
+      "accepted": true,
+      "result": 0.1,
+      "status": "PASSED"
+    },
+    {
+      "value": "0",
+      "accepted": false,
+      "result": null,
+      "status": "PASSED"
+    },
+    {
+      "value": "-1",
+      "accepted": false,
+      "result": null,
+      "status": "PASSED"
+    },
+    {
+      "value": "0.004",
+      "accepted": false,
+      "result": null,
+      "status": "PASSED"
+    },
+    {
+      "value": "0.101",
+      "accepted": false,
+      "result": null,
+      "status": "PASSED"
+    },
+    {
+      "value": "nan",
+      "accepted": false,
+      "result": null,
+      "status": "PASSED"
+    },
+    {
+      "value": "inf",
+      "accepted": false,
+      "result": null,
+      "status": "PASSED"
+    },
+    {
+      "value": "-inf",
+      "accepted": false,
+      "result": null,
+      "status": "PASSED"
+    },
+    {
+      "value": "invalid",
+      "accepted": false,
+      "result": null,
+      "status": "PASSED"
+    }
+  ]
+}

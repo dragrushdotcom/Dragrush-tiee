@@ -1,0 +1,14 @@
+{
+  "backlog": 128,
+  "poll_seconds": 0.02,
+  "postgres": [
+    [
+      "on",
+      "on",
+      "on",
+      "pg_stat_statements",
+      "on"
+    ]
+  ],
+  "redis": "appendonly\nyes\nappendfsync\nalways\n"
+}

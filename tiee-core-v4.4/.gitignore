@@ -13,3 +13,8 @@ results/v47/driver-live.log
 
 results/v47/corrected/driver-live.log
 results/v47/corrected/runs.jsonl
+
+results/v48/driver-live.log
+results/v48/runs.jsonl
+results/v48/observer.stop
+results/v48/observer.ready

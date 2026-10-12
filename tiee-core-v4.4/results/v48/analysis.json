@@ -1,0 +1,487 @@
+{
+  "status": "COMPLETE",
+  "runs": 36,
+  "offered_accounted": 8640,
+  "stages": {
+    "training": {
+      "metrics": {
+        "baseline": {
+          "runs": 9,
+          "offered": 2160,
+          "useful": 1252,
+          "useful_throughput_mean": 18.07363510922526,
+          "cpu_seconds_mean": 10.553391666666665,
+          "cpu_per_useful_mean": 0.07726453229982622,
+          "http_errors": 0,
+          "poll_errors": 0,
+          "drain_failures": 0,
+          "held": 0,
+          "missing_terminal_timing": 0,
+          "valid_count": 1253,
+          "valid_not_done": 1,
+          "valid_rejected": 1,
+          "offered_ms": {
+            "0.5": 1802.6241799998388,
+            "0.95": 6207.654596000111,
+            "0.99": 7325.232784000036
+          },
+          "ack_ms": {
+            "0.5": 362.60306799999853,
+            "0.95": 606.4282330000879,
+            "0.99": 829.0056609998828
+          },
+          "ram_peak_bytes": 335872000,
+          "queue_peak": 142,
+          "storage_mean": {
+            "table_growth_bytes": 1933312,
+            "wal_growth_bytes": 2713776.888888889,
+            "aof_growth_bytes": 134257.77777777778
+          },
+          "components": {
+            "gateway": {
+              "cpu_seconds": 7.050539999999999,
+              "fraction": 0.07423142796904944
+            },
+            "network_anchor": {
+              "cpu_seconds": 2.437362,
+              "fraction": 0.025661702754327796
+            },
+            "postgres": {
+              "cpu_seconds": 41.10543199999999,
+              "fraction": 0.43277747727757876
+            },
+            "redis": {
+              "cpu_seconds": 5.995551999999997,
+              "fraction": 0.06312401410710246
+            },
+            "relay": {
+              "cpu_seconds": 13.769747,
+              "fraction": 0.1449744250202871
+            },
+            "worker": {
+              "cpu_seconds": 24.621891999999995,
+              "fraction": 0.2592309528716545
+            }
+          },
+          "admission_lock_p95_ms": 165.63599300002352,
+          "prewrite_p95_ms": 583.5168040000553,
+          "scoring_p95_ms": 1.798553000071479
+        },
+        "candidate": {
+          "runs": 9,
+          "offered": 2160,
+          "useful": 1252,
+          "useful_throughput_mean": 17.483676619673375,
+          "cpu_seconds_mean": 10.026201,
+          "cpu_per_useful_mean": 0.07358503650482599,
+          "http_errors": 0,
+          "poll_errors": 0,
+          "drain_failures": 0,
+          "held": 0,
+          "missing_terminal_timing": 0,
+          "valid_count": 1253,
+          "valid_not_done": 1,
+          "valid_rejected": 1,
+          "offered_ms": {
+            "0.5": 1932.706152999799,
+            "0.95": 6318.382499999871,
+            "0.99": 7356.23699000007
+          },
+          "ack_ms": {
+            "0.5": 310.2672800000619,
+            "0.95": 568.0930940000053,
+            "0.99": 680.4339709999567
+          },
+          "ram_peak_bytes": 333492224,
+          "queue_peak": 158,
+          "storage_mean": {
+            "table_growth_bytes": 1927850.6666666667,
+            "wal_growth_bytes": 2754666.6666666665,
+            "aof_growth_bytes": 133347.55555555556
+          },
+          "components": {
+            "gateway": {
+              "cpu_seconds": 7.103578999999999,
+              "fraction": 0.07872239500839405
+            },
+            "network_anchor": {
+              "cpu_seconds": 2.548326000000001,
+              "fraction": 0.028240739771059193
+            },
+            "postgres": {
+              "cpu_seconds": 40.58964600000001,
+              "fraction": 0.44981749983534813
+            },
+            "redis": {
+              "cpu_seconds": 6.178657999999998,
+              "fraction": 0.06847235114831184
+            },
+            "relay": {
+              "cpu_seconds": 9.162087,
+              "fraction": 0.10153493498351635
+            },
+            "worker": {
+              "cpu_seconds": 24.653513,
+              "fraction": 0.27321207925337043
+            }
+          },
+          "admission_lock_p95_ms": 148.55331900002966,
+          "prewrite_p95_ms": 549.7037790000832,
+          "scoring_p95_ms": 1.6771269999935612
+        }
+      },
+      "endpoints": {
+        "cpu_per_useful": {
+          "mean_relative_change": -0.050780455196658,
+          "bonferroni98333_interval": [
+            -0.07256844673809604,
+            -0.031178151206051583
+          ]
+        },
+        "useful_throughput": {
+          "mean_relative_change": -0.03480113074851903,
+          "bonferroni98333_interval": [
+            -0.05789954878082607,
+            -0.005511606431469529
+          ]
+        },
+        "offered_p95_ms": {
+          "mean_relative_change": 0.05669495208081362,
+          "bonferroni98333_interval": [
+            0.017172252097674034,
+            0.0936410698894024
+          ]
+        }
+      },
+      "operational_pass": true,
+      "additional_valid_loss_ids": [],
+      "no_additional_valid_loss": true,
+      "mean_targets_pass": true
+    },
+    "heldout": {
+      "metrics": {
+        "baseline": {
+          "runs": 9,
+          "offered": 2160,
+          "useful": 1274,
+          "useful_throughput_mean": 18.224086403841778,
+          "cpu_seconds_mean": 10.664929777777775,
+          "cpu_per_useful_mean": 0.0769051025604888,
+          "http_errors": 0,
+          "poll_errors": 0,
+          "drain_failures": 0,
+          "held": 0,
+          "missing_terminal_timing": 0,
+          "valid_count": 1274,
+          "valid_not_done": 0,
+          "valid_rejected": 0,
+          "offered_ms": {
+            "0.5": 1808.0624570000055,
+            "0.95": 6187.405582999872,
+            "0.99": 7029.4755920001535
+          },
+          "ack_ms": {
+            "0.5": 368.3390829999098,
+            "0.95": 597.3638349998964,
+            "0.99": 697.347094999941
+          },
+          "ram_peak_bytes": 364580864,
+          "queue_peak": 147,
+          "storage_mean": {
+            "table_growth_bytes": 2013411.5555555555,
+            "wal_growth_bytes": 2588933.3333333335,
+            "aof_growth_bytes": 133347.55555555556
+          },
+          "components": {
+            "gateway": {
+              "cpu_seconds": 7.165445999999999,
+              "fraction": 0.07465221836955785
+            },
+            "network_anchor": {
+              "cpu_seconds": 2.4010640000000008,
+              "fraction": 0.025015156634672027
+            },
+            "postgres": {
+              "cpu_seconds": 41.78314899999998,
+              "fraction": 0.43531201872371544
+            },
+            "redis": {
+              "cpu_seconds": 6.014748000000004,
+              "fraction": 0.0626638287601165
+            },
+            "relay": {
+              "cpu_seconds": 13.90652,
+              "fraction": 0.14488317514368593
+            },
+            "worker": {
+              "cpu_seconds": 24.713441000000007,
+              "fraction": 0.25747360236825245
+            }
+          },
+          "admission_lock_p95_ms": 158.68160399986664,
+          "prewrite_p95_ms": 574.3931790000261,
+          "scoring_p95_ms": 1.970748000076128
+        },
+        "candidate": {
+          "runs": 9,
+          "offered": 2160,
+          "useful": 1274,
+          "useful_throughput_mean": 17.501346361400966,
+          "cpu_seconds_mean": 10.268857444444452,
+          "cpu_per_useful_mean": 0.07411470079224114,
+          "http_errors": 0,
+          "poll_errors": 0,
+          "drain_failures": 0,
+          "held": 0,
+          "missing_terminal_timing": 0,
+          "valid_count": 1274,
+          "valid_not_done": 0,
+          "valid_rejected": 0,
+          "offered_ms": {
+            "0.5": 1991.3273680001566,
+            "0.95": 6669.850784000118,
+            "0.99": 7633.589912999923
+          },
+          "ack_ms": {
+            "0.5": 292.18005300003824,
+            "0.95": 597.2629870000219,
+            "0.99": 873.5970520001501
+          },
+          "ram_peak_bytes": 362962944,
+          "queue_peak": 156,
+          "storage_mean": {
+            "table_growth_bytes": 1987015.111111111,
+            "wal_growth_bytes": 2593653.3333333335,
+            "aof_growth_bytes": 133347.55555555556
+          },
+          "components": {
+            "gateway": {
+              "cpu_seconds": 7.224945999999999,
+              "fraction": 0.07817537463353187
+            },
+            "network_anchor": {
+              "cpu_seconds": 2.5707280000000017,
+              "fraction": 0.02781579606005502
+            },
+            "postgres": {
+              "cpu_seconds": 42.20629300000007,
+              "fraction": 0.45668061286099854
+            },
+            "redis": {
+              "cpu_seconds": 6.188199999999995,
+              "fraction": 0.06695757356625524
+            },
+            "relay": {
+              "cpu_seconds": 9.478518,
+              "fraction": 0.10255947873114557
+            },
+            "worker": {
+              "cpu_seconds": 24.751032,
+              "fraction": 0.2678111641480138
+            }
+          },
+          "admission_lock_p95_ms": 156.71653699996568,
+          "prewrite_p95_ms": 570.0482819997887,
+          "scoring_p95_ms": 1.7216799999459909
+        }
+      },
+      "endpoints": {
+        "cpu_per_useful": {
+          "mean_relative_change": -0.036863228302227324,
+          "bonferroni98333_interval": [
+            -0.06970855278408933,
+            -0.008600361220317808
+          ]
+        },
+        "useful_throughput": {
+          "mean_relative_change": -0.04064052854826372,
+          "bonferroni98333_interval": [
+            -0.06914541042106019,
+            -0.00715032549079712
+          ]
+        },
+        "offered_p95_ms": {
+          "mean_relative_change": 0.07768985355133667,
+          "bonferroni98333_interval": [
+            0.00998279744933412,
+            0.13004923411528146
+          ]
+        }
+      },
+      "operational_pass": true,
+      "additional_valid_loss_ids": [],
+      "no_additional_valid_loss": true,
+      "mean_targets_pass": false
+    }
+  },
+  "paired_trace_results": [
+    {
+      "stage": "training",
+      "condition": "burst",
+      "block": 1,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": -0.016240161953506083,
+      "useful_throughput_relative_change": -0.0650912492754403,
+      "offered_p95_ms_relative_change": 0.0705855768124437
+    },
+    {
+      "stage": "training",
+      "condition": "shift",
+      "block": 0,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": -0.01749769824460401,
+      "useful_throughput_relative_change": -0.10395969160638718,
+      "offered_p95_ms_relative_change": 0.17413673269429997
+    },
+    {
+      "stage": "training",
+      "condition": "shift",
+      "block": 1,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": -0.06297906631423944,
+      "useful_throughput_relative_change": -0.010925012691710867,
+      "offered_p95_ms_relative_change": 0.022506780991955022
+    },
+    {
+      "stage": "training",
+      "condition": "burst",
+      "block": 0,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": -0.0865066822428695,
+      "useful_throughput_relative_change": 0.02632817923619113,
+      "offered_p95_ms_relative_change": -0.02654869552757544
+    },
+    {
+      "stage": "training",
+      "condition": "burst",
+      "block": 2,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": -0.017982961548570597,
+      "useful_throughput_relative_change": -0.061239416635793575,
+      "offered_p95_ms_relative_change": 0.07223166349337262
+    },
+    {
+      "stage": "training",
+      "condition": "normal",
+      "block": 0,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": -0.08187650531954038,
+      "useful_throughput_relative_change": -0.00725449062597372,
+      "offered_p95_ms_relative_change": 0.04637352106222403
+    },
+    {
+      "stage": "training",
+      "condition": "normal",
+      "block": 1,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": -0.05611449967925752,
+      "useful_throughput_relative_change": -0.015553784854145158,
+      "offered_p95_ms_relative_change": 0.054085525044804905
+    },
+    {
+      "stage": "training",
+      "condition": "shift",
+      "block": 2,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": -0.008397036440578765,
+      "useful_throughput_relative_change": -0.08724441293336882,
+      "offered_p95_ms_relative_change": 0.1265487753459278
+    },
+    {
+      "stage": "training",
+      "condition": "normal",
+      "block": 2,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": -0.10942948502675565,
+      "useful_throughput_relative_change": 0.011729702649957208,
+      "offered_p95_ms_relative_change": -0.02966531119013005
+    },
+    {
+      "stage": "heldout",
+      "condition": "normal",
+      "block": 2,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": -0.030090510351147626,
+      "useful_throughput_relative_change": -0.024431114435044643,
+      "offered_p95_ms_relative_change": 0.10434274205302696
+    },
+    {
+      "stage": "heldout",
+      "condition": "burst",
+      "block": 2,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": 0.012126610796227233,
+      "useful_throughput_relative_change": -0.10631176317538649,
+      "offered_p95_ms_relative_change": 0.11893324052355658
+    },
+    {
+      "stage": "heldout",
+      "condition": "shift",
+      "block": 1,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": 0.017558651350525034,
+      "useful_throughput_relative_change": -0.08681769281544494,
+      "offered_p95_ms_relative_change": 0.19171854346078265
+    },
+    {
+      "stage": "heldout",
+      "condition": "burst",
+      "block": 0,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": -0.05913187092453798,
+      "useful_throughput_relative_change": -0.04318476125773596,
+      "offered_p95_ms_relative_change": 0.057568551393404555
+    },
+    {
+      "stage": "heldout",
+      "condition": "shift",
+      "block": 0,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": -0.09372300641660092,
+      "useful_throughput_relative_change": 0.019932126792433502,
+      "offered_p95_ms_relative_change": -0.020760985726211767
+    },
+    {
+      "stage": "heldout",
+      "condition": "burst",
+      "block": 1,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": -0.05302415944447958,
+      "useful_throughput_relative_change": -0.06212478570318736,
+      "offered_p95_ms_relative_change": 0.06551778298500355
+    },
+    {
+      "stage": "heldout",
+      "condition": "normal",
+      "block": 0,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": -0.10191617460044211,
+      "useful_throughput_relative_change": 0.05595155738843993,
+      "offered_p95_ms_relative_change": -0.09711709136617463
+    },
+    {
+      "stage": "heldout",
+      "condition": "normal",
+      "block": 1,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": -0.04234618703332671,
+      "useful_throughput_relative_change": -0.018146670928889996,
+      "offered_p95_ms_relative_change": 0.0893221685082819
+    },
+    {
+      "stage": "heldout",
+      "condition": "shift",
+      "block": 2,
+      "additional_valid_loss_ids": [],
+      "cpu_per_useful_relative_change": 0.018777591903736734,
+      "useful_throughput_relative_change": -0.10063165279955755,
+      "offered_p95_ms_relative_change": 0.18968373013036022
+    }
+  ],
+  "heldout_interval_guardrails_pass": false,
+  "adoption_gate_pass": false,
+  "default_poll_seconds": 0.005,
+  "recommendation": "retain default 5ms; candidate failed frozen adoption gate",
+  "performance_claim": "Distinct TiEE superiority NOT ESTABLISHED; generic cadence experiment",
+  "statistics": "20000 stratified paired bootstrap, 98.333% Bonferroni intervals for three endpoints, nine pairs per stage; exploratory"
+}

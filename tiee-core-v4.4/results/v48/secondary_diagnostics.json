@@ -1,0 +1,67 @@
+{
+  "scope": "Exploratory supporting query counters, not adoption endpoints; includes warmup, measurement and immediate postmeasurement read; no wait observer in comparisons",
+  "by_stage": {
+    "training": {
+      "baseline": {
+        "relay_recovery_scan_calls_mean": 1209.888888888889,
+        "raw_counts": [
+          1274,
+          1211,
+          1133,
+          1265,
+          1252,
+          1257,
+          1119,
+          1253,
+          1125
+        ]
+      },
+      "candidate": {
+        "relay_recovery_scan_calls_mean": 482.55555555555554,
+        "raw_counts": [
+          519,
+          484,
+          463,
+          487,
+          525,
+          486,
+          462,
+          483,
+          434
+        ]
+      },
+      "candidate_scan_change": -0.6011571310496832
+    },
+    "heldout": {
+      "baseline": {
+        "relay_recovery_scan_calls_mean": 1208.2222222222222,
+        "raw_counts": [
+          1092,
+          1274,
+          1152,
+          1262,
+          1229,
+          1266,
+          1267,
+          1162,
+          1170
+        ]
+      },
+      "candidate": {
+        "relay_recovery_scan_calls_mean": 488.6666666666667,
+        "raw_counts": [
+          468,
+          529,
+          477,
+          489,
+          482,
+          488,
+          476,
+          498,
+          491
+        ]
+      },
+      "candidate_scan_change": -0.5955490160014714
+    }
+  }
+}
