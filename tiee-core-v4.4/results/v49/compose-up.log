@@ -1,0 +1,130 @@
+nohup: ignoring input
+ Image tiee49admission-worker Building 
+ Image tiee49admission-gateway Building 
+ Image tiee49admission-relay Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.49kB done
+#1 DONE 0.0s
+
+#2 [gateway internal] load build definition from Dockerfile
+#2 transferring dockerfile: 214B done
+#2 DONE 0.0s
+
+#3 [gateway internal] load metadata for docker.io/library/python:3.12-slim
+#3 DONE 0.0s
+
+#4 [relay internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [worker internal] load build context
+#5 transferring context: 52.16kB 0.0s done
+#5 DONE 0.0s
+
+#6 [relay 1/6] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#6 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 0.0s done
+#6 DONE 0.0s
+
+#7 [gateway 2/6] WORKDIR /srv
+#7 CACHED
+
+#8 [gateway 3/6] COPY requirements.txt ./
+#8 CACHED
+
+#9 [gateway 4/6] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [gateway 5/6] COPY app ./app
+#10 DONE 0.2s
+
+#11 [gateway 6/6] COPY policies ./policies
+#11 DONE 0.0s
+
+#12 [worker] exporting to image
+#12 exporting layers
+#12 exporting layers 0.2s done
+#12 exporting manifest sha256:4b591196f574ac0f4c29ff1888312dd9f3b6e3a9b779cb7b510808542c8cafaa 0.0s done
+#12 exporting config sha256:1fe94ddfa830caa4f322bf37014705bf50cbd3ce01aef7b38543ec921afeee9b 0.0s done
+#12 exporting attestation manifest sha256:67bad7f373bda08edfcac394c6195275f33e2304155718de18ebbfebd7b5245a 0.1s done
+#12 exporting manifest list sha256:fa37209807d8a6ea2f1560515da5729b7397a73dfcea6c1b38a58ec158eda1b5 0.0s done
+#12 naming to docker.io/library/tiee49admission-worker:latest
+#12 naming to docker.io/library/tiee49admission-worker:latest done
+#12 unpacking to docker.io/library/tiee49admission-worker:latest
+#12 unpacking to docker.io/library/tiee49admission-worker:latest 0.2s done
+#12 DONE 0.7s
+
+#13 [relay] exporting to image
+#13 exporting layers 0.2s done
+#13 exporting manifest sha256:dbacaf9015b0df9ee95d7fe7ef6ca41069201de3ba7da58616dc4775673263eb 0.0s done
+#13 exporting config sha256:e28ade757e2bad3f560768095d8c8c769f62948cef3be6f57aa89199ddeb58e8 0.0s done
+#13 exporting attestation manifest sha256:44f7e915e5df75f15992ab179b7664450518ebf4ee5042527093d812ba7b5a0e 0.1s done
+#13 exporting manifest list sha256:311623db5ac9ff0b43797b0447cebc6a2fcbaeb7e9434857450fb3cca4f29d75 0.0s done
+#13 naming to docker.io/library/tiee49admission-relay:latest 0.0s done
+#13 unpacking to docker.io/library/tiee49admission-relay:latest 0.2s done
+#13 DONE 0.7s
+
+#14 [gateway] exporting to image
+#14 exporting layers 0.2s done
+#14 exporting manifest sha256:4292e1ea88547980c6007fd4030295324da4b8d71ae29dbe4e92d1f93578a2f9 0.0s done
+#14 exporting config sha256:e4f01a721dd904f5537e25af7f4e521684c5cf13cf6b0b88798c34a8f70fdb1b 0.0s done
+#14 exporting attestation manifest sha256:4af6c9b69cf4c40d194603fdbf5b021bc9a3fdcb479aa6bf8daa897abedfd3ab 0.1s done
+#14 exporting manifest list sha256:fbaaefbcd65bbbb71e733c01de6070b34d0b547351f2eba9c6bd5fd0003951f1 0.0s done
+#14 naming to docker.io/library/tiee49admission-gateway:latest 0.0s done
+#14 unpacking to docker.io/library/tiee49admission-gateway:latest 0.2s done
+#14 DONE 0.7s
+
+#15 [worker] resolving provenance for metadata file
+#15 DONE 0.1s
+
+#16 [relay] resolving provenance for metadata file
+#16 DONE 0.1s
+
+#17 [gateway] resolving provenance for metadata file
+#17 DONE 0.0s
+ Image tiee49admission-relay Built 
+ Image tiee49admission-worker Built 
+ Image tiee49admission-gateway Built 
+ Volume tiee49admission_redis_data Creating 
+ Volume tiee49admission_redis_data Creating 
+ Network tiee49admission_default Creating 
+ Network tiee49admission_default Creating 
+ Volume tiee49admission_pg_data Creating 
+ Volume tiee49admission_pg_data Creating 
+ Volume tiee49admission_redis_data Created 
+ Volume tiee49admission_redis_data Created 
+ Volume tiee49admission_pg_data Created 
+ Volume tiee49admission_pg_data Created 
+ Network tiee49admission_default Created 
+ Network tiee49admission_default Created 
+ Container tiee49admission-redis-1 Creating 
+ Container tiee49admission-postgres-1 Creating 
+ Container tiee49admission-redis-1 Created 
+ Container tiee49admission-postgres-1 Created 
+ Container tiee49admission-worker-1 Creating 
+ Container tiee49admission-gateway-1 Creating 
+ Container tiee49admission-relay-1 Creating 
+ Container tiee49admission-relay-1 Created 
+ Container tiee49admission-gateway-1 Created 
+ Container tiee49admission-worker-1 Created 
+ Container tiee49admission-redis-1 Starting 
+ Container tiee49admission-postgres-1 Starting 
+ Container tiee49admission-postgres-1 Started 
+ Container tiee49admission-redis-1 Started 
+ Container tiee49admission-redis-1 Waiting 
+ Container tiee49admission-postgres-1 Waiting 
+ Container tiee49admission-redis-1 Waiting 
+ Container tiee49admission-postgres-1 Waiting 
+ Container tiee49admission-postgres-1 Waiting 
+ Container tiee49admission-redis-1 Waiting 
+ Container tiee49admission-redis-1 Healthy 
+ Container tiee49admission-redis-1 Healthy 
+ Container tiee49admission-redis-1 Healthy 
+ Container tiee49admission-postgres-1 Healthy 
+ Container tiee49admission-worker-1 Starting 
+ Container tiee49admission-postgres-1 Healthy 
+ Container tiee49admission-gateway-1 Starting 
+ Container tiee49admission-postgres-1 Healthy 
+ Container tiee49admission-relay-1 Starting 
+ Container tiee49admission-gateway-1 Started 
+ Container tiee49admission-worker-1 Started 
+ Container tiee49admission-relay-1 Started 

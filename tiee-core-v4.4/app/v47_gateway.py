@@ -20,7 +20,7 @@ class Handler(LegacyHandler):
             receipt=None;status=202
             transaction_start=time.perf_counter()
             with pg() as c:
-                lock_start=time.perf_counter();c.execute('SELECT pg_advisory_xact_lock(73421)');lock_wait=time.perf_counter()-lock_start
+                lock_start=time.perf_counter();c.execute('SELECT pg_advisory_xact_lock(73421)');lock_wait=time.perf_counter()-lock_start;lock_acquired=time.perf_counter()
                 old=c.execute('SELECT fingerprint,receipt,disposition FROM events WHERE id=%s',(event['id'],)).fetchone()
                 if old:
                     if old[0]!=fp: status=409;receipt=dict(error='id_conflict')
@@ -44,6 +44,8 @@ class Handler(LegacyHandler):
                             status=202 if accepted else 200
                             c.execute("INSERT INTO events(id,fingerprint,payload,disposition,state,receipt,decision,deadline,next_at,priority) VALUES(%s,%s,%s,%s,%s,%s,%s,now()+(%s*interval '1 millisecond'),now()+interval '0.25 seconds',%s)",(event['id'],fp,json.dumps(event),disposition,state,json.dumps(receipt),json.dumps(d),d['deadline_ms'],d['net_ev']/max(event['rounds'],1)))
                             c.execute('INSERT INTO decision_history(id,decision) VALUES(%s,%s)',(event['id'],json.dumps(d)));audit(c,event['id'],d['decision'])
+            commit_complete=time.perf_counter()
+            if os.environ.get("TIEE_ADMISSION_PROFILE") == "1": print("TIEE_ADMISSION_PROFILE "+json.dumps({"status":status,"connection_and_begin_seconds":lock_start-transaction_start,"advisory_lock_wait_seconds":lock_wait,"lock_to_commit_upper_bound_seconds":commit_complete-lock_acquired,"transaction_total_seconds":commit_complete-transaction_start},sort_keys=True),flush=True)
             # Never write the response until SQL context has successfully committed.
             return self.respond(status,receipt)
         except Exception as exc:
