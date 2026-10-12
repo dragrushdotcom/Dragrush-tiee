@@ -3,3 +3,8 @@ results/v46/**/*.csv whitespace=cr-at-eol
 results/v46/**/*.svg whitespace=-blank-at-eol
 results/v46/**/*.log whitespace=-blank-at-eof,-blank-at-eol
 results/v46/*.log whitespace=-blank-at-eof,-blank-at-eol
+
+results/v47/**/*.csv whitespace=cr-at-eol
+results/v47/**/*.svg whitespace=-blank-at-eol
+results/v47/**/*.log whitespace=-blank-at-eof,-blank-at-eol
+results/v47/*.log whitespace=-blank-at-eof,-blank-at-eol

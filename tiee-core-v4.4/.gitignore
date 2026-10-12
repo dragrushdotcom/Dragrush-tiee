@@ -7,3 +7,6 @@ __pycache__/
 results/v46/**/runs.jsonl
 results/v46/finalizer.log
 results/v46/finish_state.json
+
+.env.v47
+results/v47/driver-live.log

@@ -1,0 +1,18 @@
+{"test": "receipt_crash", "pool": 0, "status": "PASSED", "detail": {"receipt_immutable": true, "marker_immutable": true}, "seconds": 15.99209985899995}
+{"test": "bounded_defer", "pool": 0, "status": "PASSED", "detail": {"deferrals": 4, "final": "DONE"}, "seconds": 7.692060359000038}
+{"test": "destructive_expiry", "pool": 0, "status": "PASSED", "detail": {"no_held": true}, "seconds": 10.200769871000034}
+{"test": "rollback_fence", "pool": 0, "status": "PASSED", "detail": {"stale_fenced": true, "atomic_marker": true}, "seconds": 12.904676482000013}
+{"test": "recovery", "pool": 0, "status": "PASSED", "detail": {"recovery_seconds": {"gateway": 2.780739722000021, "relay": 2.640567674999943, "worker": 3.242872334999902, "postgres": 4.242223003999925}, "stream_loss_recovered": true}, "seconds": 27.121412696999982}
+{"test": "capacity_auth", "pool": 0, "status": "PASSED", "detail": {"safe_retry": true, "spoof_blocked": true}, "seconds": 11.40350407699998}
+{"test": "recorder", "pool": 0, "status": "PASSED", "detail": {"real_http": 6, "missing_terminal_timing": 0, "ack_not_completion": true}, "seconds": 11.990135156000065}
+{"test": "receipt_crash", "pool": 8, "status": "PASSED", "detail": {"receipt_immutable": true, "marker_immutable": true}, "seconds": 14.747097359000009}
+{"test": "bounded_defer", "pool": 8, "status": "PASSED", "detail": {"deferrals": 4, "final": "DONE"}, "seconds": 7.209746987000017}
+{"test": "destructive_expiry", "pool": 8, "status": "PASSED", "detail": {"no_held": true}, "seconds": 9.095815351000056}
+{"test": "rollback_fence", "pool": 8, "status": "PASSED", "detail": {"stale_fenced": true, "atomic_marker": true}, "seconds": 12.16078887499998}
+{"test": "recovery", "pool": 8, "status": "PASSED", "detail": {"recovery_seconds": {"gateway": 2.2462135349999244, "relay": 2.3231986270000107, "worker": 2.6306051440001283, "postgres": 3.207097526000098}, "stream_loss_recovered": true}, "seconds": 24.125279185999943}
+{"test": "capacity_auth", "pool": 8, "status": "PASSED", "detail": {"safe_retry": true, "spoof_blocked": true}, "seconds": 9.91519125700006}
+{"test": "recorder", "pool": 8, "status": "PASSED", "detail": {"real_http": 6, "missing_terminal_timing": 0, "ack_not_completion": true}, "seconds": 11.127008374999832}
+{"test": "reject_and_scorer", "pool": 0, "status": "PASSED", "detail": {"reject_marker": true, "scorer_failure_never_released": true}, "seconds": 9.46743426199987}
+{"test": "audit_marker_rollback", "pool": 0, "status": "PASSED", "detail": {"result_state_marker_audit_atomic": true}, "seconds": 11.129245420000188}
+{"test": "reject_and_scorer", "pool": 8, "status": "PASSED", "detail": {"reject_marker": true, "scorer_failure_never_released": true}, "seconds": 9.251983791000157}
+{"test": "audit_marker_rollback", "pool": 8, "status": "PASSED", "detail": {"result_state_marker_audit_atomic": true}, "seconds": 10.749473209999906}

@@ -1,0 +1,314 @@
+{
+  "status": "COMPLETE",
+  "iid_screen_pass": false,
+  "guardrails": {
+    "normal": {
+      "valid_count": 496,
+      "valid_rejected": 1,
+      "valid_not_done": 1,
+      "rejection_rate": 0.0020161290322580645,
+      "loss_rate": 0.0020161290322580645,
+      "rejection_upper95": 0.009528222728563508,
+      "loss_upper95": 0.009528222728563508,
+      "iid_screen_pass": true
+    },
+    "shift": {
+      "valid_count": 373,
+      "valid_rejected": 0,
+      "valid_not_done": 0,
+      "rejection_rate": 0.0,
+      "loss_rate": 0.0,
+      "rejection_upper95": 0.007999287862024886,
+      "loss_upper95": 0.007999287862024886,
+      "iid_screen_pass": true
+    },
+    "burst": {
+      "valid_count": 486,
+      "valid_rejected": 0,
+      "valid_not_done": 0,
+      "rejection_rate": 0.0,
+      "loss_rate": 0.0,
+      "rejection_upper95": 0.006145099343887903,
+      "loss_upper95": 0.006145099343887903,
+      "iid_screen_pass": true
+    }
+  },
+  "metrics": {
+    "A1": {
+      "runs": 9,
+      "useful_throughput_mean": 19.875254356000795,
+      "net_utility_per_cpu_mean": 4.074187258157434,
+      "cpu_seconds_mean": 10.330211222222223,
+      "valid_count": 1355,
+      "valid_rejected": 0,
+      "valid_not_done": 0,
+      "http_errors": 0,
+      "poll_errors": 0,
+      "drain_failures": 0,
+      "missing_terminal_timing": 0,
+      "held": 0,
+      "offered_observed_ms": {
+        "0.5": 1736.1601510001492,
+        "0.95": 6338.468135000085,
+        "0.99": 7236.1174919999485
+      },
+      "dispatch_observed_ms": {
+        "0.5": 1440.3418209999472,
+        "0.95": 4609.373529000095,
+        "0.99": 5055.029584000067
+      },
+      "ack_ms": {
+        "0.5": 336.8269570000848,
+        "0.95": 612.271877000012,
+        "0.99": 1018.4738969999216
+      },
+      "terminal_state_write_ms": {
+        "0.5": 1090.829,
+        "0.95": 4163.265,
+        "0.99": 4541.576
+      },
+      "ram_working_set_peak_bytes": 348364800,
+      "queue_peak": 146,
+      "table_growth_mean": 1555569.7777777778,
+      "wal_growth_mean": 2156945.777777778,
+      "aof_growth_mean": 136078.22222222222,
+      "recorded_digest_cpu_fraction": 0.14935439440998416,
+      "http_error_classes": {},
+      "scoring_ms": {
+        "0.5": 0.1830209998843202,
+        "0.95": 1.9207150000966067,
+        "0.99": 4.197243000135131
+      },
+      "admission_lock_wait_ms": {
+        "0.5": 70.41180399983205,
+        "0.95": 162.99212099988836,
+        "0.99": 206.63493400002153
+      },
+      "admission_prewrite_ms": {
+        "0.5": 315.06495799999357,
+        "0.95": 587.0638670000972,
+        "0.99": 1002.3041410001952
+      }
+    },
+    "A3": {
+      "runs": 9,
+      "useful_throughput_mean": 19.49687323868367,
+      "net_utility_per_cpu_mean": 4.777293498361491,
+      "cpu_seconds_mean": 10.44869777777778,
+      "valid_count": 1355,
+      "valid_rejected": 1,
+      "valid_not_done": 1,
+      "http_errors": 0,
+      "poll_errors": 0,
+      "drain_failures": 0,
+      "missing_terminal_timing": 0,
+      "held": 0,
+      "offered_observed_ms": {
+        "0.5": 1778.0806199998551,
+        "0.95": 6449.319035000144,
+        "0.99": 7375.386305999882
+      },
+      "dispatch_observed_ms": {
+        "0.5": 1581.9089419999273,
+        "0.95": 4590.302629000007,
+        "0.99": 5062.552042000107
+      },
+      "ack_ms": {
+        "0.5": 376.5736109999125,
+        "0.95": 642.8786940000464,
+        "0.99": 714.4869829999152
+      },
+      "terminal_state_write_ms": {
+        "0.5": 1266.532,
+        "0.95": 4192.6050000000005,
+        "0.99": 4681.6230000000005
+      },
+      "ram_working_set_peak_bytes": 349839360,
+      "queue_peak": 144,
+      "table_growth_mean": 2000668.4444444445,
+      "wal_growth_mean": 2658427.5555555555,
+      "aof_growth_mean": 134257.77777777778,
+      "recorded_digest_cpu_fraction": 0.14503927213470938,
+      "http_error_classes": {},
+      "scoring_ms": {
+        "0.5": 0.17430599996259843,
+        "0.95": 2.0212719998653483,
+        "0.99": 4.755004000116969
+      },
+      "admission_lock_wait_ms": {
+        "0.5": 73.2427599998573,
+        "0.95": 162.0678169999792,
+        "0.99": 210.84603400004198
+      },
+      "admission_prewrite_ms": {
+        "0.5": 358.9953069999865,
+        "0.95": 618.9056270000037,
+        "0.99": 692.85614599994
+      }
+    },
+    "A4": {
+      "runs": 9,
+      "useful_throughput_mean": 19.37230827479921,
+      "net_utility_per_cpu_mean": 4.806343846422719,
+      "cpu_seconds_mean": 10.563538666666666,
+      "valid_count": 1355,
+      "valid_rejected": 1,
+      "valid_not_done": 2,
+      "http_errors": 3,
+      "poll_errors": 0,
+      "drain_failures": 0,
+      "missing_terminal_timing": 0,
+      "held": 0,
+      "offered_observed_ms": {
+        "0.5": 1986.6714479996972,
+        "0.95": 6176.732625000113,
+        "0.99": 7001.587012999835
+      },
+      "dispatch_observed_ms": {
+        "0.5": 1645.6225560000348,
+        "0.95": 4585.64371500006,
+        "0.99": 5074.773485999913
+      },
+      "ack_ms": {
+        "0.5": 356.80914600015967,
+        "0.95": 578.4817219998786,
+        "0.99": 779.1176629998517
+      },
+      "terminal_state_write_ms": {
+        "0.5": 1430.174,
+        "0.95": 4213.824,
+        "0.99": 4618.997
+      },
+      "ram_working_set_peak_bytes": 349609984,
+      "queue_peak": 150,
+      "table_growth_mean": 1998848,
+      "wal_growth_mean": 2645056,
+      "aof_growth_mean": 134712.88888888888,
+      "recorded_digest_cpu_fraction": 0.14311142390963097,
+      "http_error_classes": {
+        "0:ConnectionResetError": 3
+      },
+      "scoring_ms": {
+        "0.5": 0.17649999995228427,
+        "0.95": 2.1759700000529847,
+        "0.99": 4.412073999901622
+      },
+      "admission_lock_wait_ms": {
+        "0.5": 78.15647800020997,
+        "0.95": 158.11149399996793,
+        "0.99": 230.99494400003096
+      },
+      "admission_prewrite_ms": {
+        "0.5": 332.41161700016164,
+        "0.95": 546.1673419999897,
+        "0.99": 670.8657829999538
+      }
+    }
+  },
+  "component_profiles": {
+    "A1": {
+      "gateway": {
+        "cpu_seconds": 7.082654999999999,
+        "fraction": 0.07618059783460811
+      },
+      "network_anchor": {
+        "cpu_seconds": 2.3475970000000004,
+        "fraction": 0.02525060770780626
+      },
+      "postgres": {
+        "cpu_seconds": 39.812714,
+        "fraction": 0.4282230821546824
+      },
+      "redis": {
+        "cpu_seconds": 5.978039000000003,
+        "fraction": 0.06429941665923346
+      },
+      "relay": {
+        "cpu_seconds": 12.968411,
+        "fraction": 0.1394874242702642
+      },
+      "worker": {
+        "cpu_seconds": 24.782485,
+        "fraction": 0.2665588713734056
+      }
+    },
+    "A3": {
+      "gateway": {
+        "cpu_seconds": 7.022880000000001,
+        "fraction": 0.07468107668494149
+      },
+      "network_anchor": {
+        "cpu_seconds": 2.3686680000000004,
+        "fraction": 0.02518833819589214
+      },
+      "postgres": {
+        "cpu_seconds": 40.62847000000001,
+        "fraction": 0.432041823818981
+      },
+      "redis": {
+        "cpu_seconds": 5.982681000000001,
+        "fraction": 0.0636196344722596
+      },
+      "relay": {
+        "cpu_seconds": 13.637279,
+        "fraction": 0.14501837974918297
+      },
+      "worker": {
+        "cpu_seconds": 24.398302000000005,
+        "fraction": 0.2594507470787428
+      }
+    },
+    "A4": {
+      "gateway": {
+        "cpu_seconds": 7.11949,
+        "fraction": 0.07488536459289188
+      },
+      "network_anchor": {
+        "cpu_seconds": 2.4318609999999996,
+        "fraction": 0.02557919143425086
+      },
+      "postgres": {
+        "cpu_seconds": 41.235310000000005,
+        "fraction": 0.43372786863257357
+      },
+      "redis": {
+        "cpu_seconds": 6.042593000000004,
+        "fraction": 0.06355817339324259
+      },
+      "relay": {
+        "cpu_seconds": 13.782261,
+        "fraction": 0.14496679395566184
+      },
+      "worker": {
+        "cpu_seconds": 24.460333,
+        "fraction": 0.2572826079913793
+      }
+    }
+  },
+  "contrasts": {
+    "A4": {
+      "paired_difference": -0.029050348061227933,
+      "ci_adjusted975": [
+        -0.3003262732481149,
+        0.24550760924715784
+      ],
+      "ci95": [
+        -0.2760006775493078,
+        0.21489794464046755
+      ],
+      "pairs": 9
+    },
+    "A1": {
+      "paired_difference": 0.7031062402040567,
+      "ci_adjusted975": [
+        0.40299338598470924,
+        1.0181281303930423
+      ],
+      "ci95": [
+        0.43560147829323287,
+        0.9851381049325814
+      ],
+      "pairs": 9
+    }
+  }
+}

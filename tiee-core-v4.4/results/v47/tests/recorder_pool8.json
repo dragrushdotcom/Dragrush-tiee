@@ -1,0 +1,385 @@
+{
+  "seed": 470099,
+  "n": 6,
+  "condition": "normal",
+  "rate": 120,
+  "prefix": "late-recorder-54281865",
+  "disable_poll": true,
+  "drain_limit_seconds": 0,
+  "ledger": [
+    {
+      "id": "late-recorder-54281865-v46-470099-0",
+      "valid": true,
+      "event": {
+        "id": "late-recorder-54281865-v46-470099-0",
+        "kind": "valid",
+        "rounds": 2000,
+        "body": "{\"class\": \"standard\", \"deadline_ms\": 12000, \"noise\": 1.0320351571013995, \"signal\": -1.3806778597437552}"
+      },
+      "state": "DONE",
+      "decision": {
+        "arm": "A3",
+        "omega": 1.0,
+        "net_ev": -1.8416225141558327,
+        "reason": "conservative useful-work protection",
+        "reward": 1.0,
+        "base_ev": -1.8415151615058327,
+        "p_valid": 0.05282827949805577,
+        "penalty": 2.0,
+        "decision": "ALLOW",
+        "mandatory": false,
+        "p_corrupt": 0.9471717205019442,
+        "deadline_ms": 12000,
+        "feature_hash": "c30ab31d3791d67bc7d98277156c4acabef9cf90258ef91daecc90bf588d335c",
+        "expected_cost": 0.00010735264999999217,
+        "model_version": "f1c8e9d837de2500499c4bac47d2792d4aa029f8e2cb607df33ab6d716702b85",
+        "policy_version": "v47-1",
+        "decision_seconds": 0.00011220900000807887,
+        "confidence_margin": 0.005
+      },
+      "receipt": {
+        "dispatch": 1098.11425057,
+        "ack": 1104.186198445,
+        "response": [
+          202,
+          {
+            "status": "ACCEPT",
+            "decision": "DEFER",
+            "receipt_id": "late-recorder-54281865-v46-470099-0",
+            "policy_version": "v47-1",
+            "model_version": "f1c8e9d837de2500499c4bac47d2792d4aa029f8e2cb607df33ab6d716702b85",
+            "payload_hash": "781a14b575b64f7921301577cefa8cfbea74642399c2ae1135c10e881063a968"
+          }
+        ],
+        "scheduled": 1098.110359178
+      },
+      "utility": 1,
+      "execution_cpu": 0.0018651590000000051,
+      "queue_seconds": 1.023208,
+      "db_latency_seconds": 1.028837,
+      "terminal_observed_monotonic": 1104.353678051,
+      "terminal_observation_source": "final committed SQL snapshot",
+      "terminal_state_write_seconds": 1.030346,
+      "offered_terminal_ms": 6243.318873000135,
+      "dispatch_terminal_ms": 6239.427481000121
+    },
+    {
+      "id": "late-recorder-54281865-v46-470099-1",
+      "valid": true,
+      "event": {
+        "id": "late-recorder-54281865-v46-470099-1",
+        "kind": "valid",
+        "rounds": 100,
+        "body": "{\"class\": \"standard\", \"deadline_ms\": 12000, \"noise\": -1.4766130782359372, \"signal\": 0.2937664765998531}"
+      },
+      "state": "DONE",
+      "decision": {
+        "arm": "A3",
+        "omega": 1.0,
+        "net_ev": 0.8032599155926827,
+        "reason": "conservative useful-work protection",
+        "reward": 1.0,
+        "base_ev": 0.8032652832251828,
+        "p_valid": 0.9344217610750609,
+        "penalty": 2.0,
+        "decision": "ALLOW",
+        "mandatory": false,
+        "p_corrupt": 0.06557823892493908,
+        "deadline_ms": 12000,
+        "feature_hash": "6050859f7f9178e3662f671d7812bbaf9aba1f2eb3af612215d27ff51a62b7cf",
+        "expected_cost": 5.3676324999996085e-06,
+        "model_version": "f1c8e9d837de2500499c4bac47d2792d4aa029f8e2cb607df33ab6d716702b85",
+        "policy_version": "v47-1",
+        "decision_seconds": 0.0002854619999652641,
+        "confidence_margin": 0.005,
+        "admission_prewrite_seconds": 0.044402757999932874,
+        "admission_lock_wait_seconds": 0.01925708399994619
+      },
+      "receipt": {
+        "dispatch": 1098.118783537,
+        "ack": 1104.197421519,
+        "response": [
+          202,
+          {
+            "status": "ACCEPT",
+            "decision": "ALLOW",
+            "receipt_id": "late-recorder-54281865-v46-470099-1",
+            "policy_version": "v47-1",
+            "model_version": "f1c8e9d837de2500499c4bac47d2792d4aa029f8e2cb607df33ab6d716702b85",
+            "payload_hash": "9da5857554522c52857908c0c854ad70269902ec1bfede288844d805aa0a74af"
+          }
+        ],
+        "scheduled": 1098.1186925113334
+      },
+      "utility": 1,
+      "execution_cpu": 0.0001796130000000229,
+      "queue_seconds": 0.03363,
+      "db_latency_seconds": 0.041542,
+      "terminal_observed_monotonic": 1104.353678051,
+      "terminal_observation_source": "final committed SQL snapshot",
+      "terminal_state_write_seconds": 0.04891,
+      "offered_terminal_ms": 6234.985539666695,
+      "dispatch_terminal_ms": 6234.894514000189
+    },
+    {
+      "id": "late-recorder-54281865-v46-470099-2",
+      "valid": true,
+      "event": {
+        "id": "late-recorder-54281865-v46-470099-2",
+        "kind": "valid",
+        "rounds": 6000,
+        "body": "{\"class\": \"standard\", \"deadline_ms\": 12000, \"noise\": -0.11371247716688604, \"signal\": 1.2627363982282285}"
+      },
+      "state": "DONE",
+      "decision": {
+        "arm": "A3",
+        "omega": 1.0,
+        "net_ev": 0.9446289169579228,
+        "reason": "conservative useful-work protection",
+        "reward": 1.0,
+        "base_ev": 0.9449509749079228,
+        "p_valid": 0.9816503249693076,
+        "penalty": 2.0,
+        "decision": "ALLOW",
+        "mandatory": false,
+        "p_corrupt": 0.018349675030692403,
+        "deadline_ms": 12000,
+        "feature_hash": "346b8a0b01497fa799405f6a56f4e6efe3818516f5a444b9b3547b8e659ba1fd",
+        "expected_cost": 0.0003220579499999765,
+        "model_version": "f1c8e9d837de2500499c4bac47d2792d4aa029f8e2cb607df33ab6d716702b85",
+        "policy_version": "v47-1",
+        "decision_seconds": 0.0001583949999712786,
+        "confidence_margin": 0.005,
+        "admission_prewrite_seconds": 0.04286065500014047,
+        "admission_lock_wait_seconds": 0.025322465000044758
+      },
+      "receipt": {
+        "dispatch": 1098.129037472,
+        "ack": 1104.220944295,
+        "response": [
+          202,
+          {
+            "status": "ACCEPT",
+            "decision": "ALLOW",
+            "receipt_id": "late-recorder-54281865-v46-470099-2",
+            "policy_version": "v47-1",
+            "model_version": "f1c8e9d837de2500499c4bac47d2792d4aa029f8e2cb607df33ab6d716702b85",
+            "payload_hash": "8523dc4edb2f011a58038503b4448242706f07f886a20b525ae1402cd3299a6e"
+          }
+        ],
+        "scheduled": 1098.1270258446666
+      },
+      "utility": 1,
+      "execution_cpu": 0.0054405459999999906,
+      "queue_seconds": 0.053273,
+      "db_latency_seconds": 0.062648,
+      "terminal_observed_monotonic": 1104.353678051,
+      "terminal_observation_source": "final committed SQL snapshot",
+      "terminal_state_write_seconds": 0.064643,
+      "offered_terminal_ms": 6226.652206333483,
+      "dispatch_terminal_ms": 6224.640579000152
+    },
+    {
+      "id": "late-recorder-54281865-v46-470099-3",
+      "valid": false,
+      "event": {
+        "id": "late-recorder-54281865-v46-470099-3",
+        "kind": "valid",
+        "rounds": 2000,
+        "body": "{\"class\": \"standard\", \"deadline_ms\": 12000, \"noise\": 0.045042651221040675, \"signal\": -0.7357590719550027}"
+      },
+      "state": "DONE",
+      "decision": {
+        "arm": "A3",
+        "omega": 1.0,
+        "net_ev": -0.8492807730782576,
+        "reason": "conservative useful-work protection",
+        "reward": 1.0,
+        "base_ev": -0.8491734204282576,
+        "p_valid": 0.38360885985724746,
+        "penalty": 2.0,
+        "decision": "ALLOW",
+        "mandatory": false,
+        "p_corrupt": 0.6163911401427525,
+        "deadline_ms": 12000,
+        "feature_hash": "5ec1f943e0baa8253e768780bff9deb42db6388122651fc2e1233d0fee299ae7",
+        "expected_cost": 0.00010735264999999217,
+        "model_version": "f1c8e9d837de2500499c4bac47d2792d4aa029f8e2cb607df33ab6d716702b85",
+        "policy_version": "v47-1",
+        "decision_seconds": 0.00016001899984985357,
+        "confidence_margin": 0.005
+      },
+      "receipt": {
+        "dispatch": 1098.138676351,
+        "ack": 1104.174669922,
+        "response": [
+          202,
+          {
+            "status": "ACCEPT",
+            "decision": "DEFER",
+            "receipt_id": "late-recorder-54281865-v46-470099-3",
+            "policy_version": "v47-1",
+            "model_version": "f1c8e9d837de2500499c4bac47d2792d4aa029f8e2cb607df33ab6d716702b85",
+            "payload_hash": "660a2a765e19ca2f10d139a01277b585884da29fb6b2cfa49dd347d35631bbf8"
+          }
+        ],
+        "scheduled": 1098.135359178
+      },
+      "utility": -2,
+      "execution_cpu": 0.001990986000000028,
+      "queue_seconds": 1.022193,
+      "db_latency_seconds": 1.029686,
+      "terminal_observed_monotonic": 1104.353678051,
+      "terminal_observation_source": "final committed SQL snapshot",
+      "terminal_state_write_seconds": 1.036597,
+      "offered_terminal_ms": 6218.318873000044,
+      "dispatch_terminal_ms": 6215.00170000013
+    },
+    {
+      "id": "late-recorder-54281865-v46-470099-4",
+      "valid": false,
+      "event": {
+        "id": "late-recorder-54281865-v46-470099-4",
+        "kind": "valid",
+        "rounds": 500,
+        "body": "{\"class\": \"standard\", \"deadline_ms\": 12000, \"noise\": 0.3090832241757946, \"signal\": -1.3329977494389564}"
+      },
+      "state": "DONE",
+      "decision": {
+        "arm": "A3",
+        "omega": 1.0,
+        "net_ev": -1.6585407000623786,
+        "reason": "conservative useful-work protection",
+        "reward": 1.0,
+        "base_ev": -1.6585138618998787,
+        "p_valid": 0.11382871270004045,
+        "penalty": 2.0,
+        "decision": "ALLOW",
+        "mandatory": false,
+        "p_corrupt": 0.8861712872999595,
+        "deadline_ms": 12000,
+        "feature_hash": "8180ba75c4fb5fced3db7247cb478d3fed9d76a03027722b5b21f71ffbd3374c",
+        "expected_cost": 2.6838162499998042e-05,
+        "model_version": "f1c8e9d837de2500499c4bac47d2792d4aa029f8e2cb607df33ab6d716702b85",
+        "policy_version": "v47-1",
+        "decision_seconds": 0.000207135999971797,
+        "confidence_margin": 0.005
+      },
+      "receipt": {
+        "dispatch": 1098.146049678,
+        "ack": 1104.194548237,
+        "response": [
+          202,
+          {
+            "status": "ACCEPT",
+            "decision": "DEFER",
+            "receipt_id": "late-recorder-54281865-v46-470099-4",
+            "policy_version": "v47-1",
+            "model_version": "f1c8e9d837de2500499c4bac47d2792d4aa029f8e2cb607df33ab6d716702b85",
+            "payload_hash": "caaa9fe7affd9602946aae02d477814f975937d334ec34e3d7b9d7b279ff97bc"
+          }
+        ],
+        "scheduled": 1098.1436925113333
+      },
+      "utility": -2,
+      "execution_cpu": 0.0002765059999999542,
+      "queue_seconds": 1.023352,
+      "db_latency_seconds": 1.026728,
+      "terminal_observed_monotonic": 1104.353678051,
+      "terminal_observation_source": "final committed SQL snapshot",
+      "terminal_state_write_seconds": 1.028057,
+      "offered_terminal_ms": 6209.985539666832,
+      "dispatch_terminal_ms": 6207.628373000034
+    },
+    {
+      "id": "late-recorder-54281865-v46-470099-5",
+      "valid": true,
+      "event": {
+        "id": "late-recorder-54281865-v46-470099-5",
+        "kind": "valid",
+        "rounds": 2000,
+        "body": "{\"class\": \"standard\", \"deadline_ms\": 12000, \"noise\": 0.9055352372257195, \"signal\": 0.6070005342615654}"
+      },
+      "state": "DONE",
+      "decision": {
+        "arm": "A3",
+        "omega": 1.0,
+        "net_ev": 0.6630543200115165,
+        "reason": "conservative useful-work protection",
+        "reward": 1.0,
+        "base_ev": 0.6631616726615165,
+        "p_valid": 0.8877205575538388,
+        "penalty": 2.0,
+        "decision": "ALLOW",
+        "mandatory": false,
+        "p_corrupt": 0.11227944244616117,
+        "deadline_ms": 12000,
+        "feature_hash": "22e019e841d45ad5722ed7e33766fb8abc3e7e298c4835ef8f33bf33fcb51848",
+        "expected_cost": 0.00010735264999999217,
+        "model_version": "f1c8e9d837de2500499c4bac47d2792d4aa029f8e2cb607df33ab6d716702b85",
+        "policy_version": "v47-1",
+        "decision_seconds": 0.00012313000001995533,
+        "confidence_margin": 0.005,
+        "admission_prewrite_seconds": 0.03923361400006797,
+        "admission_lock_wait_seconds": 0.018313314000124592
+      },
+      "receipt": {
+        "dispatch": 1098.156263619,
+        "ack": 1104.208653038,
+        "response": [
+          202,
+          {
+            "status": "ACCEPT",
+            "decision": "ALLOW",
+            "receipt_id": "late-recorder-54281865-v46-470099-5",
+            "policy_version": "v47-1",
+            "model_version": "f1c8e9d837de2500499c4bac47d2792d4aa029f8e2cb607df33ab6d716702b85",
+            "payload_hash": "b566b70d4ffc91bffdf972b99b75b51b2b50d9591f47fd725724ee636eb6049d"
+          }
+        ],
+        "scheduled": 1098.1520258446667
+      },
+      "utility": 1,
+      "execution_cpu": 0.0016297989999999873,
+      "queue_seconds": 0.045385,
+      "db_latency_seconds": 0.053894,
+      "terminal_observed_monotonic": 1104.353678051,
+      "terminal_observation_source": "final committed SQL snapshot",
+      "terminal_state_write_seconds": 0.059422,
+      "offered_terminal_ms": 6201.652206333392,
+      "dispatch_terminal_ms": 6197.414432000187
+    }
+  ],
+  "queue_samples": [],
+  "wall_seconds": 6.111412730999973,
+  "total_utility": 0,
+  "execution_cpu_seconds": 0.011382608999999988,
+  "probe_cpu_seconds": 0.194099478,
+  "states": {
+    "DONE": 6
+  },
+  "valid_count": 4,
+  "valid_rejected": 0,
+  "brier": 0.17908181508413132,
+  "log_loss": 0.6251454957885098,
+  "offered_latency_ms": {
+    "0.5": 6218.318873000044,
+    "0.95": 6234.985539666695,
+    "0.99": 6234.985539666695
+  },
+  "dispatch_latency_ms": {
+    "0.5": 6215.00170000013,
+    "0.95": 6234.894514000189,
+    "0.99": 6234.894514000189
+  },
+  "ack_latency_ms": {
+    "0.5": 6052.389419000065,
+    "0.95": 6078.637982000146,
+    "0.99": 6078.637982000146
+  },
+  "useful_completions": 4,
+  "http_errors": 0,
+  "poll_errors": [],
+  "drain_pass": true,
+  "workload_hash": "6a9cabc4047628a2401ffb3fde39ee8ec55af00a9c4dabdf1be7c22b75855553"
+}

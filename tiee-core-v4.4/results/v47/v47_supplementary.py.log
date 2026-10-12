@@ -1,0 +1,4 @@
+{"test": "reject_and_scorer", "pool": 0, "status": "PASSED", "detail": {"reject_marker": true, "scorer_failure_never_released": true}, "seconds": 9.46743426199987}
+{"test": "audit_marker_rollback", "pool": 0, "status": "PASSED", "detail": {"result_state_marker_audit_atomic": true}, "seconds": 11.129245420000188}
+{"test": "reject_and_scorer", "pool": 8, "status": "PASSED", "detail": {"reject_marker": true, "scorer_failure_never_released": true}, "seconds": 9.251983791000157}
+{"test": "audit_marker_rollback", "pool": 8, "status": "PASSED", "detail": {"result_state_marker_audit_atomic": true}, "seconds": 10.749473209999906}

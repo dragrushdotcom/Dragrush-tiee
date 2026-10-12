@@ -1,0 +1,79 @@
+{
+  "seed": 470002,
+  "n": 6000,
+  "method": "one-sided Wilson 95%, calibration-only selection; synthetic IID assumption",
+  "selection_limit": 0.0025,
+  "chosen_threshold": 0.02,
+  "candidates": [
+    {
+      "threshold": 0,
+      "valid_rejected": 0,
+      "valid_count": 3840,
+      "rejected": 0,
+      "wilson_upper95": 0.0007040725404277215
+    },
+    {
+      "threshold": 0.001,
+      "valid_rejected": 0,
+      "valid_count": 3840,
+      "rejected": 0,
+      "wilson_upper95": 0.0007040725404277215
+    },
+    {
+      "threshold": 0.002,
+      "valid_rejected": 0,
+      "valid_count": 3840,
+      "rejected": 0,
+      "wilson_upper95": 0.0007040725404277215
+    },
+    {
+      "threshold": 0.005,
+      "valid_rejected": 0,
+      "valid_count": 3840,
+      "rejected": 4,
+      "wilson_upper95": 0.0007040725404277215
+    },
+    {
+      "threshold": 0.01,
+      "valid_rejected": 0,
+      "valid_count": 3840,
+      "rejected": 61,
+      "wilson_upper95": 0.0007040725404277215
+    },
+    {
+      "threshold": 0.02,
+      "valid_rejected": 3,
+      "valid_count": 3840,
+      "rejected": 181,
+      "wilson_upper95": 0.0019532052859288084
+    },
+    {
+      "threshold": 0.03,
+      "valid_rejected": 6,
+      "valid_count": 3840,
+      "rejected": 255,
+      "wilson_upper95": 0.003018673960926088
+    },
+    {
+      "threshold": 0.05,
+      "valid_rejected": 10,
+      "valid_count": 3840,
+      "rejected": 417,
+      "wilson_upper95": 0.004351290818256845
+    },
+    {
+      "threshold": 0.075,
+      "valid_rejected": 17,
+      "valid_count": 3840,
+      "rejected": 565,
+      "wilson_upper95": 0.006571812547228191
+    },
+    {
+      "threshold": 0.1,
+      "valid_rejected": 28,
+      "valid_count": 3840,
+      "rejected": 671,
+      "wilson_upper95": 0.009922593842898812
+    }
+  ]
+}

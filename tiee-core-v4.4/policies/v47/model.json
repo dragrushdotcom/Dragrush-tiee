@@ -1,0 +1,21 @@
+{
+  "coefficients": [
+    1.1761236842248897,
+    2.1919498257091927,
+    -0.6433353420835385,
+    0.2612352090578535
+  ],
+  "cpu_seconds_per_round": 5.367632499999608e-07,
+  "utility_per_cpu_second": 0.1,
+  "confidence_margin": 0.005,
+  "training_seed": 460001,
+  "calibration_seed": 470002,
+  "primary_system": "Nominal",
+  "maximum_wait_seconds": 0.5,
+  "deferral_seconds": 0.25,
+  "maximum_deferrals": 3,
+  "claim_lease_seconds": 3,
+  "utility_missed_fraction": 0.25,
+  "reject_probability_threshold": 0.02,
+  "admission_rule": "reject only below calibrated probability cap; uncertain EV defers three times then valid scorer authorizes conservative release"
+}

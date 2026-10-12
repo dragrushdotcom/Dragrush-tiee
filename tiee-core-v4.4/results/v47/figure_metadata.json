@@ -1,0 +1,14 @@
+{
+  "matplotlib_version": "3.11.2",
+  "analysis_sha256": "da45c14f574a0f208abd9809997713afe359527bf3b9aeb594e38a588f776319",
+  "figures": [
+    "useful_loss",
+    "component_cpu",
+    "useful_throughput"
+  ],
+  "formats": [
+    "png",
+    "pdf",
+    "svg"
+  ]
+}

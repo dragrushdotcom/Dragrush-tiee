@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-12T00:46:33.771752+00:00",
+  "frozen_plan_method": "one-sided Wilson screening",
+  "additional_reporting_requirement": "exact Clopper-Pearson upper95 <=1% for valid rejection and all-cause loss",
+  "reason": "conservative treatment of zero/few failures; small pilot remains exploratory",
+  "engine_model_workload_unchanged": true
+}

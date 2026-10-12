@@ -1,0 +1,14 @@
+services:
+  gateway:
+    command: [python, -m, app.v47_gateway]
+    environment:
+      V46_ARM: ${V46_ARM:-A3}
+      V46_SYSTEM: ${V46_SYSTEM:-Nominal}
+  relay:
+    command: [python, -m, app.v47_relay]
+    environment:
+      V46_ARM: ${V46_ARM:-A3}
+      V46_SYSTEM: ${V46_SYSTEM:-Nominal}
+      V46_WORKERS: '2'
+  worker:
+    command: [python, -m, app.v47_worker]
