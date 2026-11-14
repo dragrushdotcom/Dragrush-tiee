@@ -17,8 +17,7 @@ jobs:
           python-version: '3.11'
       - name: Run synthetic benchmark unit tests
         run: |
-          cd experiments/synthetic_cpu
-          python -m unittest -v test_benchmark.py
+          python -m unittest discover -s experiments/synthetic_cpu -p 'test_*.py' -v
       - name: Test actual starter processor measurement
         run: |
           python -m unittest discover -s tiee-starter/tests -p test_measure_processor.py -v
@@ -29,3 +28,11 @@ jobs:
           cd experiments/synthetic_cpu
           python benchmark.py --n 10000 --repetitions 7 --warmups 2 --seed 20261113 > result.json
           python -m json.tool result.json > /dev/null
+      - name: Preserve exact-source processor and synthetic measurements
+        uses: actions/upload-artifact@v4
+        with:
+          name: tiee-measurements-${{ github.sha }}
+          path: |
+            /tmp/tiee-processor-measurement.json
+            experiments/synthetic_cpu/result.json
+          if-no-files-found: error
