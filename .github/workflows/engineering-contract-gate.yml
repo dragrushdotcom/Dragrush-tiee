@@ -1,0 +1,34 @@
+name: Engineering receipt and progress gates
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/engineering_contract_gate.py'
+      - 'tests/test_engineering_contract_gate.py'
+      - 'ops/engineering_contracts/**'
+      - 'docs/ENGINEERING_HARNESS_POLICY.md'
+      - '.github/workflows/engineering-contract-gate.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/engineering_contract_gate.py'
+      - 'tests/test_engineering_contract_gate.py'
+      - 'ops/engineering_contracts/**'
+      - 'docs/ENGINEERING_HARNESS_POLICY.md'
+      - '.github/workflows/engineering-contract-gate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  engineering-contract-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate read-only receipt and stall diagnostics
+        run: python3 -m unittest discover -s tests -p 'test_engineering_contract_gate.py' -v
+      - name: Confirm contract manifest is well-formed JSON
+        run: python3 -m json.tool ops/engineering_contracts/tiee_benchmark.json > /dev/null

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "task_id": "tiee-benchmark-engineering",
+  "lane": "TiEE",
+  "metric": {
+    "name": "verified_benchmark_experiments",
+    "direction": "increase",
+    "minimum_delta": 1
+  },
+  "author_approval_required": false,
+  "stale_after_minutes": 90,
+  "max_retry_attempts": 3,
+  "write_permissions": [
+    "benchmarks_and_review_branches_only"
+  ],
+  "prohibited_side_effects": [
+    "claim_design_targets_as_production_results",
+    "consume_paid_compute_without_approval",
+    "modify_unrelated_repositories",
+    "silently_drop_rare_high_value_events"
+  ]
+}
