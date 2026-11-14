@@ -1,0 +1,21 @@
+{
+  "project": "TiEE",
+  "lane": "T",
+  "run_date": "2026-11-13",
+  "base_main_sha": "1d5edba143628854df52a5d8bc6c8d4b380e458a",
+  "branch": "experiment/synthetic-cpu-baseline-20261113",
+  "engineering_sha": "796caa9df1515e92eb5e7e0be7cfbe4aaa801e1d",
+  "pr": "https://github.com/dragrushdotcom/Dragrush-tiee/pull/2",
+  "recommended_thought_intensity": "HIGH",
+  "reason": "Scientific benchmark validity and unknown actual gateway implementation require careful provenance",
+  "risks": [
+    "Synthetic Python workload is not real TiEE",
+    "No actual component benchmark identified",
+    "CI pending"
+  ],
+  "escalation": "none",
+  "local_evidence": "Similar isolated harness passed 6 unittest tests locally; exact committed files require CI",
+  "outcome": "Synthetic benchmark, six tests, documentation and CI workflow committed on scoped branch; draft PR opened",
+  "next": "Verify PR CI and inspect actual executable TiEE components and historic v4.4/v4.5 artifacts",
+  "no_live_changes": true
+}

@@ -1,0 +1,31 @@
+name: Synthetic CPU baseline tests
+on:
+  pull_request:
+    paths:
+      - 'experiments/synthetic_cpu/**'
+      - '.github/workflows/synthetic-cpu.yml'
+      - 'tiee-starter/**'
+  workflow_dispatch:
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run synthetic benchmark unit tests
+        run: |
+          cd experiments/synthetic_cpu
+          python -m unittest -v test_benchmark.py
+      - name: Test actual starter processor measurement
+        run: |
+          python -m unittest discover -s tiee-starter/tests -p test_measure_processor.py -v
+          python tiee-starter/tools/measure_processor.py > /tmp/tiee-processor-measurement.json
+          python -m json.tool /tmp/tiee-processor-measurement.json > /dev/null
+      - name: Generate synthetic measurements
+        run: |
+          cd experiments/synthetic_cpu
+          python benchmark.py --n 10000 --repetitions 7 --warmups 2 --seed 20261113 > result.json
+          python -m json.tool result.json > /dev/null
