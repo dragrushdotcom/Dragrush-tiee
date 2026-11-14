@@ -1,11 +1,14 @@
 name: Synthetic CPU baseline tests
 on:
   pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
     paths:
       - 'experiments/synthetic_cpu/**'
       - '.github/workflows/synthetic-cpu.yml'
       - 'tiee-starter/**'
   workflow_dispatch:
+permissions:
+  contents: read
 jobs:
   tests:
     runs-on: ubuntu-latest
