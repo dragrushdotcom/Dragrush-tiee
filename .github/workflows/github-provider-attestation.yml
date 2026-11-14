@@ -1,0 +1,50 @@
+name: Independent GitHub run attestation
+
+# Does not modify existing task schedules; reacts only to completed trusted jobs.
+on:
+  workflow_run:
+    workflows:
+      - 'Engineering receipt and progress gates'
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: Existing GitHub Actions run ID to independently inspect (read-only)
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  read-only-provider-attestation:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.head_branch == 'main' &&
+       github.event.workflow_run.event != 'pull_request')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exercise provider trust and fail-closed regression tests
+        run: python3 -m unittest discover -s tests -p 'test_github_run_attestor.py' -v
+      - name: Verify actual source run directly from GitHub provider
+        id: attest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SOURCE_RUN_ID: ${{ github.event.workflow_run.id || inputs.run_id }}
+        run: |
+          set -euo pipefail
+          python3 scripts/github_run_attestor.py \
+            --run-id "$SOURCE_RUN_ID" \
+            --output "dist/provider-evidence/run_${SOURCE_RUN_ID}.json"
+      - name: Preserve evidence including failure and UNKNOWN states
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-provider-attestation-${{ github.event.workflow_run.id || inputs.run_id }}
+          path: dist/provider-evidence/
+          if-no-files-found: warn
+          retention-days: 90

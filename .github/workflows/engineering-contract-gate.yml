@@ -5,6 +5,9 @@ on:
     paths:
       - 'scripts/engineering_contract_gate.py'
       - 'tests/test_engineering_contract_gate.py'
+      - 'scripts/github_run_attestor.py'
+      - 'tests/test_github_run_attestor.py'
+      - '.github/workflows/github-provider-attestation.yml'
       - 'ops/engineering_contracts/**'
       - 'docs/ENGINEERING_HARNESS_POLICY.md'
       - '.github/workflows/engineering-contract-gate.yml'
@@ -14,6 +17,9 @@ on:
     paths:
       - 'scripts/engineering_contract_gate.py'
       - 'tests/test_engineering_contract_gate.py'
+      - 'scripts/github_run_attestor.py'
+      - 'tests/test_github_run_attestor.py'
+      - '.github/workflows/github-provider-attestation.yml'
       - 'ops/engineering_contracts/**'
       - 'docs/ENGINEERING_HARNESS_POLICY.md'
       - '.github/workflows/engineering-contract-gate.yml'
@@ -30,5 +36,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate read-only receipt and stall diagnostics
         run: python3 -m unittest discover -s tests -p 'test_engineering_contract_gate.py' -v
+      - name: Verify authenticated GitHub provider-run attestation logic
+        run: python3 -m unittest discover -s tests -p 'test_github_run_attestor.py' -v
       - name: Confirm contract manifest is well-formed JSON
         run: python3 -m json.tool ops/engineering_contracts/tiee_benchmark.json > /dev/null
