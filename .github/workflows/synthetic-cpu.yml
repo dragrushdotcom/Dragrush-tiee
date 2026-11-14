@@ -4,6 +4,7 @@ on:
     paths:
       - 'experiments/synthetic_cpu/**'
       - '.github/workflows/synthetic-cpu.yml'
+      - 'tiee-starter/**'
   workflow_dispatch:
 jobs:
   tests:
@@ -18,6 +19,11 @@ jobs:
         run: |
           cd experiments/synthetic_cpu
           python -m unittest -v test_benchmark.py
+      - name: Test actual starter processor measurement
+        run: |
+          python -m unittest discover -s tiee-starter/tests -p test_measure_processor.py -v
+          python tiee-starter/tools/measure_processor.py > /tmp/tiee-processor-measurement.json
+          python -m json.tool /tmp/tiee-processor-measurement.json > /dev/null
       - name: Generate synthetic measurements
         run: |
           cd experiments/synthetic_cpu
