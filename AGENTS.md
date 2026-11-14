@@ -33,3 +33,7 @@ Deliver the actionable result first. Identify evidence and exact changed files/P
 ## Project boundaries
 
 Do not conflate TiEE engineering evidence with the theological or narrative claims in The Pure Essence of Existence. Do not alter TPEOE manuscript-writing schedules, chapter approvals or source files. TiEE is an independently evaluated engineering project.
+
+## Measured engineering receipt gate
+
+Apply `docs/ENGINEERING_HARNESS_POLICY.md` and the bounded project contract in `ops/engineering_contracts/tiee_benchmark.json` for new TiEE experiments. Use `scripts/engineering_contract_gate.py` for consistency checks with a trusted exact checkout SHA. Record independent CI/artifact readback and measured baseline/new/delta; do not confuse a passing receipt or a benchmark experiment count with verified performance improvement. Use read-only stall classification without automatically replaying possible in-flight jobs.
