@@ -1,0 +1,58 @@
+{
+  "component": "tiee-starter/shared/processor.py",
+  "count": 100,
+  "fixture_sha256": "fce9dc83406467d489492fc3152be829f37c27a4a9a9ced03fe3a02c4db99b69",
+  "iterations": 100,
+  "median_throughput_events_s": 38230.75702633526,
+  "mode": "in_process_cpu",
+  "no_baseline_comparison": true,
+  "not_gateway_or_queue_or_db": true,
+  "processor_sha256": "4c6620281eb4a556efd903ecf17d1d25ff37679eb22fd0dac264dc5622067e49",
+  "production_speedup_evidence": false,
+  "python": "3.12.14",
+  "repeats": 5,
+  "runs": [
+    {
+      "elapsed_s": 0.002615695,
+      "eligible": 50,
+      "p50_ms": 0.02016,
+      "p95_ms": 0.037997,
+      "p99_ms": 0.105279,
+      "throughput_events_s": 38230.75702633526
+    },
+    {
+      "elapsed_s": 0.002498167,
+      "eligible": 50,
+      "p50_ms": 0.015854,
+      "p95_ms": 0.038999,
+      "p99_ms": 0.087452,
+      "throughput_events_s": 40029.34951906738
+    },
+    {
+      "elapsed_s": 0.002972282,
+      "eligible": 50,
+      "p50_ms": 0.033361,
+      "p95_ms": 0.058738,
+      "p99_ms": 0.114062,
+      "throughput_events_s": 33644.18315624157
+    },
+    {
+      "elapsed_s": 0.002871741,
+      "eligible": 50,
+      "p50_ms": 0.034822,
+      "p95_ms": 0.04011,
+      "p99_ms": 0.192861,
+      "throughput_events_s": 34822.0817963737
+    },
+    {
+      "elapsed_s": 0.002554403,
+      "eligible": 50,
+      "p50_ms": 0.034672,
+      "p95_ms": 0.037246,
+      "p99_ms": 0.070246,
+      "throughput_events_s": 39148.09057145643
+    }
+  ],
+  "seed": 101,
+  "warmups": 1
+}

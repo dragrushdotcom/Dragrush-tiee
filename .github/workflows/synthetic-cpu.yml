@@ -1,0 +1,41 @@
+name: Synthetic CPU baseline tests
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'experiments/synthetic_cpu/**'
+      - '.github/workflows/synthetic-cpu.yml'
+      - 'tiee-starter/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run synthetic benchmark unit tests
+        run: |
+          python -m unittest discover -s experiments/synthetic_cpu -p 'test_*.py' -v
+      - name: Test actual starter processor measurement
+        run: |
+          python -m unittest discover -s tiee-starter/tests -p test_measure_processor.py -v
+          python tiee-starter/tools/measure_processor.py > /tmp/tiee-processor-measurement.json
+          python -m json.tool /tmp/tiee-processor-measurement.json > /dev/null
+      - name: Generate synthetic measurements
+        run: |
+          cd experiments/synthetic_cpu
+          python benchmark.py --n 10000 --repetitions 7 --warmups 2 --seed 20261113 > result.json
+          python -m json.tool result.json > /dev/null
+      - name: Preserve exact-source processor and synthetic measurements
+        uses: actions/upload-artifact@v4
+        with:
+          name: tiee-measurements-${{ github.sha }}
+          path: |
+            /tmp/tiee-processor-measurement.json
+            experiments/synthetic_cpu/result.json
+          if-no-files-found: error

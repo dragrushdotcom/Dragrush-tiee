@@ -1,0 +1,37 @@
+{
+  "project": "TiEE",
+  "lane": "T",
+  "run_date": "2026-11-13",
+  "base_main_sha": "1d5edba143628854df52a5d8bc6c8d4b380e458a",
+  "branch": "experiment/synthetic-cpu-baseline-20261113",
+  "engineering_sha": "796caa9df1515e92eb5e7e0be7cfbe4aaa801e1d",
+  "pr": "https://github.com/dragrushdotcom/Dragrush-tiee/pull/2",
+  "recommended_thought_intensity": "HIGH",
+  "reason": "Scientific benchmark validity and unknown actual gateway implementation require careful provenance",
+  "risks": [
+    "Synthetic Python workload is not real TiEE",
+    "No actual component benchmark identified",
+    "CI pending"
+  ],
+  "escalation": "none",
+  "local_evidence": "Similar isolated harness passed 6 unittest tests locally; exact committed files require CI",
+  "outcome": "Synthetic benchmark, six tests, documentation and CI workflow committed on scoped branch; draft PR opened",
+  "next": "Verify PR CI and inspect actual executable TiEE components and historic v4.4/v4.5 artifacts",
+  "no_live_changes": true,
+  "observed_at_utc": "2026-11-14T17:41:03.156Z",
+  "verified_source_head": "15341cfa9a243070ac7c01f02cbda13af60386d9",
+  "verified_ci": {
+    "run_id": 43616975252,
+    "conclusion": "success",
+    "actual_processor_measurement_step": "success"
+  },
+  "local_tests": {
+    "synthetic": 11,
+    "actual_processor": 2
+  },
+  "actual_processor_local_receipt": "experiments/synthetic_cpu/results/20261114-local-processor.json",
+  "actual_processor_repeated_trials": 5,
+  "production_speedup_evidence": false,
+  "next_action": "Verify final integration-head CI, inspect uploaded exact-source raw measurement artifact, merge code under existing gates, then design matched real-service baseline/treatment experiment.",
+  "no_gateway_queue_db_gpu_measurement": true
+}
