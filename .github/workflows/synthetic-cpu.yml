@@ -26,6 +26,9 @@ jobs:
           python -m unittest discover -s tiee-starter/tests -p test_measure_processor.py -v
           python tiee-starter/tools/measure_processor.py > /tmp/tiee-processor-measurement.json
           python -m json.tool /tmp/tiee-processor-measurement.json > /dev/null
+      - name: Test actual processor interruption and replay
+        run: |
+          python -m unittest discover -s tiee-starter/tests -p test_processor_interruption.py -v
       - name: Generate synthetic measurements
         run: |
           cd experiments/synthetic_cpu
