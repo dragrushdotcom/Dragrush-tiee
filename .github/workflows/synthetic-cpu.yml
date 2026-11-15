@@ -29,6 +29,9 @@ jobs:
       - name: Test actual processor interruption and replay
         run: |
           python -m unittest discover -s tiee-starter/tests -p test_processor_interruption.py -v
+      - name: Test matched actual processor workload experiment
+        run: |
+          python -m unittest discover -s tiee-starter/tests -p test_matched_processor_workloads.py -v
       - name: Generate synthetic measurements
         run: |
           cd experiments/synthetic_cpu
