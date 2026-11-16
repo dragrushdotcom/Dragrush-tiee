@@ -32,6 +32,9 @@ jobs:
       - name: Test matched actual processor workload experiment
         run: |
           python -m unittest discover -s tiee-starter/tests -p test_matched_processor_workloads.py -v
+      - name: Test durable actual processor restart and replay
+        run: |
+          python -m unittest discover -s tiee-starter/tests -p test_durable_processor_replay.py -v
       - name: Generate synthetic measurements
         run: |
           cd experiments/synthetic_cpu
