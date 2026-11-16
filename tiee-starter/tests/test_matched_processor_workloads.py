@@ -6,7 +6,7 @@ from matched_processor_workloads import matched
 
 class MatchedWorkloadsTests(unittest.TestCase):
     def test_matching_and_no_speedup_claim(self):
-        result=matched(count=20,repeats=3,warmups=1,baseline_iterations=0,treatment_iterations=3)
+        result=matched(count=100,repeats=3,warmups=1,baseline_iterations=0,treatment_iterations=3)
         self.assertEqual(len(result["pairs"]),3)
         self.assertEqual(len(result["fixture_sha256"]),64)
         self.assertEqual(len(result["processor_sha256"]),64)
