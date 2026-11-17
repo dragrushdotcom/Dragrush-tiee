@@ -32,6 +32,11 @@ jobs:
       - name: Test matched actual processor workload experiment
         run: |
           python -m unittest discover -s tiee-starter/tests -p test_matched_processor_workloads.py -v
+      - name: Test paired actual starter processor trials
+        run: |
+          python -m unittest discover -s tiee-starter/tests -p test_matched_processor_trials.py -v
+          python tiee-starter/benchmark/matched_processor_trials.py > /tmp/tiee-matched-processor.json
+          python -m json.tool /tmp/tiee-matched-processor.json > /dev/null
       - name: Test durable actual processor restart and replay
         run: |
           python -m unittest discover -s tiee-starter/tests -p test_durable_processor_replay.py -v
@@ -46,5 +51,6 @@ jobs:
           name: tiee-measurements-${{ github.sha }}
           path: |
             /tmp/tiee-processor-measurement.json
+            /tmp/tiee-matched-processor.json
             experiments/synthetic_cpu/result.json
           if-no-files-found: error
